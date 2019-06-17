@@ -8,6 +8,12 @@ class Admin extends CI_Controller {
 		parent::__construct();
 		$this->load->helper('url');
 	}
+	public function index()
+	{
+		$data['title'] = 'Dashboard';
+		$data['page']  = '_backend/dashboard/index';
+		$this->load->view('_backend/index', $data);
+	}
 
 	public function pemohon()
 	{
