@@ -11,10 +11,19 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		$data['title'] = 'Dashboard';
-		$data['page']  = '_backend/dashboard/index';
-		$this->load->view('_backend/index', $data);
+		$this->load->view('_frontend/index');
 	}
+
+	public function login()
+	{
+		$this->load->view('_frontend/login');
+	}
+
+	public function registrasi()
+	{
+		$this->load->view('_frontend/registrasi');
+	}
+
 
 
 }
