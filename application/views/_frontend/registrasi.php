@@ -54,7 +54,7 @@
             <a href="../../index2.html"><b>Admin</b>LTE</a>
         </div>
         <div class="register-box-body">
-            <p class="login-box-msg">Register a new membership</p>
+            <p class="login-box-msg">Silahkan Daftar</p>
 
             <form action="../../index.html" method="post">
             <div class="form-group has-feedback">
