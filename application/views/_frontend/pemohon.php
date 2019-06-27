@@ -48,39 +48,87 @@
   <!-- Full Width Column -->
   <div class="content-wrapper">
       <section class="content">
-        <div class="col-md-6">
+        <div class="col-md-12">
           <!-- Horizontal Form -->
           <div class="box box-info">
             <div class="box-header with-border">
-              <h3 class="box-title">Horizontal Form</h3>
+              <h3 class="box-title">FORMULIR PERMOHONAN INFORMASI PEMANFAATAN RUANG ( IPR )</h3>
             </div>
             <!-- /.box-header -->
             <!-- form start -->
             <form class="form-horizontal">
               <div class="box-body">
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+            
 
                   <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                    <input type="hidden" class="form-control" id="inputnoreg" placeholder="No Reg">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                  <label for="inputnama" class="col-sm-2 control-label">Nama</label>
 
                   <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                    <input type="Nama" class="form-control" id="inputnama" placeholder="Nama">
                   </div>
                 </div>
                 <div class="form-group">
-                  <div class="col-sm-offset-2 col-sm-10">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox"> Remember me
-                      </label>
-                    </div>
+                  <label for="inputjeniskelamin" class="col-sm-2 control-label">Jenis Kelamin</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputjeniskelamin" placeholder="Jenis Kelamin">
                   </div>
                 </div>
+                <div class="form-group">
+                  <label for="inputalamat" class="col-sm-2 control-label">Alamat</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputalamat" placeholder="Alamat">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputtanggal" class="col-sm-2 control-label">Tanggal</label>
+
+                  <div class="col-sm-10">
+                    <input type="date" class="form-control" id="inputtanggal" placeholder="Tanggal">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputpekerjaan" class="col-sm-2 control-label">Pekerjaan</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputpekerjaan" placeholder="Pekerjaan">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputpemanfaatan" class="col-sm-2 control-label">Pemanfaatan</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputpemanfaatan" placeholder="Pemanfaatan">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputlokasi" class="col-sm-2 control-label">Lokasi</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputlokasi" placeholder="Lokasi">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputnotelpon" class="col-sm-2 control-label">No. Telpon/HP</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputnotelpon" placeholder="No. Telpon/HP">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputberkas" class="col-sm-2 control-label">Unggah Berkas</label>
+
+                  <div class="col-sm-10">
+                    <input type="file" class="form-control" id="inputberkas" placeholder="Unggah Berkas">
+                  </div>
+                </div>
+                
               </div>
               <!-- /.box-body -->
               <div class="box-footer">
@@ -90,7 +138,7 @@
               <!-- /.box-footer -->
             </form>
           </div>
-          
+          </div>
          
       </section>
       <!-- /.content -->

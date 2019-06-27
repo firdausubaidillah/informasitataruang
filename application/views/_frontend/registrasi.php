@@ -88,7 +88,7 @@
                 </div>
 
                 <div class="col-xs-4">
-                <button type="submit" class="btn btn-primary btn-block btn-flat">Cancel</button>
+                <button type="button" class="btn btn-primary btn-block btn-flat">Cancel</button>
                 </div>
                 <!-- /.col -->
             </div>
