@@ -24,6 +24,10 @@ class Welcome extends CI_Controller {
 		$this->load->view('_frontend/registrasi');
 	}
 
+	public function pemohon()
+	{
+		$this->load->view('_frontend/pemohon');
+	}
 
 
 }

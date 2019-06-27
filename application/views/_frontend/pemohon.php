@@ -48,58 +48,50 @@
   <!-- Full Width Column -->
   <div class="content-wrapper">
       <section class="content">
-      <div class="register-box">
-  <!-- /.login-logo -->
-        <div class="register-logo">
-            <a href="../../index2.html"><b>Admin</b>LTE</a>
-        </div>
-        <div class="register-box-body">
-            <p class="login-box-msg">Silahkan Daftar</p>
+        <div class="col-md-6">
+          <!-- Horizontal Form -->
+          <div class="box box-info">
+            <div class="box-header with-border">
+              <h3 class="box-title">Horizontal Form</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form class="form-horizontal">
+              <div class="box-body">
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
 
-            <form action="../../index.html" method="post">
-            <div class="form-group has-feedback">
-                <input type="hidden" name="id_regis" class="form-control" placeholder="Id">
-                <span class="glyphicon glyphicon-user form-control-feedback"></span>
-            </div>
-            <div class="form-group has-feedback">
-                <input type="text" class="form-control" placeholder="Full name">
-                <span class="glyphicon glyphicon-user form-control-feedback"></span>
-            </div>
-            <div class="form-group has-feedback">
-                <input type="email" class="form-control" placeholder="Email">
-                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-            </div>
-            <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="Password">
-                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-            </div>
-            <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="Retype password">
-                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-            </div>
-            <div class="form-group has-feedback">
-                <input type="telpon" class="form-control" placeholder="No Telpon">
-                <span class="glyphicon glyphicon-phone form-control-feedback"></span>
-            </div>
-            <div class="row">
-                <!-- /.col -->
-                <div class="col-xs-4">
-                <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
+                  <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                  </div>
                 </div>
+                <div class="form-group">
+                  <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
 
-                <div class="col-xs-4">
-                <button type="submit" class="btn btn-primary btn-block btn-flat">Cancel</button>
+                  <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                  </div>
                 </div>
-                <!-- /.col -->
-            </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox"> Remember me
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.box-body -->
+              <div class="box-footer">
+                <button type="submit" class="btn btn-default">Cancel</button>
+                <button type="submit" class="btn btn-info pull-right">Sign in</button>
+              </div>
+              <!-- /.box-footer -->
             </form>
-
-        </div>
-  <!-- /.form-box -->
-</div>
-  <!-- /.login-box-body -->
-</div>
-        <!-- /.box -->
+          </div>
+          
+         
       </section>
       <!-- /.content -->
     </div>
