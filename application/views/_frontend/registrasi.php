@@ -58,7 +58,7 @@
 
             <form action="../../index.html" method="post">
             <div class="form-group has-feedback">
-                <input type="hidden" name="id_regis" class="form-control" placeholder="Id">
+                <input type="hidden" name="noreg" class="form-control" placeholder="Id">
                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">

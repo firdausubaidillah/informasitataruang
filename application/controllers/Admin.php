@@ -7,6 +7,7 @@ class Admin extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->helper('url');
+		$this->load->model('M_pemohon');
 	}
 	public function index()
 	{
@@ -19,8 +20,8 @@ class Admin extends CI_Controller {
 	{
 		$data['title'] = 'Pemohon';
 		$data['page']  = '_backend/pemohon/index';
+		$data['data'] = $this->M_pemohon->tampil()->result();
 		$this->load->view('_backend/index', $data);
 	}
-
 
 }
