@@ -102,7 +102,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputnama" class="col-sm-2 control-label">Nama</label>
+                  <label for="inputnama" class="col-sm-2 control-label">Nama Lengkap</label>
 
                   <div class="col-sm-10">
                     <input type="Nama" class="form-control" id="inputnama" placeholder="Nama">
