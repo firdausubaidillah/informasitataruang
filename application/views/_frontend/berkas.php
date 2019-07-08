@@ -31,6 +31,7 @@
 <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
 <body class="hold-transition skin-blue layout-top-nav">
 <div class="wrapper">
+
   <header class="main-header">
     <nav class="navbar navbar-static-top">
       <div class="container">
@@ -39,8 +40,8 @@
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
             <i class="fa fa-bars"></i>
           </button>
-      </div>
-      <div class="navbar-custom-menu">
+        </div>
+        <div class="navbar-custom-menu">
           <ul class="nav navbar-nav">
             <!-- User Account Menu -->
             <li class="dropdown user user-menu">
@@ -76,6 +77,7 @@
             </li>
           </ul>
         </div>
+      
       <!-- /.container-fluid -->
     </nav>
   </header>
@@ -84,81 +86,52 @@
   <section class="content">
       <div class="row">
         <!-- left column -->
-        <div class="col-md-12">
-          <!-- general form elements -->
-          <div class="box box-primary">
+        <div class="col-md-8">
+          <!-- Horizontal Form -->
+          <div class="box box-info">
             <div class="box-header with-border">
-              <h3 class="box-title">FORMULIR PERMOHONAN INFORMASI PEMANFAATAN RUANG ( IPR )</h3>
+              <h3 class="box-title">Dokumen Berkas Pemohon</h3>
             </div>
             <!-- /.box-header -->
             <!-- form start -->
             <form class="form-horizontal">
               <div class="box-body">
-
                 <div class="form-group">
-                  <label for="inputnoreg" class="col-sm-2 control-label">No Reg</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputnoreg" placeholder="No Reg">
+                  <label for="inputEmail3" class="col-sm-3 control-label">KTP / KK</label>
+
+                  <div class="col-sm-8">
+                    <input type="file" class="form-control" id="inputEmail3" placeholder="Email">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputnama" class="col-sm-2 control-label">Nama</label>
+                  <label for="inputPassword3" class="col-sm-3 control-label">Bukti Kepemilikan</label>
 
-                  <div class="col-sm-10">
-                    <input type="Nama" class="form-control" id="inputnama" placeholder="Nama">
+                  <div class="col-sm-8">
+                    <input type="file" class="form-control" id="inputPassword3" placeholder="Password">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputjeniskelamin" class="col-sm-2 control-label">Jenis Kelamin</label>
+                  <label for="inputPassword3" class="col-sm-3 control-label">Bukti Lunas PBB</label>
 
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputjeniskelamin" placeholder="Jenis Kelamin">
+                  <div class="col-sm-8">
+                    <input type="file" class="form-control" id="inputPassword3" placeholder="Password">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputalamat" class="col-sm-2 control-label">Alamat</label>
+                  <label for="inputPassword3" class="col-sm-3 control-label">Surat Pertanyaan Penunjukkan Lokasi</label>
 
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputalamat" placeholder="Alamat">
+                  <div class="col-sm-8">
+                    <input type="file" class="form-control" id="inputPassword3" placeholder="Password">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputtanggal" class="col-sm-2 control-label">Tanggal</label>
+                  <label for="inputPassword3" class="col-sm-3 control-label">Surat Kuasa</label>
 
-                  <div class="col-sm-10">
-                    <input type="date" class="form-control" id="inputtanggal" placeholder="Tanggal">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputpekerjaan" class="col-sm-2 control-label">Pekerjaan</label>
-
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputpekerjaan" placeholder="Pekerjaan">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputpemanfaatan" class="col-sm-2 control-label">Pemanfaatan</label>
-
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputpemanfaatan" placeholder="Pemanfaatan">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputlokasi" class="col-sm-2 control-label">Lokasi</label>
-
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputlokasi" placeholder="Lokasi">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputnotelpon" class="col-sm-2 control-label">No. Telpon/HP</label>
-
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputnotelpon" placeholder="No. Telpon/HP">
+                  <div class="col-sm-8">
+                    <input type="file" class="form-control" id="inputPassword3" placeholder="Password">
                   </div>
                 </div>
               </div>
-              <!-- /.box-body -->
               <!-- /.box-body -->
               <div class="box-footer">
                 <button type="submit" class="btn btn-default">Cancel</button>
@@ -168,7 +141,11 @@
             </form>
           </div>
           <!-- /.box -->
+          <!-- general form elements disabled -->
+    
+          <!-- /.box -->
         </div>
+        <!--/.col (right) -->
       </div>
       <!-- /.row -->
     </section>
