@@ -22,6 +22,15 @@
 
                     <div class="form-group">
                         <label for="" class="col-sm-2 control-label">
+                            No. Reg
+                        </label>
+                        <div class="col-sm-8">
+                            <input name="nama" placeholder="" class="form-control" type="text" value="<?= $kodeunik; ?>" readonly>
+                        </div>
+                        <span class="help-block"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-sm-2 control-label">
                             Nama Pemohon
                         </label>
                         <div class="col-sm-8">
@@ -34,7 +43,11 @@
                             Jenis Kelamin
                         </label>
                         <div class="col-sm-8">
-                            <input name="jk" placeholder="Masukan jenis Kelamin" class="form-control" type="text">
+                            <select class="form-control" name="jk">
+                                <option value="">--- Pilih jenis Kelamin ---</option> 
+                                <option>Laki-laki</option>
+                                <option>Perempuan</option>
+                            </select>
                         </div>
                         <span class="help-block"></span>
                     </div>
@@ -52,7 +65,7 @@
                             Tanggal
                         </label>
                         <div class="col-sm-8">
-                            <input name="tgl" placeholder="Masukan tanggal" class="form-control" type="text">
+                            <input name="tgl" placeholder="Masukan tanggal" class="form-control" type="date">
                         </div>
                         <span class="help-block"></span>
                     </div>
@@ -70,7 +83,11 @@
                             Pemanfaatan
                         </label>
                         <div class="col-sm-8">
-                            <input name="pemanfaatan" placeholder="Masukan pemanfaatan" class="form-control" type="text">
+                            <select class="form-control" name="jk">
+                                <option value="">--- Pilih Pemanfaatan ---</option> 
+                                <option>Permukiman</option>
+                                <option>Kantor</option>
+                            </select>
                         </div>
                         <span class="help-block"></span>
                     </div>
