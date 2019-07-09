@@ -92,69 +92,62 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form class="form-horizontal">
+            <form method="post" action="<?=base_url("admin/insert_jabatan"); ?>" enctype="multipart/form-data" class="form-horizontal">
               <div class="box-body">
-
+              <!--
                 <div class="form-group">
                   <label for="inputnoreg" class="col-sm-2 control-label">No Reg</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" id="inputnoreg" placeholder="No Reg">
                   </div>
                 </div>
+              -->
                 <div class="form-group">
                   <label for="inputnama" class="col-sm-2 control-label">Nama Lengkap</label>
-
                   <div class="col-sm-10">
-                    <input type="Nama" class="form-control" id="inputnama" placeholder="Nama">
+                    <input type="Nama" name="nama" class="form-control" id="inputnama" placeholder="Nama">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputjeniskelamin" class="col-sm-2 control-label">Jenis Kelamin</label>
-
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputjeniskelamin" placeholder="Jenis Kelamin">
+                    <input type="text" name="jk" class="form-control" id="inputjeniskelamin" placeholder="Jenis Kelamin">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputalamat" class="col-sm-2 control-label">Alamat</label>
-
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputalamat" placeholder="Alamat">
+                    <input type="text" name="alamat" class="form-control" id="inputalamat" placeholder="Alamat">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputtanggal" class="col-sm-2 control-label">Tanggal</label>
-
                   <div class="col-sm-10">
-                    <input type="date" class="form-control" id="inputtanggal" placeholder="Tanggal">
+                    <input type="date" name="tgl" class="form-control" id="inputtanggal" placeholder="Tanggal">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputpekerjaan" class="col-sm-2 control-label">Pekerjaan</label>
-
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputpekerjaan" placeholder="Pekerjaan">
+                    <input type="text" name="pekerjaan" class="form-control" id="inputpekerjaan" placeholder="Pekerjaan">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputpemanfaatan" class="col-sm-2 control-label">Pemanfaatan</label>
-
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputpemanfaatan" placeholder="Pemanfaatan">
+                    <input type="text" name="pemanfaatan" class="form-control" id="inputpemanfaatan" placeholder="Pemanfaatan">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputlokasi" class="col-sm-2 control-label">Lokasi</label>
-
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputlokasi" placeholder="Lokasi">
+                    <input type="text" name="lokasi" class="form-control" id="inputlokasi" placeholder="Lokasi">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputnotelpon" class="col-sm-2 control-label">No. Telpon/HP</label>
-
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputnotelpon" placeholder="No. Telpon/HP">
+                    <input type="text" name="notelp" class="form-control" id="inputnotelpon" placeholder="No. Telpon/HP">
                   </div>
                 </div>
               </div>

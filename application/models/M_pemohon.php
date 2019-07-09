@@ -24,4 +24,28 @@ class M_pemohon extends CI_Model {
         return $query;
     }
 
+    public function tampil_ubah($id)
+    {
+        $query = $this->db->query("SELECT * FROM tbl_pemohon WHERE noreg='". $id ."'");
+		return $query;
+    }
+
+    public function ubah($id, $object)
+	{
+		$this->db->where($this->primary, $id);
+		$query = $this->db->update($this->table, $object);
+		return $query;
+	}
+
+	public function hapus($id)
+	{
+		$query = $this->db->query("DELETE FROM tbl_pemohon WHERE noreg='" . $id ."'");
+		return $query;
+	}
+
+	public function filter($id) {
+		$query = $this->db->query("SELECT * FROM tbl_pemohon WHERE noreg='". $id ."'")->row(0);
+		return $query;
+	}
+
 }

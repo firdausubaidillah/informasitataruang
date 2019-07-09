@@ -25,26 +25,38 @@
                 <table id="example1" class="table table-bordered table-striped">
                     <thead>
                         <tr>
+                            <th>No</th>
                             <th>No. Reg</th>
                             <th>Nama Pemohon</th>
                             <th>Alamat</th>
                             <th>Tgl Pengajuan</th>
-                            <th>Tgl Pengajuan</th>
+                            <th>Pekerjaan</th>
+                            <th>Pemanfaatan</th>
+                            <th>Lokasi</th>
                             <th width="10%">OPTION</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
+                            $i=1;
                             foreach($data as $r) {
                         ?>
                             <tr>
+                                <td><?= $i ?>
                                 <td><?= $r->noreg; ?></td>
+                                <td><?= $r->nama; ?></td>
+                                <td><?= $r->alamat; ?></td>
+                                <td><?= $r->tgl; ?></td>
+                                <td><?= $r->pekerjaan; ?></td>
+                                <td><?= $r->pemanfaatan; ?></td>
+                                <td><?= $r->lokasi; ?></td>
                                 <td>
-                                    <a href="<?= base_url('admin/tampil_ubah_jabatan/') . $r->noreg; ?>" class="btn btn-success"><i class="glyphicon glyphicon-pencil"></i> Ubah</a>
-                                    <a href="<?= base_url('admin/delete_jabatan/') . $r->noreg; ?>" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i> Hapus</a>
+                                    <a href="<?= base_url('admin/tampilubah_pemohon/') . $r->noreg; ?>" class="btn btn-success"><i class="glyphicon glyphicon-pencil"></i></a>
+                                    <a href="<?= base_url('admin/hapus_pemohon/') . $r->noreg; ?>" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
                                 </td>
-                            </tr>
+                            </tr> 
                         <?php
+                            $i++;
                             }
                         ?>
                     </tbody>
