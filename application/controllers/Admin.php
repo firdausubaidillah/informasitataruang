@@ -23,12 +23,14 @@ class Admin extends CI_Controller {
 		$data['page']  = '_backend/pemohon/index';
 		$data['data'] = $this->M_pemohon->tampil()->result();
 		$this->load->view('_backend/index', $data);
+		
 	}
 
 	public function tambah_pemohon()
 	{
 		$data['title'] = 'Pemohon';
 		$data['page'] = '_backend/pemohon/tambah';
+		$data['kodeunik'] = $this->M_pemohon->buat_kode();
 		$this->load->view('_backend/index', $data);
 	}
 
