@@ -54,6 +54,7 @@
       <section class="content">
       <div class="login-box">
   <div class="login-logo">
+    <img src="../assets/frontend/assets/img/logoo.PNG" width="120" height="144"></br>
     <a href="<?= base_url("welcome/login");?>"><b>ITR</b> Kota Pasuruan</a>
   </div>
   <!-- /.login-logo -->
@@ -62,18 +63,24 @@
 
     <form action="<?= base_url("Welcome/pemohon"); ?>" method="post">
       <div class="form-group has-feedback">
-        <input type="email" class="form-control" placeholder="Email">
-        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        <input type="text" class="form-control" placeholder="No KTP">
+        <span class="glyphicon glyphicon- form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password">
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        <input type="text" class="form-control" placeholder="No KK">
+        <span class="glyphicon glyphicon- form-control-feedback"></span>
       </div>
       <div class="row">
         <!-- /.col -->
-        <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Masuk</button>
-        </div>
+        <div class="col-xs-12">
+          <button type="submit" class="btn btn-primary btn-block btn-flat">Login</button>
+        </div></br></br>
+        <div class="col-xs-12">
+          <button type="button" class="btn btn-primary btn-block btn-flat"<a href="<?= base_url("welcome/registrasi");?>">Registrasi</a></button>
+        </div></br></br>
+        <div class="col-xs-12">
+        <p>Tidak Mempunyau Akun? Silahkan Registrasi Terlebih Dahulu</p>
+        </div>  
         <!-- /.col -->
       </div>
     </form>
