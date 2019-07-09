@@ -25,8 +25,14 @@ class Welcome extends CI_Controller {
 	}
 
 	public function pemohon()
-	{
-		$this->load->view('_frontend/pemohon');
+	{	
+		if (isset($_POST['submit'])) {
+			$input = $_POST['submit'];
+			$this->load->view('_frontend/pemohon');
+		}
+		else {
+			$this->load->view('_frontend/registrasi');
+		}
 	}
 
 	public function berkas()

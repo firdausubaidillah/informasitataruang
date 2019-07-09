@@ -73,11 +73,11 @@
       <div class="row">
         <!-- /.col -->
         <div class="col-xs-12">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Login</button>
-        </div></br></br>
+          <button type="submit" name="submit" class="btn btn-primary btn-block btn-flat">Login</button>
+        </div><br><br>
         <div class="col-xs-12">
-          <button type="button" class="btn btn-primary btn-block btn-flat"<a href="<?= base_url("welcome/registrasi");?>">Registrasi</a></button>
-        </div></br></br>
+          <button type="submit" name="register" class="btn btn-primary btn-block btn-flat">Registrasi</a></button>
+        </div><br><br>
         <div class="col-xs-12">
         <p>Tidak Mempunyau Akun? Silahkan Registrasi Terlebih Dahulu</p>
         </div>  
