@@ -127,8 +127,8 @@
                     <div class="container">
 
                         <div class="welcome-speech">
-                            <h1>SISTEM INFORMASI TATA RUANG</h1>
-                            <p>DINAS PEKERJAAN UMUM DAN PENATAAN RUANG KOTA PASURUAN</p>
+                            <h1><b>SISTEM INFORMASI TATA RUANG</b></h1>
+                            <p><b>DINAS PEKERJAAN UMUM DAN PENATAAN RUANG KOTA PASURUAN</b></p>
                             <a href="<?= base_url("welcome/login"); ?>" class="btn btn-primary">
                                 Login
                             </a>

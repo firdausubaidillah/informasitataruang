@@ -92,7 +92,7 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form method="post" action="<?=base_url("admin/insert_jabatan"); ?>" enctype="multipart/form-data" class="form-horizontal">
+            <form method="post" action="<?=base_url("admin/tambahdata_pemohon"); ?>" enctype="multipart/form-data" class="form-horizontal">
               <div class="box-body">
               <!--
                 <div class="form-group">
@@ -102,28 +102,41 @@
                   </div>
                 </div>
               -->
+              <div class="form-group">
+                  <label for="inputnama" class="col-sm-2 control-label">No. Reg</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="noreg" class="form-control" id="noreg" placeholder="">
+                  </div>
+                </div>
                 <div class="form-group">
                   <label for="inputnama" class="col-sm-2 control-label">Nama Lengkap</label>
                   <div class="col-sm-10">
-                    <input type="Nama" name="nama" class="form-control" id="inputnama" placeholder="Nama">
+                    <input type="text" name="nama" class="form-control" id="inputnama" placeholder="Nama">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputjeniskelamin" class="col-sm-2 control-label">Jenis Kelamin</label>
+                        <label for="" class="col-sm-2 control-label">
+                            Jenis Kelamin
+                        </label>
+                        <div class="col-sm-10">
+                            <select class="form-control" name="jk">
+                                <option value="">--- Pilih jenis Kelamin ---</option> 
+                                <option>Laki-laki</option>
+                                <option>Perempuan</option>
+                            </select>
+                        </div>
+                        <span class="help-block"></span>
+                    </div>
+                <div class="form-group">
+                  <label for="inputalamat" class="col-sm-2 control-label">Alamat Lengkap</label>
                   <div class="col-sm-10">
-                    <input type="text" name="jk" class="form-control" id="inputjeniskelamin" placeholder="Jenis Kelamin">
+                    <input type="text" name="alamat" class="form-control" id="inputalamat" placeholder="Alamat Lengkap">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputalamat" class="col-sm-2 control-label">Alamat</label>
+                  <label for="inputtanggal" class="col-sm-2 control-label">Tanggal Pengajuan</label>
                   <div class="col-sm-10">
-                    <input type="text" name="alamat" class="form-control" id="inputalamat" placeholder="Alamat">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputtanggal" class="col-sm-2 control-label">Tanggal</label>
-                  <div class="col-sm-10">
-                    <input type="date" name="tgl" class="form-control" id="inputtanggal" placeholder="Tanggal">
+                    <input type="date" name="tgl" class="form-control" id="inputtanggal" placeholder="Tanggal Pengajuan">
                   </div>
                 </div>
                 <div class="form-group">
@@ -139,9 +152,9 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputlokasi" class="col-sm-2 control-label">Lokasi</label>
+                  <label for="inputlokasi" class="col-sm-2 control-label">Lokasi yang diajukan</label>
                   <div class="col-sm-10">
-                    <input type="text" name="lokasi" class="form-control" id="inputlokasi" placeholder="Lokasi">
+                    <input type="text" name="lokasi" class="form-control" id="inputlokasi" placeholder="Lokasi yang diajukan">
                   </div>
                 </div>
                 <div class="form-group">
@@ -155,7 +168,7 @@
               <!-- /.box-body -->
               <div class="box-footer">
                 <button type="submit" class="btn btn-default">Cancel</button>
-                <button type="submit" class="btn btn-info pull-right">Sign in</button>
+                <button type="submit" class="btn btn-info pull-right">Simpan</button>
               </div>
               <!-- /.box-footer -->
             </form>
