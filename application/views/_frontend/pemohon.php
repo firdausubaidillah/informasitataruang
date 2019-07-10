@@ -103,7 +103,7 @@
                 </div>
               -->
               <div class="form-group">
-                  <label for="inputnama" class="col-sm-2 control-label">No. Reg</label>
+                  <label for="inputnama" class="col-sm-2 control-label" style:text-align="left";>No. Reg</label>
                   <div class="col-sm-10">
                     <input type="text" name="noreg" class="form-control" id="noreg" placeholder="">
                   </div>
@@ -154,7 +154,7 @@
                 <div class="form-group">
                   <label for="inputlokasi" class="col-sm-2 control-label">Lokasi yang diajukan</label>
                   <div class="col-sm-10">
-                    <input type="text" name="lokasi" class="form-control" id="inputlokasi" placeholder="Lokasi yang diajukan">
+                    <input type="text" name="lokasi" class="form-control" id="inputlokasi" placeholder="Alamat Lokasi yang diajukan">
                   </div>
                 </div>
                 <div class="form-group">

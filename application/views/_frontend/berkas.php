@@ -86,7 +86,7 @@
   <section class="content">
       <div class="row">
         <!-- left column -->
-        <div class="col-md-8">
+        <div class="col-md-8" style="float: left;">
           <!-- Horizontal Form -->
           <div class="box box-info">
             <div class="box-header with-border">
@@ -97,37 +97,44 @@
             <form class="form-horizontal">
               <div class="box-body">
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-3 control-label">KTP / KK</label>
+                  <label for="inputEmail3" class="col-sm-3 control-label">KTP</label>
 
-                  <div class="col-sm-8">
+                  <div class="col-sm-6">
                     <input type="file" class="form-control" id="inputEmail3" placeholder="Email">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-3 control-label">Bukti Kepemilikan</label>
+                  <label for="inputEmail3" class="col-sm-3 control-label">KK</label>
 
-                  <div class="col-sm-8">
+                  <div class="col-sm-6">
+                    <input type="file" class="form-control" id="inputEmail3" placeholder="Email">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword3" class="col-sm-3 control-label">Bukti Kepemilikan Lahan</label>
+
+                  <div class="col-sm-6">
                     <input type="file" class="form-control" id="inputPassword3" placeholder="Password">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputPassword3" class="col-sm-3 control-label">Bukti Lunas PBB</label>
 
-                  <div class="col-sm-8">
+                  <div class="col-sm-6">
                     <input type="file" class="form-control" id="inputPassword3" placeholder="Password">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-3 control-label">Surat Pertanyaan Penunjukkan Lokasi</label>
+                  <label for="inputPassword3" class="col-sm-3 control-label">Surat Pernyataan Penunjukkan Lokasi</label>
 
-                  <div class="col-sm-8">
+                  <div class="col-sm-6">
                     <input type="file" class="form-control" id="inputPassword3" placeholder="Password">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputPassword3" class="col-sm-3 control-label">Surat Kuasa</label>
 
-                  <div class="col-sm-8">
+                  <div class="col-sm-6">
                     <input type="file" class="form-control" id="inputPassword3" placeholder="Password">
                   </div>
                 </div>
