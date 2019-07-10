@@ -47,35 +47,42 @@
   </header>
   <!-- Full Width Column -->
   <div class="content-wrapper">
+  
       <section class="content">
       <div class="register-box">
+      
   <!-- /.login-logo -->
         <div class="register-logo">
-            <a href="<?= base_url("welcome/register");?>"><b>ITR</b> Kota Pasuruan</a>
+        <img src="../assets/frontend/assets/img/logoo.PNG" width="120" height="144"></br>
+            <a href="<?= base_url("welcome/register");?>"><p><h4><b>Informasi Tata Ruang</b></h4></p><p><h4><b> Dinas Pekerjaan Umum dan Penataan Ruang Kota Pasuruan</b></h4></p></a>
         </div>
         <div class="register-box-body">
             <p class="login-box-msg">Silahkan Daftar</p>
 
             <form action="../../index.html" method="post">
             <div class="form-group has-feedback">
-                <input type="hidden" name="noreg" class="form-control" placeholder="Id">
-                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                <input type="hidden" id="noreg" name="noreg" class="form-control" placeholder="No Reg">
+                <span class="glyphicon glyphicon- form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="text" name="nama" class="form-control" placeholder="Nama Lengkap">
-                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                <input type="text" id="nama" name="nama" class="form-control" placeholder="Nama Lengkap">
+                <span class="glyphicon glyphicon- form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="email" name="email" class="form-control" placeholder="Email">
-                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                <input type="text" id="alamat" name="alamat" class="form-control" placeholder="Alamat">
+                <span class="glyphicon glyphicon- form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="password" name="password" class="form-control" placeholder="Password">
-                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                <input type="text" id="noktp" name="noktp" class="form-control" placeholder="No KTP">
+                <span class="glyphicon glyphicon-card form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="telpon" name="notelpon" class="form-control" placeholder="No Telpon">
-                <span class="glyphicon glyphicon-phone form-control-feedback"></span>
+                <input type="text" id="nokk" name="nokk" class="form-control" placeholder="No KK">
+                <span class="glyphicon glyphicon- form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+                <input type="text" id="notelpon" name="notelpon" class="form-control" placeholder="No Telpon">
+                <span class="glyphicon glyphicon- form-control-feedback"></span>
             </div>
             <div class="row">
                 <!-- /.col -->
