@@ -14,6 +14,17 @@ class Welcome extends CI_Controller {
 		$this->load->view('_frontend/index');
 	}
 
+	public function validasi_index()
+	{
+		if (isset($_POST['submit'])) {
+			$input = $_POST['submit'];
+			redirect('welcome/pemohon');
+		}
+		else {
+			redirect('welcome/registrasi');
+		}
+	}
+
 	public function login()
 	{
 		$this->load->view('_frontend/login');
@@ -26,13 +37,7 @@ class Welcome extends CI_Controller {
 
 	public function pemohon()
 	{	
-		if (isset($_POST['submit'])) {
-			$input = $_POST['submit'];
-			$this->load->view('_frontend/pemohon');
-		}
-		else {
-			$this->load->view('_frontend/registrasi');
-		}
+		$this->load->view('_frontend/pemohon');
 	}
 
 	public function berkas()

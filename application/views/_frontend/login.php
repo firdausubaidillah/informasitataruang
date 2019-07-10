@@ -61,7 +61,7 @@
   <div class="login-box-body">
     <p class="login-box-msg">Silahkan Masuk Menggunakan :</p>
 
-    <form action="<?= base_url("Welcome/pemohon"); ?>" method="post">
+    <form action="<?= base_url("welcome/validasi_index"); ?>" method="post">
       <div class="form-group has-feedback">
         <input type="text" class="form-control" placeholder="No KTP">
         <span class="glyphicon glyphicon- form-control-feedback"></span>

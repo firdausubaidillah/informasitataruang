@@ -26,7 +26,7 @@
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu" data-widget="tree">
       <li class="header">MAIN NAVIGATION</li>
-      <li class="<?php if($title=='Dashboard') { echo "active"; } ?>"><a href="<?= base_url('welcome/index'); ?>">
+      <li class="<?php if($title=='Dashboard') { echo "active"; } ?>"><a href="<?= base_url('admin/index'); ?>">
 
           <i class="fa fa-dashboard"></i> <span>Dashboard</span>
           </a>

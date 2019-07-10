@@ -56,7 +56,7 @@
         <div class="register-box-body">
             <p class="login-box-msg">Silahkan Daftar</p>
 
-            <form action="../../index.html" method="post">
+            <form action="<?= base_url("welcome/login");?>" method="post">
             <div class="form-group has-feedback">
                 <input type="hidden" name="noreg" class="form-control" placeholder="Id">
                 <span class="glyphicon glyphicon-user form-control-feedback"></span>

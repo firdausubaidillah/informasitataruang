@@ -8,6 +8,7 @@ class Admin extends CI_Controller {
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->model('M_pemohon');
+		$this->load->model('M_berkas');
 	}
 
 	public function index()
@@ -17,6 +18,7 @@ class Admin extends CI_Controller {
 		$this->load->view('_backend/index', $data);
 	}
 
+	// Pemohon
 	public function pemohon()
 	{
 		$data['title'] = 'Pemohon';
@@ -88,6 +90,16 @@ class Admin extends CI_Controller {
 	{
 		$this->M_pemohon->hapus($id);
 		redirect('admin/pemohon');
+	}
+
+	// Berkas
+	public function berkas()
+	{
+		$data['title'] = 'Berkas';
+		$data['page']  = '_backend/berkas/index';
+		$data['data'] = $this->M_berkas->tampil()->result();
+		$this->load->view('_backend/index', $data);
+		
 	}
 
 }
