@@ -36,7 +36,7 @@
     <nav class="navbar navbar-static-top">
       <div class="container">
         <div class="navbar-header">
-          <a href="<?= base_url("welcome/index");?>" class="navbar-brand">Sistem Informasi Tata Ruang Kota Pasuruan</a>
+          <a href="<?= base_url("pemohon/index");?>" class="navbar-brand">Sistem Informasi Tata Ruang Kota Pasuruan</a>
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
             <i class="fa fa-bars"></i>
           </button>
@@ -47,45 +47,40 @@
   </header>
   <!-- Full Width Column -->
   <div class="content-wrapper">
-  
+    <div class="container">
+      <!-- Content Header (Page header) -->
+
+      <!-- Main content -->
       <section class="content">
-      <div class="register-box">
-      
+      <div class="login-box">
+  <div class="login-logo">
+    <img src="<?= base_url("assets/frontend/"); ?>assets/img/logoo.PNG" width="120" height="144"><br>
+    <a href="<?= base_url("pemohon/login");?>"><p><h4><b>Informasi Tata Ruang</b></h4></p><p><h4><b> Dinas Pekerjaan Umum dan Penataan Ruang Kota Pasuruan</b></h4></p></a>
+  </div>
   <!-- /.login-logo -->
-        <div class="register-logo">
-        <img src="<?= base_url("assets/frontend/"); ?>assets/img/logoo.PNG" width="120" height="144"><br>
-            <a href="<?= base_url("pemohon/register");?>"><p><h4><b>Informasi Tata Ruang</b></h4></p><p><h4><b> Dinas Pekerjaan Umum dan Penataan Ruang Kota Pasuruan</b></h4></p></a>
-        </div>
-        <div class="register-box-body">
-            <p class="login-box-msg">Silahkan Daftar</p>
+  <div class="login-box-body">
+    <p class="login-box-msg">Silahkan Masuk Menggunakan :</p>
 
-            <form method="post" action="<?= base_url("pemohon/daftar"); ?>" enctype="multipart/form-data">
-            <div class="form-group has-feedback">
-                <input type="text" name="nama" class="form-control" placeholder="Nama Lengkap" required>
-                <span class="glyphicon glyphicon- form-control-feedback"></span>
-            </div>
-            <div class="form-group has-feedback">
-                <input type="text" name="ktp" class="form-control" placeholder="No.KTP" required>
-                <span class="glyphicon glyphicon-card form-control-feedback"></span>
-            </div>
-            <div class="form-group has-feedback">
-                <input type="text" name="notelp" class="form-control" placeholder="No.Telpon/HP" required>
-                <span class="glyphicon glyphicon- form-control-feedback"></span>
-            </div>
-            <div class="row">
-                <!-- /.col -->
-                <div class="col-xs-12">
-                  <button type="submit" name="submit" class="btn btn-primary btn-block btn-flat">Registrasi</button>
-                </div>
-                <!-- /.col -->
-            </div>
-            </form>
-
-        </div>
-    <!-- /.form-box -->
+    <form method="post" action="<?= base_url("admin/dashboard"); ?>" enctype="multipart/form-data">
+      <div class="form-group has-feedback">
+        <input type="email" class="form-control" placeholder="Email">
+        <span class="glyphicon glyphicon- form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" class="form-control" placeholder="Password">
+        <span class="glyphicon glyphicon- form-control-feedback"></span>
+      </div>
+      <div class="row">
+        <!-- /.col -->
+        <div class="col-xs-12">
+          <button type="submit" name="submit" class="btn btn-primary btn-block btn-flat">Login</button>
+        </div><br><br>
+        <!-- /.col -->
+      </div>
+    </form>
   </div>
-    <!-- /.login-box-body -->
-  </div>
+  <!-- /.login-box-body -->
+</div>
         <!-- /.box -->
       </section>
       <!-- /.content -->

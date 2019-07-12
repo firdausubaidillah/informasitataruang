@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Top Navigation</title>
+  <title>Informasi Tata Ruang</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -92,20 +92,12 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form method="post" action="<?=base_url("admin/tambahdata_pemohon"); ?>" enctype="multipart/form-data" class="form-horizontal">
+            <form method="post" action="<?= base_url("pemohon/tambahdatapemohon"); ?>" enctype="multipart/form-data" class="form-horizontal">
               <div class="box-body">
-              <!--
-                <div class="form-group">
-                  <label for="inputnoreg" class="col-sm-2 control-label">No Reg</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputnoreg" placeholder="No Reg">
-                  </div>
-                </div>
-              -->
               <div class="form-group">
                   <label for="inputnama" class="col-sm-2 control-label">No. Reg</label>
                   <div class="col-sm-10">
-                    <input type="text" name="noreg" class="form-control" id="noreg" placeholder="">
+                    <input type="text" name="noreg" class="form-control" id="noreg" value="<?= $kodeunik; ?>" readonly>
                   </div>
                 </div>
                 <div class="form-group">
@@ -167,8 +159,8 @@
               <!-- /.box-body -->
               <!-- /.box-body -->
               <div class="box-footer">
-                <button type="submit" class="btn btn-default">Cancel</button>
-                <button type="submit" class="btn btn-info pull-right">Simpan</button>
+                <button type="submit" name="batal" class="btn btn-default">Batal</button>
+                <button type="submit" name="submit"class="btn btn-info pull-right">Simpan</button>
               </div>
               <!-- /.box-footer -->
             </form>

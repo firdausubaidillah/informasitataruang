@@ -3,8 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_berkas extends CI_Model {
 
-    var $table = 'tbl_pemohon';
-    var $primary = 'noreg';
+    var $table = 'tbl_berkas';
+    var $primary = 'id';
 
     public function __construct()
     {
@@ -14,7 +14,7 @@ class M_berkas extends CI_Model {
 
     public function tampil()
     {
-        $query = $this->db->query("SELECT * FROM tbl_pemohon");
+        $query = $this->db->query("SELECT * FROM tbl_berkas");
         return $query;
     }
 
@@ -26,7 +26,7 @@ class M_berkas extends CI_Model {
 
     public function tampil_ubah($id)
     {
-        $query = $this->db->query("SELECT * FROM tbl_pemohon WHERE noreg='". $id ."'");
+        $query = $this->db->query("SELECT * FROM tbl_berkas WHERE id='". $id ."'");
 		return $query;
     }
 
@@ -39,12 +39,12 @@ class M_berkas extends CI_Model {
 
 	public function hapus($id)
 	{
-		$query = $this->db->query("DELETE FROM tbl_pemohon WHERE noreg='" . $id ."'");
+		$query = $this->db->query("DELETE FROM tbl_berkas WHERE id='" . $id ."'");
 		return $query;
 	}
 
 	public function filter($id) {
-		$query = $this->db->query("SELECT * FROM tbl_pemohon WHERE noreg='". $id ."'")->row(0);
+		$query = $this->db->query("SELECT * FROM tbl_berkas WHERE id='". $id ."'")->row(0);
 		return $query;
 	}
 

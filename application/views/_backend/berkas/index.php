@@ -17,7 +17,7 @@
     <div class="row">
         <div class="col-xs-12">
         <div class="box-header with-border">
-                <h3 class="box-title"><a href="<?= base_url('admin/tambah_pemohon'); ?>" class="btn btn-primary pull-right">Tambah <?= $title ?></a></h3>
+                <h3 class="box-title"><a href="<?= base_url('admin/tambah_berkas'); ?>" class="btn btn-primary pull-right">Tambah <?= $title ?></a></h3>
         </div>
         <div class="box">
             <!-- /.box-header -->
@@ -28,11 +28,8 @@
                             <th>No</th>
                             <th>No. Reg</th>
                             <th>Nama Pemohon</th>
-                            <th>Alamat</th>
-                            <th>Tgl Pengajuan</th>
-                            <th>Pekerjaan</th>
-                            <th>Pemanfaatan</th>
-                            <th>Lokasi</th>
+                            <th>KTP</th>
+                            <th>KK</th>
                             <th width="10%">OPTION</th>
                         </tr>
                     </thead>
@@ -45,11 +42,8 @@
                                 <td><?= $i ?>
                                 <td><?= $r->noreg; ?></td>
                                 <td><?= $r->nama; ?></td>
-                                <td><?= $r->alamat; ?></td>
-                                <td><?= $r->tgl; ?></td>
-                                <td><?= $r->pekerjaan; ?></td>
-                                <td><?= $r->pemanfaatan; ?></td>
-                                <td><?= $r->lokasi; ?></td>
+                                <td><?= $r->ktp; ?></td>
+                                <td><?= $r->kk; ?></td>
                                 <td>
                                     <a href="<?= base_url('admin/tampilubah_pemohon/') . $r->noreg; ?>" class="btn btn-success"><i class="glyphicon glyphicon-pencil"></i></a>
                                     <a href="<?= base_url('admin/hapus_pemohon/') . $r->noreg; ?>" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></a>

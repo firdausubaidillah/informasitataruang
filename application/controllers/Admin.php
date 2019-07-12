@@ -13,10 +13,17 @@ class Admin extends CI_Controller {
 
 	public function index()
 	{
+		$this->load->view('_backend/login');
+	}
+
+	public function dashboard()
+	{
 		$data['title'] = 'Dashboard';
 		$data['page']  = '_backend/dashboard/index';
 		$this->load->view('_backend/index', $data);
 	}
+
+	
 
 	// Pemohon
 	public function pemohon()
@@ -39,7 +46,8 @@ class Admin extends CI_Controller {
 	function tambahdata_pemohon()
 	{
 		if (isset($_POST['submit'])) {
-			$object = array('nama'			=> $this->input->post('nama'),
+			$object = array('noreg'			=> $this->input->post('noreg'),
+							'nama'			=> $this->input->post('nama'),
 							'jk'			=> $this->input->post('jk'),
 							'alamat'		=> $this->input->post('alamat'),
 							'tgl'			=> $this->input->post('tgl'),
@@ -100,6 +108,13 @@ class Admin extends CI_Controller {
 		$data['data'] = $this->M_berkas->tampil()->result();
 		$this->load->view('_backend/index', $data);
 		
+	}
+
+	public function tambah_berkas()
+	{
+		$data['title'] = 'Analisa Data';
+		$data['page'] = '_backend/berkas/tambah';
+		$this->load->view('_backend/index', $data);
 	}
 
 }

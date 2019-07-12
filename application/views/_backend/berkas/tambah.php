@@ -18,14 +18,14 @@
         <div class="box">
             <!-- /.box-header -->
             <div class="box-body">
-                <form method="post" action="<?=base_url("admin/tambahdata_pemohon"); ?>"enctype="multipart/form-data" class="form-horizontal">
+                <form method="post" action="<?=base_url("admin/tambahdata_pemohon"); ?>" enctype="multipart/form-data" class="form-horizontal">
 
                     <div class="form-group">
                         <label for="" class="col-sm-2 control-label">
                             No. Reg
                         </label>
                         <div class="col-sm-8">
-                            <input name="noreg" placeholder="" class="form-control" type="text" value="<?= $kodeunik; ?>" readonly>
+                            <input name="noreg" placeholder="" class="form-control" type="text">
                         </div>
                         <span class="help-block"></span>
                     </div>

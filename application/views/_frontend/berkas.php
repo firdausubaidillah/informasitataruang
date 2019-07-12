@@ -94,38 +94,60 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form class="form-horizontal">
+            <form method="post" action="<?= base_url("pemohon/tambahdataberkas"); ?>" enctype="multipart/form-data" class="form-horizontal">
               <div class="box-body">
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-3 control-label">KTP / KK</label>
+                  <label for="" name="noreg" class="col-sm-3 control-label">No. Reg</label>
+
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputEmail3" readonly>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="" name="nama" class="col-sm-3 control-label">Nama Pemohon</label>
+
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputEmail3" readonly>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="inputEmail3" name="ktp" class="col-sm-3 control-label">KTP</label>
 
                   <div class="col-sm-8">
                     <input type="file" class="form-control" id="inputEmail3" placeholder="Email">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-3 control-label">Bukti Kepemilikan</label>
+                  <label for="inputEmail3" name="kk" class="col-sm-3 control-label">KK</label>
+
+                  <div class="col-sm-8">
+                    <input type="file" class="form-control" id="inputEmail3" placeholder="Email">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword3" name="bkl" class="col-sm-3 control-label">Bukti Kepemilikan</label>
 
                   <div class="col-sm-8">
                     <input type="file" class="form-control" id="inputPassword3" placeholder="Password">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-3 control-label">Bukti Lunas PBB</label>
+                  <label for="inputPassword3" name="pbb" class="col-sm-3 control-label">Bukti Lunas PBB</label>
 
                   <div class="col-sm-8">
                     <input type="file" class="form-control" id="inputPassword3" placeholder="Password">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-3 control-label">Surat Pertanyaan Penunjukkan Lokasi</label>
+                  <label for="inputPassword3" name="sppl" class="col-sm-3 control-label">Surat Pertanyaan Penunjukkan Lokasi</label>
 
                   <div class="col-sm-8">
                     <input type="file" class="form-control" id="inputPassword3" placeholder="Password">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-3 control-label">Surat Kuasa</label>
+                  <label for="inputPassword3" name="sk" class="col-sm-3 control-label">Surat Kuasa</label>
 
                   <div class="col-sm-8">
                     <input type="file" class="form-control" id="inputPassword3" placeholder="Password">
@@ -134,8 +156,8 @@
               </div>
               <!-- /.box-body -->
               <div class="box-footer">
-                <button type="submit" class="btn btn-default">Cancel</button>
-                <button type="submit" class="btn btn-info pull-right">Sign in</button>
+                <button type="submit" class="btn btn-default">Batal</button>
+                <button type="submit" class="btn btn-info pull-right">Simpan</button>
               </div>
               <!-- /.box-footer -->
             </form>
