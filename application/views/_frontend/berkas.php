@@ -97,79 +97,45 @@
             <form method="post" action="<?= base_url("pemohon/tambahdataberkas"); ?>" enctype="multipart/form-data" class="form-horizontal">
               <div class="box-body">
                 <div class="form-group">
-<<<<<<< HEAD
-                  <label for="" name="noreg" class="col-sm-3 control-label">No. Reg</label>
-
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="inputEmail3" readonly>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="" name="nama" class="col-sm-3 control-label">Nama Pemohon</label>
-
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="inputEmail3" readonly>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="inputEmail3" name="ktp" class="col-sm-3 control-label">KTP</label>
-
-                  <div class="col-sm-8">
-                    <input type="file" class="form-control" id="inputEmail3" placeholder="Email">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputEmail3" name="kk" class="col-sm-3 control-label">KK</label>
-=======
-                  <label for="inputEmail3" class="col-sm-3 control-label">KTP</label>
->>>>>>> a2bc8f9cc0c9e763b0374f28b51ab9637e27ff07
+                  <label for="" class="col-sm-3 control-label">KTP</label>
 
                   <div class="col-sm-6">
-                    <input type="file" class="form-control" id="inputEmail3" placeholder="Email">
+                    <input type="file" name="ktp" class="form-control" id="inputEmail3">
                   </div>
                 </div>
                 <div class="form-group">
-<<<<<<< HEAD
-                  <label for="inputPassword3" name="bkl" class="col-sm-3 control-label">Bukti Kepemilikan</label>
-=======
-                  <label for="inputEmail3" class="col-sm-3 control-label">KK</label>
->>>>>>> a2bc8f9cc0c9e763b0374f28b51ab9637e27ff07
+                  <label for="" class="col-sm-3 control-label">KK</label>
 
                   <div class="col-sm-6">
-                    <input type="file" class="form-control" id="inputEmail3" placeholder="Email">
+                    <input type="file" name="kk" class="form-control" id="inputEmail3">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword3" class="col-sm-3 control-label">Bukti Kepemilikan Lahan</label>
+                  <label for="" class="col-sm-3 control-label">Bukti Kepemilikan Lahan</label>
 
                   <div class="col-sm-6">
-                    <input type="file" class="form-control" id="inputPassword3" placeholder="Password">
+                    <input type="file" name="bkl" class="form-control" id="inputPassword3">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword3" name="pbb" class="col-sm-3 control-label">Bukti Lunas PBB</label>
+                  <label for="" class="col-sm-3 control-label">Bukti Lunas PBB</label>
 
                   <div class="col-sm-6">
-                    <input type="file" class="form-control" id="inputPassword3" placeholder="Password">
+                    <input type="file" name="pbb" class="form-control" id="inputPassword3">
                   </div>
                 </div>
                 <div class="form-group">
-<<<<<<< HEAD
-                  <label for="inputPassword3" name="sppl" class="col-sm-3 control-label">Surat Pertanyaan Penunjukkan Lokasi</label>
-=======
-                  <label for="inputPassword3" class="col-sm-3 control-label">Surat Pernyataan Penunjukkan Lokasi</label>
->>>>>>> a2bc8f9cc0c9e763b0374f28b51ab9637e27ff07
+                  <label for="" class="col-sm-3 control-label">Surat Pernyataan Penunjukkan Lokasi</label>
 
                   <div class="col-sm-6">
-                    <input type="file" class="form-control" id="inputPassword3" placeholder="Password">
+                    <input type="file" name="sppl" class="form-control" id="inputPassword3" >
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword3" name="sk" class="col-sm-3 control-label">Surat Kuasa</label>
+                  <label for="" class="col-sm-3 control-label">Surat Kuasa</label>
 
                   <div class="col-sm-6">
-                    <input type="file" class="form-control" id="inputPassword3" placeholder="Password">
+                    <input type="file" name="sk" class="form-control" id="inputPassword3">
                   </div>
                 </div>
               </div>
