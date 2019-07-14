@@ -42,6 +42,7 @@ class Pemohon extends CI_Controller {
 			$object = array('nama'			=> $this->input->post('nama'),
 							'ktp'			=> $this->input->post('ktp'),
 							'notelp'		=> $this->input->post('notelp'),
+							'level'			=> 'Pemohon',
 						);
 		
 			$object = $this->security->xss_clean($object);
