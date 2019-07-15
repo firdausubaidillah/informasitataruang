@@ -9,11 +9,10 @@ class Admin extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->model('M_pemohon');
 		$this->load->model('M_berkas');
-	}
 
-	public function index()
-	{
-		$this->load->view('_backend/login');
+		if($this->session->userdata('status') != "login"){
+			redirect("login");
+		}
 	}
 
 	public function dashboard()
@@ -22,8 +21,6 @@ class Admin extends CI_Controller {
 		$data['page']  = '_backend/dashboard/index';
 		$this->load->view('_backend/index', $data);
 	}
-
-	
 
 	// Pemohon
 	public function pemohon()
@@ -73,7 +70,7 @@ class Admin extends CI_Controller {
 		$this->load->view('_backend/index', $data);
 	}
 
-	function ubahdata_pemohon(Type $var = null)
+	function ubahdata_pemohon()
 	{
 		if(isset($_POST['submit'])){
 			$id 	= $this->input->post('noreg');

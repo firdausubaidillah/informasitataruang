@@ -55,25 +55,25 @@
       <div class="login-box">
   <div class="login-logo">
     <img src="<?= base_url("assets/frontend/"); ?>assets/img/logoo.PNG" width="120" height="144"><br>
-    <a href="<?= base_url("pemohon/login");?>"><p><h4><b>Informasi Tata Ruang</b></h4></p><p><h4><b> Dinas Pekerjaan Umum dan Penataan Ruang Kota Pasuruan</b></h4></p></a>
+    <a href="<?= base_url("admin/login");?>"><p><h4><b>Informasi Tata Ruang</b></h4></p><p><h4><b> Dinas Pekerjaan Umum dan Penataan Ruang Kota Pasuruan</b></h4></p></a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
     <p class="login-box-msg">Silahkan Masuk Menggunakan :</p>
 
-    <form method="post" action="<?= base_url("admin/dashboard"); ?>" enctype="multipart/form-data">
+    <form method="post" action="<?= base_url("login/aksi_login"); ?>" enctype="multipart/form-data">
       <div class="form-group has-feedback">
-        <input type="email" class="form-control" placeholder="Email">
+        <input type="email" name="email" class="form-control" placeholder="Email">
         <span class="glyphicon glyphicon- form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password">
+        <input type="password" name="password" class="form-control" placeholder="Password">
         <span class="glyphicon glyphicon- form-control-feedback"></span>
       </div>
       <div class="row">
         <!-- /.col -->
         <div class="col-xs-12">
-          <button type="submit" name="submit" class="btn btn-primary btn-block btn-flat">Login</button>
+          <button type="submit" class="btn btn-primary btn-block btn-flat">Login</button>
         </div><br><br>
         <!-- /.col -->
       </div>
