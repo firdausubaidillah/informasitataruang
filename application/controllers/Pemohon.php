@@ -9,6 +9,7 @@ class Pemohon extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->model('M_pemohon');
 		$this->load->model('M_user');
+		$this->load->model('M_pernyataan');
 	}
 
 	public function index()
@@ -69,10 +70,37 @@ class Pemohon extends CI_Controller {
 		}
 	}
 
+	public function pernyataan()
+	{	
+		$data['kodeunik'] = $this->M_pernyataan->buat_kode();
+		$this->load->view('_frontend/pernyataan', $data);
+	}
+
+	function tambahdatapernyataan()
+	{
+		if (isset($_POST['submit'])) {
+			$object = array('id'			=> $this->input->post('id'),
+							'nama'			=> $this->input->post('nama'),
+							'jk'			=> $this->input->post('jk'),
+							'alamat'		=> $this->input->post('alamat'),							
+							'pekerjaan'		=> $this->input->post('pekerjaan'),
+							'ktp'			=> $this->input->post('ktp'),
+							'notelp'		=> $this->input->post('notelp'),
+							'lokasi'		=> $this->input->post('lokasi'),
+							'tgl'			=> $this->input->post('tgl')
+						);
+		
+			$object = $this->security->xss_clean($object);
+			$this->M_pernyataan->simpan($object);
+			redirect('pemohon/berkas');
+		} else {
+			redirect('pemohon/pernyataan');
+		}
+	}
+
 	public function berkas()
 	{
 		$this->load->view('_frontend/berkas');
 	}
-
-
 }
+?>
