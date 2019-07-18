@@ -22,10 +22,10 @@
 
                     <div class="form-group">
                         <label for="" class="col-sm-2 control-label">
-                            Id
+                            No. Reg
                         </label>
                         <div class="col-sm-8">
-                            <input name="id" placeholder="" class="form-control" type="text" value="<?= $kodeunik; ?>" readonly>
+                            <input name="noreg" placeholder="" class="form-control" type="text" value="<?= $kodeunik; ?>" readonly>
                         </div>
                         <span class="help-block"></span>
                     </div>

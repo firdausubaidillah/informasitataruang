@@ -94,55 +94,67 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form method="post" action="<?= base_url("pemohon/tambahdataberkas"); ?>" enctype="multipart/form-data" class="form-horizontal">
+            <form method="post" action="<?= base_url("pemohon/tambah_aksi"); ?>" enctype="multipart/form-data" class="form-horizontal">
               <div class="box-body">
-                <div class="form-group">
-                  <label for="" class="col-sm-3 control-label">KTP</label>
-
+              <div class="form-group">
+                  <label for="inputid" class="col-sm-3 control-label" style:text-align="left";>No. Reg</label>
                   <div class="col-sm-6">
-                    <input type="file" name="ktp" class="form-control" id="inputEmail3">
+                    <input type="text" name="noreg" class="form-control" id="noreg" value="<?= $kodeunik; ?>" readonly>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="" class="col-sm-3 control-label">KK</label>
-
+                  <label for="inputnama" class="col-sm-3 control-label">Nama Lengkap</label>
                   <div class="col-sm-6">
-                    <input type="file" name="kk" class="form-control" id="inputEmail3">
+                    <input type="text" name="nama" class="form-control" id="inputnama" placeholder="Nama">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="" class="col-sm-3 control-label">Bukti Kepemilikan Lahan</label>
+                  <label for="inputktp" class="col-sm-3 control-label">KTP</label>
 
                   <div class="col-sm-6">
-                    <input type="file" name="bkl" class="form-control" id="inputPassword3">
+                    <input type="file" name="ktp" class="form-control" id="inputktp">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="" class="col-sm-3 control-label">Bukti Lunas PBB</label>
+                  <label for="inputkk" class="col-sm-3 control-label">KK</label>
 
                   <div class="col-sm-6">
-                    <input type="file" name="pbb" class="form-control" id="inputPassword3">
+                    <input type="file" name="kk" class="form-control" id="inputkk">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="" class="col-sm-3 control-label">Surat Pernyataan Penunjukkan Lokasi</label>
+                  <label for="inputbkl" class="col-sm-3 control-label">Bukti Kepemilikan Lahan</label>
 
                   <div class="col-sm-6">
-                    <input type="file" name="sppl" class="form-control" id="inputPassword3" >
+                    <input type="file" name="bkl" class="form-control" id="inputbkl">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="" class="col-sm-3 control-label">Surat Kuasa</label>
+                  <label for="inputpbb" class="col-sm-3 control-label">Bukti Lunas PBB</label>
 
                   <div class="col-sm-6">
-                    <input type="file" name="sk" class="form-control" id="inputPassword3">
+                    <input type="file" name="pbb" class="form-control" id="inputpbb">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputsppl" class="col-sm-3 control-label">Surat Pernyataan Penunjukkan Lokasi</label>
+
+                  <div class="col-sm-6">
+                    <input type="file" name="sppl" class="form-control" id="inputsppl" >
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputsk" class="col-sm-3 control-label">Surat Kuasa</label>
+
+                  <div class="col-sm-6">
+                    <input type="file" name="sk" class="form-control" id="inputsk">
                   </div>
                 </div>
               </div>
               <!-- /.box-body -->
               <div class="box-footer">
-                <button type="submit" class="btn btn-default">Batal</button>
-                <button type="submit" class="btn btn-info pull-right">Simpan</button>
+                <button type="submit" name="batal" class="btn btn-default">Batal</button>
+                <button type="submit" name="submit" class="btn btn-info pull-right">Simpan</button>
               </div>
               <!-- /.box-footer -->
             </form>

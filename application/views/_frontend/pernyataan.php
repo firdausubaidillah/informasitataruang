@@ -95,9 +95,9 @@
             <form method="post" action="<?= base_url("pemohon/tambahdatapernyataan"); ?>" enctype="multipart/form-data" class="form-horizontal">
               <div class="box-body">
               <div class="form-group">
-                  <label for="inputid" class="col-sm-2 control-label" style:text-align="left";>Id</label>
+                  <label for="inputid" class="col-sm-2 control-label" style:text-align="left";>No. Reg</label>
                   <div class="col-sm-10">
-                    <input type="text" name="id" class="form-control" id="id" value="<?= $kodeunik; ?>" readonly>
+                    <input type="text" name="noreg" class="form-control" id="noreg" value="<?= $kodeunik; ?>" readonly>
                   </div>
                 </div>
                 <div class="form-group">
@@ -126,7 +126,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputtanggal" class="col-sm-2 control-label">Pekerjaan</label>
+                  <label for="inputpekerjaan" class="col-sm-2 control-label">Pekerjaan</label>
                   <div class="col-sm-10">
                     <input type="text" name="pekerjaan" class="form-control" id="inputpekerjaan" placeholder="Pekerjaan">
                   </div>

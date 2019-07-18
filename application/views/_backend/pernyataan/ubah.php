@@ -26,7 +26,7 @@
                                 Nama Pemohon
                             </label>
                             <div class="col-sm-8">
-                                <input type="hidden" name="id" class="form-control" value="<?= $r->id; ?>">
+                                <input type="hidden" name="noreg" class="form-control" value="<?= $r->noreg; ?>">
                                 <input type="text" name="nama" class="form-control" value="<?= $r->nama; ?>">
                             </div>
                             <span class="help-block"></span>

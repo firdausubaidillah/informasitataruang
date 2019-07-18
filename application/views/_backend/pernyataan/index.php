@@ -26,7 +26,7 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Id</th>
+                            <th>No. Reg</th>
                             <th>Nama Pemohon</th>
                             <th>Jenis Kelamin</th>
                             <th>Alamat</th> 
@@ -45,7 +45,7 @@
                         ?>
                             <tr>
                                 <td><?= $i ?>
-                                <td><?= $r->id; ?></td>
+                                <td><?= $r->noreg; ?></td>
                                 <td><?= $r->nama; ?></td>
                                 <td><?= $r->jk; ?></td>
                                 <td><?= $r->alamat; ?></td>

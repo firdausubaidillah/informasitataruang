@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class M_pernyataan extends CI_Model {
 
     var $table = 'tbl_pernyataan';
-    var $primary = 'id';
+    var $primary = 'noreg';
 
     public function __construct()
     {
@@ -14,8 +14,8 @@ class M_pernyataan extends CI_Model {
 
     public function buat_kode()
     {
-        $this->db->select('RIGHT(tbl_pernyataan.id,4) as kode', FALSE);
-        $this->db->order_by('id','DESC');
+        $this->db->select('RIGHT(tbl_pernyataan.noreg,4) as kode', FALSE);
+        $this->db->order_by('noreg','DESC');
         $this->db->limit(1);
         $query = $this->db->get('tbl_pernyataan');
         if($query->num_rows() <> 0 ){
@@ -58,12 +58,12 @@ class M_pernyataan extends CI_Model {
 
 	public function hapus($id)
 	{
-		$query = $this->db->query("DELETE FROM tbl_pernyataan WHERE id='" . $id ."'");
+		$query = $this->db->query("DELETE FROM tbl_pernyataan WHERE noreg='" . $id ."'");
 		return $query;
 	}
 
 	public function filter($id) {
-		$query = $this->db->query("SELECT * FROM tbl_pernyataan WHERE id='". $id ."'")->row(0);
+		$query = $this->db->query("SELECT * FROM tbl_pernyataan WHERE noreg='". $id ."'")->row(0);
 		return $query;
 	}
 
