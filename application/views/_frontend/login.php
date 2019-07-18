@@ -61,22 +61,23 @@
   <div class="login-box-body">
     <p class="login-box-msg">Silahkan Masuk Menggunakan :</p>
 
-    <form method="post" action="<?= base_url("pemohon/validasi_index"); ?>" enctype="multipart/form-data">
+    <form method="post" action="<?= base_url("login/aksi_login_pemohon"); ?>" enctype="multipart/form-data">
       <div class="form-group has-feedback">
-        <input type="text" name="ktp" class="form-control" placeholder="No.KTP">
+        <input type="text" name="ktp" id="ktp" class="form-control" placeholder="No.KTP">
         <span class="glyphicon glyphicon- form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="text" name="notelp" class="form-control" placeholder="No.Telp">
+        <input type="text" name="notelp" id="notelp" class="form-control" placeholder="No.Telp">
         <span class="glyphicon glyphicon- form-control-feedback"></span>
       </div>
       <div class="row">
         <!-- /.col -->
         <div class="col-xs-12">
-          <button type="submit" name="submit" class="btn btn-primary btn-block btn-flat">Login</button>
+          <button type="submit" name="login" id="login" class="btn btn-primary btn-block btn-flat">Login</button>
         </div><br><br>
         <div class="col-xs-12">
-          <button type="submit" name="register" class="btn btn-primary btn-block btn-flat">Registrasi</a></button>
+        <a href="<?= base_url("pemohon/registrasi");?>">
+        <button type="button" name="register" id="register" class="btn btn-primary btn-block btn-flat">Registrasi</button></a>
         </div><br><br>
         <div class="col-xs-12">
         <p>Tidak Mempunyau Akun? Silahkan Registrasi Terlebih Dahulu</p>

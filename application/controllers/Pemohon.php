@@ -18,17 +18,6 @@ class Pemohon extends CI_Controller {
 		$this->load->view('_frontend/index');
 	}
 
-	public function validasi_index()
-	{
-		if (isset($_POST['submit'])) {
-			$input = $_POST['submit'];
-			redirect('pemohon/pemohon');
-		}
-		else {
-			redirect('pemohon/registrasi');
-		}
-	}
-
 	public function login()
 	{
 		$this->load->view('_frontend/login');
@@ -44,7 +33,6 @@ class Pemohon extends CI_Controller {
 			$object = array('nama'			=> $this->input->post('nama'),
 							'ktp'			=> $this->input->post('ktp'),
 							'notelp'		=> $this->input->post('notelp'),
-							'level'			=> 'Pemohon',
 						);
 		
 			$object = $this->security->xss_clean($object);

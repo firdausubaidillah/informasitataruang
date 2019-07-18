@@ -12,7 +12,7 @@ class Login extends CI_Controller {
     public function index()
     {
         $this->load->view('_backend/login');
-    }
+	}
 
     function aksi_login()
     {
@@ -35,13 +35,44 @@ class Login extends CI_Controller {
 			redirect('admin/dashboard');
  
 		}else{
-			echo "Username dan password salah !";
 			redirect('login');
 		}
+	}
+	
+	function aksi_login_pemohon()
+    {
+			$ktp		= $this->input->post('ktp', TRUE);
+			$notelp		= $this->input->post('notelp', TRUE);
+			$where = array(
+				'ktp' 		=> $ktp,
+				'notelp' 	=> $notelp
+				);
+			$cek = $this->M_login->cek_login_pemohon("tbl_user",$where)->num_rows();
+			if($cek > 0){
+	
+				$data_session = array(
+					'nama' => $nama,
+					'status' => "login"
+					);
+	
+				$this->session->set_userdata($data_session);
+	
+				redirect('pemohon/pemohon');
+	
+				} else {
+					redirect('pemohon/login');
+				}
+
     }
     
     function logout(){
 		$this->session->sess_destroy();
 		redirect('login');
 	}
+
+	function logout_pemohon(){
+		$this->session->sess_destroy();
+		redirect('pemohon/login');
+	}
+	
 }
