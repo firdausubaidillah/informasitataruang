@@ -10,12 +10,16 @@ class Admin extends CI_Controller {
 		$this->load->model('M_pemohon');
 		$this->load->model('M_berkas');
 
-		if($this->session->userdata('status') != "login"){
-			redirect("login");
+		$kodeakses = $this->session->userdata('kodeakses');
+		$level = $this->session->userdata('level');
+
+		if ((empty($kodeakses)) AND (empty($level)))
+		{
+		 redirect('login');
 		}
 	}
 
-	public function dashboard()
+	public function index()
 	{
 		$data['title'] = 'Dashboard';
 		$data['page']  = '_backend/dashboard/index';

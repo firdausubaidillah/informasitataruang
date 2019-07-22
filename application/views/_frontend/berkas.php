@@ -99,7 +99,7 @@
               <div class="form-group">
                   <label for="inputid" class="col-sm-3 control-label" style:text-align="left";>No. Reg</label>
                   <div class="col-sm-6">
-                    <input type="text" name="noreg" class="form-control" id="noreg" value="<?= $kodeunik; ?>" readonly>
+                    <input type="text" name="noreg" class="form-control" id="noreg" value="<?= $noreg; ?>" readonly>
                   </div>
                 </div>
                 <div class="form-group">

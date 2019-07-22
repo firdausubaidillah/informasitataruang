@@ -1,3 +1,11 @@
+<?php
+    $id       = $this->session->userdata('id');
+    $nama     = $this->session->userdata('nama');
+    $email    = $this->session->userdata('email');
+    $password = $this->session->userdata('password');
+    $level    = $this->session->userdata('level');
+?>
+
 <!DOCTYPE html>
 <html>
 <head>

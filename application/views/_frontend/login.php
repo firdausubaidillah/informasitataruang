@@ -36,7 +36,7 @@
     <nav class="navbar navbar-static-top">
       <div class="container">
         <div class="navbar-header">
-          <a href="<?= base_url("pemohon/index");?>" class="navbar-brand">Sistem Informasi Tata Ruang Kota Pasuruan</a>
+          <a href="<?= base_url("");?>" class="navbar-brand">Sistem Informasi Tata Ruang Kota Pasuruan</a>
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
             <i class="fa fa-bars"></i>
           </button>
@@ -61,7 +61,7 @@
   <div class="login-box-body">
     <p class="login-box-msg">Silahkan Masuk Menggunakan :</p>
 
-    <form method="post" action="<?= base_url("login/aksi_login_pemohon"); ?>" enctype="multipart/form-data">
+    <form method="post" action="<?= base_url("loginpemohon/aksi_login"); ?>" enctype="multipart/form-data">
       <div class="form-group has-feedback">
         <input type="text" name="ktp" id="ktp" class="form-control" placeholder="No.KTP">
         <span class="glyphicon glyphicon- form-control-feedback"></span>
@@ -76,7 +76,7 @@
           <button type="submit" name="login" id="login" class="btn btn-primary btn-block btn-flat">Login</button>
         </div><br><br>
         <div class="col-xs-12">
-        <a href="<?= base_url("pemohon/registrasi");?>">
+        <a href="<?= base_url("home/registrasipemohon");?>">
         <button type="button" name="register" id="register" class="btn btn-primary btn-block btn-flat">Registrasi</button></a>
         </div><br><br>
         <div class="col-xs-12">

@@ -1,3 +1,11 @@
+<?php
+    $id       = $this->session->userdata('id');
+    $nama     = $this->session->userdata('nama');
+    $ktp      = $this->session->userdata('ktp');
+    $notelp   = $this->session->userdata('notelp');
+    $level    = $this->session->userdata('level');
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -49,7 +57,7 @@
                 <!-- The user image in the navbar-->
                 <img src="<?= base_url("assets/backend/"); ?>dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
                 <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                <span class="hidden-xs">Alexander Pierce</span>
+                <span class="hidden-xs"><?= $nama; ?></span>
               </a>
               <ul class="dropdown-menu">
                 <!-- The user image in the menu -->
@@ -57,7 +65,7 @@
                   <img src="<?= base_url("assets/backend/"); ?>dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                   <p>
-                    Alexander Pierce - Web Developer
+                    <?= $nama; ?>
                     <small>Member since Nov. 2012</small>
                   </p>
                 </li>
@@ -103,7 +111,7 @@
                 <div class="form-group">
                   <label for="inputnama" class="col-sm-2 control-label">Nama Lengkap</label>
                   <div class="col-sm-10">
-                    <input type="text" name="nama" class="form-control" id="inputnama" placeholder="Nama">
+                    <input type="text" name="nama" class="form-control" id="inputnama" placeholder="Nama" value="<?= $nama; ?>">
                   </div>
                 </div>
                 <div class="form-group">
@@ -152,7 +160,7 @@
                 <div class="form-group">
                   <label for="inputnotelpon" class="col-sm-2 control-label">No. Telpon/HP</label>
                   <div class="col-sm-10">
-                    <input type="text" name="notelp" class="form-control" id="inputnotelpon" placeholder="No. Telpon/HP">
+                    <input type="text" name="notelp" class="form-control" id="inputnotelpon" placeholder="No. Telpon/HP" value="<?= $notelp; ?>">
                   </div>
                 </div>
               </div>

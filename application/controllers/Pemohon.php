@@ -6,26 +6,24 @@ class Pemohon extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		error_reporting(0);
 		$this->load->helper('url');
 		$this->load->model('M_pemohon');
 		$this->load->model('M_user');
 		$this->load->model('M_pernyataan');
 		$this->load->model('M_berkas');
+
+		$kodeakses	= $this->session->userdata('kodeakses');
+		$ktp		= $this->session->userdata('ktp');
+
+		if((empty($kodeakses)) AND (empty($ktp))) {
+			redirect('loginpemohon');
+		}
 	}
 
 	public function index()
 	{
 		$this->load->view('_frontend/index');
-	}
-
-	public function login()
-	{
-		$this->load->view('_frontend/login');
-	}
-
-	public function registrasi()
-	{
-		$this->load->view('_frontend/registrasi');
 	}
 
 	function daftar(){
@@ -128,12 +126,12 @@ class Pemohon extends CI_Controller {
 
 	private function _do_upload1()
 	{
-		$config['upload_path'] 		= 'application/controllers/gambar/';
+		$config['upload_path'] 		= 'assets/gambar/';
 		$config['allowed_types'] 	= 'gif|jpg|png|jpeg';
-		$config['max_size'] 			= 10000;
-		$config['max_widht'] 			= 1000;
+		$config['max_size'] 		= 10000;
+		$config['max_widht'] 		= 1000;
 		$config['max_height']  		= 1000;
-		$config['file_name'] 			= '';
+		$config['file_name'] 		= '';
  
 		$this->load->library('upload', $config);
 		if (!$this->upload->do_upload('ktp')) {
@@ -145,12 +143,12 @@ class Pemohon extends CI_Controller {
 
 	private function _do_upload2()
 	{
-		$config['upload_path'] 		= 'application/controllers/gambar/';
+		$config['upload_path'] 		= 'assets/gambar/';
 		$config['allowed_types'] 	= 'gif|jpg|png|jpeg';
-		$config['max_size'] 			= 10000;
-		$config['max_widht'] 			= 1000;
+		$config['max_size'] 		= 10000;
+		$config['max_widht'] 		= 1000;
 		$config['max_height']  		= 1000;
-		$config['file_name'] 			= '';
+		$config['file_name'] 		= '';
  
 		$this->load->library('upload', $config);
 		if (!$this->upload->do_upload('kk')) {
@@ -162,12 +160,12 @@ class Pemohon extends CI_Controller {
 
 	private function _do_upload3()
 	{
-		$config['upload_path'] 		= 'application/controllers/gambar/';
+		$config['upload_path'] 		= 'assets/gambar/';
 		$config['allowed_types'] 	= 'gif|jpg|png|jpeg';
-		$config['max_size'] 			= 10000;
-		$config['max_widht'] 			= 1000;
+		$config['max_size'] 		= 10000;
+		$config['max_widht'] 		= 1000;
 		$config['max_height']  		= 1000;
-		$config['file_name'] 			= '';
+		$config['file_name'] 		= '';
  
 		$this->load->library('upload', $config);
 		if (!$this->upload->do_upload('bkl')) {
@@ -179,12 +177,12 @@ class Pemohon extends CI_Controller {
 
 	private function _do_upload4()
 	{
-		$config['upload_path'] 		= 'application/controllers/gambar/';
+		$config['upload_path'] 		= 'assets/gambar/';
 		$config['allowed_types'] 	= 'gif|jpg|png|jpeg';
-		$config['max_size'] 			= 10000;
-		$config['max_widht'] 			= 1000;
+		$config['max_size'] 		= 10000;
+		$config['max_widht'] 		= 1000;
 		$config['max_height']  		= 1000;
-		$config['file_name'] 			= '';
+		$config['file_name'] 		= '';
  
 		$this->load->library('upload', $config);
 		if (!$this->upload->do_upload('pbb')) {
@@ -196,12 +194,12 @@ class Pemohon extends CI_Controller {
 
 	private function _do_upload5()
 	{
-		$config['upload_path'] 		= 'application/controllers/gambar/';
+		$config['upload_path'] 		= 'assets/gambar/';
 		$config['allowed_types'] 	= 'gif|jpg|png|jpeg';
-		$config['max_size'] 			= 10000;
-		$config['max_widht'] 			= 1000;
+		$config['max_size'] 		= 10000;
+		$config['max_widht'] 		= 1000;
 		$config['max_height']  		= 1000;
-		$config['file_name'] 			= '';
+		$config['file_name'] 		= '';
  
 		$this->load->library('upload', $config);
 		if (!$this->upload->do_upload('sppl')) {
@@ -213,12 +211,12 @@ class Pemohon extends CI_Controller {
 
 	private function _do_upload6()
 	{
-		$config['upload_path'] 		= 'application/controllers/gambar/';
+		$config['upload_path'] 		= 'assets/gambar/';
 		$config['allowed_types'] 	= 'gif|jpg|png|jpeg';
-		$config['max_size'] 			= 10000;
-		$config['max_widht'] 			= 1000;
+		$config['max_size'] 		= 10000;
+		$config['max_widht'] 		= 1000;
 		$config['max_height']  		= 1000;
-		$config['file_name'] 			= '';
+		$config['file_name'] 		= '';
  
 		$this->load->library('upload', $config);
 		if (!$this->upload->do_upload('sk')) {

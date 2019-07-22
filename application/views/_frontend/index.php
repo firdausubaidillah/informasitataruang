@@ -129,10 +129,10 @@
                         <div class="welcome-speech">
                             <h1><b>SISTEM INFORMASI TATA RUANG</b></h1>
                             <p><b>DINAS PEKERJAAN UMUM DAN PENATAAN RUANG KOTA PASURUAN</b></p>
-                            <a href="<?= base_url("pemohon/login"); ?>" class="btn btn-primary">
+                            <a href="<?= base_url("home/loginpemohon"); ?>" class="btn btn-primary">
                                 Login
                             </a>
-                            <a href="<?= base_url("pemohon/registrasi"); ?>" class="btn btn-white">
+                            <a href="<?= base_url("home/registrasipemohon"); ?>" class="btn btn-white">
                                 Registrasi
                             </a>
                         </div><!-- /.intro -->
