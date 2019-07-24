@@ -178,7 +178,7 @@
                 </form>
               </div>
               <!-- /.tab-pane -->
-              <div class="active tab-pane" id="berkas">
+              <div class="tab-pane" id="berkas">
               <form method="post" action="<?= base_url("pemohon/tambahdatapemohon"); ?>" enctype="multipart/form-data" class="form-horizontal">
                   <div class="form-group">
                     <label for="inputNoreg" class="col-sm-2 control-label">No. Reg</label>
