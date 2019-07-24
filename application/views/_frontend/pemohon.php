@@ -184,7 +184,7 @@
                     <label for="inputNoreg" class="col-sm-2 control-label">No. Reg</label>
                     
                     <div class="col-sm-10">
-                    <input type="text" name="noreg" class="form-control" id="noreg" value="<?= $r->noreg; ?>" readonly>
+                    <input type="text" name="noreg" class="form-control" id="noreg" value="<?= $kodeunik; ?>" readonly>
                     </div>
                   </div>
                   <div class="form-group">
@@ -195,56 +195,45 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputJK" class="col-sm-2 control-label">KTP</label>
+                    <label for="inputktp" class="col-sm-2 control-label">KTP</label>
 
                     <div class="col-sm-10">
-                       <select class="form-control" name="jk">
-                          <option value="">--- Pilih jenis Kelamin ---</option> 
-                          <option>Laki-laki</option>
-                          <option>Perempuan</option>
-                      </select>
+                      <input type="file" name="ktp" class="form-control" id="inputktp">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputAlamat" class="col-sm-2 control-label">Alamat Lengkap</label>
+                    <label for="inputkk" class="col-sm-2 control-label">KK</label>
 
                     <div class="col-sm-10">
-                      <textArea name="alamat" class="form-control" id="inputalamat" placeholder="Alamat Lengkap"></textarea>
+                      <input type="file" name="kk" class="form-control" id="inputkk">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputTgl" class="col-sm-2 control-label">Tanggal</label>
+                    <label for="inputbkl" class="col-sm-2 control-label">Bukti Kepemilikan Lahan</label>
 
                     <div class="col-sm-10">
-                      <input type="date" name="tgl" class="form-control" id="inputtanggal" placeholder="Tanggal Pengajuan">
+                    <input type="file" name="bkl" class="form-control" id="inputbkl">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputPekerjaan" class="col-sm-2 control-label">Pekerjaan</label>
+                    <label for="inputpbb" class="col-sm-2 control-label">Bukti Lunas PBB</label>
 
                     <div class="col-sm-10">
-                    <input type="text" name="pekerjaan" class="form-control" id="inputpekerjaan" placeholder="Pekerjaan">
+                    <input type="file" name="pbb" class="form-control" id="inputpbb">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputPemanfaatan" class="col-sm-2 control-label">Pemanfaatan</label>
+                    <label for="inputsppl" class="col-sm-2 control-label">Surat Pernyataan Penunjukkan Lokasi</label>
 
                     <div class="col-sm-10">
-                    <input type="text" name="pemanfaatan" class="form-control" id="inputpemanfaatan" placeholder="Pemanfaatan">
+                    <input type="file" name="sppl" class="form-control" id="inputsppl" >
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputLokasi" class="col-sm-2 control-label">Lokasi yang diajukan</label>
+                    <label for="inputsk" class="col-sm-2 control-label">Surat Kuasa</label>
 
                     <div class="col-sm-10">
-                    <input type="text" name="lokasi" class="form-control" id="inputlokasi" placeholder="Alamat Lokasi yang diajukan">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputHp" class="col-sm-2 control-label">No. Telpon/HP</label>
-
-                    <div class="col-sm-10">
-                    <input type="text" name="notelp" class="form-control" id="inputnotelpon" placeholder="No. Telpon/HP" value="<?= $notelp; ?>">
+                    <input type="file" name="sk" class="form-control" id="inputsk">
                     </div>
                   </div>
                   <div class="form-group">
@@ -360,7 +349,6 @@
               </div>
               <!-- /.tab-pane -->
 
-             
             </div>
             <!-- /.tab-content -->
           </div>
@@ -369,6 +357,61 @@
         <!-- /.col -->
       </div>
       <!-- /.row -->
+    </section>
+    <section class="content">
+    <!-- Small boxes (Stat box) -->
+    <div class="row">
+        <div class="col-xs-12">
+        <div class="box">
+            <!-- /.box-header -->
+            <div class="box-body">
+                <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>No. Reg</th>
+                            <th>Nama Pemohon</th>
+                            <th>Alamat</th>
+                            <th>Tgl Pengajuan</th>
+                            <th>Pekerjaan</th>
+                            <th>Pemanfaatan</th>
+                            <th>Lokasi</th>
+                            <th width="10%">OPTION</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                            $i=1;
+                            foreach($data as $r) {
+                        ?>
+                            <tr>
+                                <td><?= $i ?>
+                                <td><?= $r->noreg; ?></td>
+                                <td><?= $r->nama; ?></td>
+                                <td><?= $r->alamat; ?></td>
+                                <td><?= $r->tgl; ?></td>
+                                <td><?= $r->pekerjaan; ?></td>
+                                <td><?= $r->pemanfaatan; ?></td>
+                                <td><?= $r->lokasi; ?></td>
+                                <td>
+                                    <a href="<?= base_url('admin/tampilubah_pemohon/') . $r->id; ?>" class="btn btn-success"><i class="glyphicon glyphicon-pencil"></i></a>
+                                    <a href="<?= base_url('admin/hapus_pemohon/') . $r->id; ?>" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
+                                </td>
+                            </tr> 
+                        <?php
+                            $i++;
+                            }
+                        ?>
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
     </section>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
