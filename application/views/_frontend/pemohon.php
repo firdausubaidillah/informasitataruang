@@ -93,7 +93,6 @@
               <li class="active"><a href="#pemohon" data-toggle="tab">Data Pemohon</a></li>
               <li><a href="#berkas" data-toggle="tab">Berkas</a></li>
               <li><a href="#timeline" data-toggle="tab">Timeline</a></li>
-
             </ul>
             <div class="tab-content">
               <div class="tab-pane">
@@ -103,10 +102,89 @@
               <div class="active tab-pane" id="pemohon">
               <form method="post" action="<?= base_url("pemohon/tambahdatapemohon"); ?>" enctype="multipart/form-data" class="form-horizontal">
                   <div class="form-group">
+                    <label for="inputNama" class="col-sm-2 control-label">Nama Lengkap</label>
+
+                    <div class="col-sm-10">
+                    <input type="text" name="nama" class="form-control" id="inputnama" placeholder="Nama" value="<?= $nama; ?>">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputJK" class="col-sm-2 control-label">Jenis Kelamin</label>
+
+                    <div class="col-sm-10">
+                       <select class="form-control" name="jk">
+                          <option value="">--- Pilih jenis Kelamin ---</option> 
+                          <option>Laki-laki</option>
+                          <option>Perempuan</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputAlamat" class="col-sm-2 control-label">Alamat Lengkap</label>
+
+                    <div class="col-sm-10">
+                      <textArea name="alamat" class="form-control" id="inputalamat" placeholder="Alamat Lengkap"></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputTgl" class="col-sm-2 control-label">Tanggal</label>
+
+                    <div class="col-sm-10">
+                      <input type="date" name="tgl" class="form-control" id="inputtanggal" placeholder="Tanggal Pengajuan">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPekerjaan" class="col-sm-2 control-label">Pekerjaan</label>
+
+                    <div class="col-sm-10">
+                    <input type="text" name="pekerjaan" class="form-control" id="inputpekerjaan" placeholder="Pekerjaan">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPemanfaatan" class="col-sm-2 control-label">Pemanfaatan</label>
+
+                    <div class="col-sm-10">
+                    <input type="text" name="pemanfaatan" class="form-control" id="inputpemanfaatan" placeholder="Pemanfaatan">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputLokasi" class="col-sm-2 control-label">Lokasi yang diajukan</label>
+
+                    <div class="col-sm-10">
+                    <input type="text" name="lokasi" class="form-control" id="inputlokasi" placeholder="Alamat Lokasi yang diajukan">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputHp" class="col-sm-2 control-label">No. Telpon/HP</label>
+
+                    <div class="col-sm-10">
+                    <input type="text" name="notelp" class="form-control" id="inputnotelpon" placeholder="No. Telpon/HP" value="<?= $notelp; ?>">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"> I agree to the <a href="#">terms and conditions</a>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!-- /.tab-pane -->
+              <div class="active tab-pane" id="berkas">
+              <form method="post" action="<?= base_url("pemohon/tambahdatapemohon"); ?>" enctype="multipart/form-data" class="form-horizontal">
+                  <div class="form-group">
                     <label for="inputNoreg" class="col-sm-2 control-label">No. Reg</label>
                     
                     <div class="col-sm-10">
-                    <input type="text" name="noreg" class="form-control" id="noreg" value="<?= $kodeunik; ?>" readonly>
+                    <input type="text" name="noreg" class="form-control" id="noreg" value="<?= $r->noreg; ?>" readonly>
                     </div>
                   </div>
                   <div class="form-group">
@@ -117,7 +195,7 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputJK" class="col-sm-2 control-label">Jenis Kelamin</label>
+                    <label for="inputJK" class="col-sm-2 control-label">KTP</label>
 
                     <div class="col-sm-10">
                        <select class="form-control" name="jk">
@@ -291,105 +369,7 @@
         <!-- /.col -->
       </div>
       <!-- /.row -->
-
     </section>
-
-
-
-
-
-  <section class="content">
-      <div class="row">
-        <!-- left column -->
-        <div class="col-md-12">
-          <!-- general form elements -->
-          <div class="box box-primary">
-            <div class="box-header with-border">
-              <h3 class="box-title">FORMULIR PERMOHONAN INFORMASI PEMANFAATAN RUANG ( IPR )</h3>
-            </div>
-            <!-- /.box-header -->
-            <!-- form start -->
-            <form method="post" action="<?= base_url("pemohon/tambahdatapemohon"); ?>" enctype="multipart/form-data" class="form-horizontal">
-              <div class="box-body">
-              <div class="form-group">
-                  <label for="inputnama" class="col-sm-2 control-label" style:text-align="left";>No. Reg</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="noreg" class="form-control" id="noreg" value="<?= $kodeunik; ?>" readonly>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputnama" class="col-sm-2 control-label">Nama Lengkap</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="nama" class="form-control" id="inputnama" placeholder="Nama" value="<?= $nama; ?>">
-                  </div>
-                </div>
-                <div class="form-group">
-                        <label for="" class="col-sm-2 control-label">
-                            Jenis Kelamin
-                        </label>
-                        <div class="col-sm-10">
-                            <select class="form-control" name="jk">
-                                <option value="">--- Pilih jenis Kelamin ---</option> 
-                                <option>Laki-laki</option>
-                                <option>Perempuan</option>
-                            </select>
-                        </div>
-                        <span class="help-block"></span>
-                    </div>
-                <div class="form-group">
-                  <label for="inputalamat" class="col-sm-2 control-label">Alamat Lengkap</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="alamat" class="form-control" id="inputalamat" placeholder="Alamat Lengkap">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputtanggal" class="col-sm-2 control-label">Tanggal Pengajuan</label>
-                  <div class="col-sm-10">
-                    <input type="date" name="tgl" class="form-control" id="inputtanggal" placeholder="Tanggal Pengajuan">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputpekerjaan" class="col-sm-2 control-label">Pekerjaan</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="pekerjaan" class="form-control" id="inputpekerjaan" placeholder="Pekerjaan">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputpemanfaatan" class="col-sm-2 control-label">Pemanfaatan</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="pemanfaatan" class="form-control" id="inputpemanfaatan" placeholder="Pemanfaatan">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputlokasi" class="col-sm-2 control-label">Lokasi yang diajukan</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="lokasi" class="form-control" id="inputlokasi" placeholder="Alamat Lokasi yang diajukan">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputnotelpon" class="col-sm-2 control-label">No. Telpon/HP</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="notelp" class="form-control" id="inputnotelpon" placeholder="No. Telpon/HP" value="<?= $notelp; ?>">
-                  </div>
-                </div>
-              </div>
-              <!-- /.box-body -->
-              <!-- /.box-body -->
-              <div class="box-footer">
-                <button type="submit" name="batal" class="btn btn-default">Batal</button>
-                <button type="submit" name="submit"class="btn btn-info pull-right">Simpan</button>
-              </div>
-              <!-- /.box-footer -->
-            </form>
-          </div>
-          <!-- /.box -->
-        </div>
-      </div>
-      <!-- /.row -->
-    </section>
-    </div>
-    <!-- /.container -->
-  </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="container">

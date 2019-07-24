@@ -36,8 +36,7 @@ class Pemohon extends CI_Controller {
 	function tambahdatapemohon()
 	{
 		if (isset($_POST['submit'])) {
-			$object = array('noreg'			=> $this->input->post('noreg'),
-							'nama'			=> $this->input->post('nama'),
+			$object = array('nama'			=> $this->input->post('nama'),
 							'jk'			=> $this->input->post('jk'),
 							'alamat'		=> $this->input->post('alamat'),
 							'tgl'			=> $this->input->post('tgl'),

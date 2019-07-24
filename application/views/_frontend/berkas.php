@@ -99,10 +99,7 @@
             <!-- /.box-header -->
             <!-- form start -->
             <div class="box-body">
-              <form method="post" action="<?= base_url("pemohon/tambah_aksi"); ?>" enctype="multipart/form-data" class="form-horizontal">
-                <?php 
-                  foreach($data as $r) :
-                ?>
+              <form method="post" action="<?= base_url("pemohon/tambah_aksi"); ?>" enctype="multipart/form-data" class="form-horizontal">  
                 <div class="form-group">
                   <label for="inputid" class="col-sm-3 control-label" style:text-align="left";>No. Reg</label>
                   <div class="col-sm-6">
@@ -115,9 +112,6 @@
                     <input type="text" name="nama" class="form-control" id="inputnama" placeholder="Nama" value="<?= $r->nama; ?>">
                   </div>
                 </div>
-                <?php
-                    endforeach
-                ?>
                 <div class="form-group">
                   <label for="inputktp" class="col-sm-3 control-label">KTP</label>
 
