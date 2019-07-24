@@ -66,14 +66,5 @@ class M_pemohon extends CI_Model {
 		$query = $this->db->query("SELECT * FROM tbl_pemohon WHERE id='". $id ."'")->row(0);
 		return $query;
     }
-    
-    public function get_by_id($id)
-	{
-		$this->db->from($this->table);
-		$this->db->where('id',$id);
-		$query = $this->db->get();
-
-		return $query->row();
-	}
 
 }

@@ -12,23 +12,10 @@ class M_berkas extends CI_Model {
         $this->load->database();
     }
 
-    public function buat_kode()
+    public function tampilnoreg()
     {
-        $this->db->select('RIGHT(tbl_berkas.noreg,4) as kode', FALSE);
-        $this->db->order_by('noreg','DESC');
-        $this->db->limit(1);
-        $query = $this->db->get('tbl_berkas');
-        if($query->num_rows() <> 0 ){
-            $data = $query->row();
-            $kode = intval($data->kode) + 1;
-        }
-        else {
-            $kode = 1;
-        }
-
-        $kodemax = str_pad($kode, 4, "0", STR_PAD_LEFT);
-        $kodejadi = "TR".$kodemax;
-        return $kodejadi;
+        $query = $this->db->query("SELECT * FROM tbl_pemohon WHERE id='". $id ."'");
+		return $query;
     }
 
     public function tampil()

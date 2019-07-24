@@ -58,8 +58,7 @@ class Pemohon extends CI_Controller {
 	//BERKAS
 	public function berkas()
 	{	
-		$data['title']	= 'Pemohon';
-		$data['data']	= $this->M_pemohon->tampil_ubah($id)->result();
+		$data['data']	= $this->M_berkas->tampilnoreg($id)->result();
 		$this->load->view('_frontend/berkas', $data);
 	}
 
