@@ -58,7 +58,7 @@ class Pemohon extends CI_Controller {
 	public function berkas()
 	{	
 		$data['data']	= $this->M_berkas->tampilnoreg($id)->result();
-		$this->load->view('_frontend/berkas', $data);
+		$this->load->view('_frontend/pemohon', $data);
 	}
 
 	function tambahdataberkas()
