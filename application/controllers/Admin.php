@@ -77,8 +77,9 @@ class Admin extends CI_Controller {
 	function ubahdata_pemohon()
 	{
 		if(isset($_POST['submit'])){
-			$id 	= $this->input->post('noreg');
-			$object = array('nama' 			=> $this->input->post('nama'),
+			$id 	= $this->input->post('id');
+			$object = array('noreg'			=> $this->input->post('noreg'),
+							'nama' 			=> $this->input->post('nama'),
 							'jk'			=> $this->input->post('jk'),
 							'alamat'		=> $this->input->post('alamat'),
 							'tgl'			=> $this->input->post('tgl'),

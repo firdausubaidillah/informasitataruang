@@ -7,6 +7,7 @@ class Home extends CI_Controller {
     {
         parent::__construct();
         error_reporting(0);
+        $this->load->model('M_user');
     }
 
     public function index()
@@ -24,9 +25,21 @@ class Home extends CI_Controller {
         $this->load->view('_frontend/registrasi');
     }
 
-    public function admin()
-    {
-        $this->load->view('_backend/login');
-    }
+    function daftar(){
+		if (isset($_POST['submit'])) {
+			$object = array('nama'			=> $this->input->post('nama'),
+							'ktp'			=> $this->input->post('ktp'),
+							'notelp'		=> $this->input->post('notelp'),
+							'level'			=> 'PEMOHON',
+							'aktif_user'	=> 'YA',
+						);
+		
+			$object = $this->security->xss_clean($object);
+			$this->M_user->simpan($object);
+			redirect('pemohon/index');
+		} else {
+			redirect('home/registrasi');
+		}
+	}
 
 }

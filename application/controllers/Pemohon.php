@@ -26,23 +26,7 @@ class Pemohon extends CI_Controller {
 		$this->load->view('_frontend/index');
 	}
 
-	function daftar(){
-		if (isset($_POST['submit'])) {
-			$object = array('nama'			=> $this->input->post('nama'),
-							'ktp'			=> $this->input->post('ktp'),
-							'notelp'		=> $this->input->post('notelp'),
-							'level'			=> 'PEMOHON',
-							'aktif_user'	=> 'YA',
-						);
-		
-			$object = $this->security->xss_clean($object);
-			$this->M_user->simpan($object);
-			redirect('pemohon/login');
-		} else {
-			redirect('pemohon/registrasi');
-		}
-	}
-
+	//PEMOHON
 	public function pemohon()
 	{	
 		$data['kodeunik'] = $this->M_pemohon->buat_kode();
@@ -71,6 +55,35 @@ class Pemohon extends CI_Controller {
 		}
 	}
 
+	//BERKAS
+	public function berkas()
+	{	
+		$data['title']	= 'Pemohon';
+		$data['data']	= $this->M_pemohon->tampil_ubah($id)->result();
+		$this->load->view('_frontend/berkas', $data);
+	}
+
+	function tambahdataberkas()
+	{
+		if (isset($_POST['submit'])) {
+			$object = array('noreg'			=> $this->input->post('noreg'),
+							'nama'			=> $this->input->post('nama'),
+							'ktp'			=> $this->input->post('ktp'),
+							'kk'			=> $this->input->post('kk'),
+							'bkl'			=> $this->input->post('bkl'),
+							'pbb'			=> $this->input->post('pbb'),
+							'sppl'			=> $this->input->post('sppl'),
+							'sk'			=> $this->input->post('sk')
+						);
+		
+			$object = $this->security->xss_clean($object);
+			$this->M_berkas->simpan($object);
+			redirect('pemohon/pernyataan');
+		} else {
+			redirect('pemohon/berkas');
+		}
+	}
+
 	public function pernyataan()
 	{	
 		$data['kodeunik'] = $this->M_pernyataan->buat_kode();
@@ -96,33 +109,6 @@ class Pemohon extends CI_Controller {
 			redirect('pemohon/berkas');
 		} else {
 			redirect('pemohon/pernyataan');
-		}
-	}
-	
-	public function berkas()
-	{	
-		$data['kodeunik'] = $this->M_berkas->buat_kode();
-		$this->load->view('_frontend/berkas', $data);
-	}
-
-	function tambahdataberkas()
-	{
-		if (isset($_POST['submit'])) {
-			$object = array('noreg'			=> $this->input->post('noreg'),
-							'nama'			=> $this->input->post('nama'),
-							'ktp'			=> $this->input->post('ktp'),
-							'kk'			=> $this->input->post('kk'),
-							'bkl'			=> $this->input->post('bkl'),
-							'pbb'			=> $this->input->post('pbb'),
-							'sppl'			=> $this->input->post('sppl'),
-							'sk'			=> $this->input->post('sk')
-						);
-		
-			$object = $this->security->xss_clean($object);
-			$this->M_berkas->simpan($object);
-			redirect('pemohon/pernyataan');
-		} else {
-			redirect('pemohon/berkas');
 		}
 	}
 

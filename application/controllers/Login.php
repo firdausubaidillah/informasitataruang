@@ -82,7 +82,7 @@ class Login extends CI_Controller {
 		$this->session->unset_userdata('notelp');
 		$this->session->unset_userdata('level');
 		$this->session->sess_destroy();
-		redirect('pemohon/login');
+		redirect('home/loginpemohon');
 	}
 	
 }

@@ -51,8 +51,8 @@
                                 <td><?= $r->pemanfaatan; ?></td>
                                 <td><?= $r->lokasi; ?></td>
                                 <td>
-                                    <a href="<?= base_url('admin/tampilubah_pemohon/') . $r->noreg; ?>" class="btn btn-success"><i class="glyphicon glyphicon-pencil"></i></a>
-                                    <a href="<?= base_url('admin/hapus_pemohon/') . $r->noreg; ?>" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
+                                    <a href="<?= base_url('admin/tampilubah_pemohon/') . $r->id; ?>" class="btn btn-success"><i class="glyphicon glyphicon-pencil"></i></a>
+                                    <a href="<?= base_url('admin/hapus_pemohon/') . $r->id; ?>" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
                                 </td>
                             </tr> 
                         <?php

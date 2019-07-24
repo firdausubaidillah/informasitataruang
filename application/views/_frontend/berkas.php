@@ -1,3 +1,7 @@
+<?php
+    $id       = $this->session->userdata('id');
+    $nama     = $this->session->userdata('nama');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,7 +54,7 @@
                 <!-- The user image in the navbar-->
                 <img src="<?= base_url("assets/backend/"); ?>dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
                 <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                <span class="hidden-xs">Alexander Pierce</span>
+                <span class="hidden-xs"><?= $nama; ?></span>
               </a>
               <ul class="dropdown-menu">
                 <!-- The user image in the menu -->
@@ -58,7 +62,7 @@
                   <img src="<?= base_url("assets/backend/"); ?>dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                   <p>
-                    Alexander Pierce - Web Developer
+                    <?= $nama; ?>
                     <small>Member since Nov. 2012</small>
                   </p>
                 </li>
@@ -95,19 +99,23 @@
             <!-- /.box-header -->
             <!-- form start -->
             <form method="post" action="<?= base_url("pemohon/tambah_aksi"); ?>" enctype="multipart/form-data" class="form-horizontal">
+            <?php foreach($data as $r) { ?>
               <div class="box-body">
-              <div class="form-group">
+                <div class="form-group">
                   <label for="inputid" class="col-sm-3 control-label" style:text-align="left";>No. Reg</label>
                   <div class="col-sm-6">
-                    <input type="text" name="noreg" class="form-control" id="noreg" value="<?= $noreg; ?>" readonly>
+                    <input type="text" name="noreg" class="form-control" id="noreg" value="<?= $r->noreg; ?>" readonly>
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputnama" class="col-sm-3 control-label">Nama Lengkap</label>
                   <div class="col-sm-6">
-                    <input type="text" name="nama" class="form-control" id="inputnama" placeholder="Nama">
+                    <input type="text" name="nama" class="form-control" id="inputnama" placeholder="Nama" value="<?= $r->nama; ?>">
                   </div>
                 </div>
+                <?php
+                    }
+                ?>
                 <div class="form-group">
                   <label for="inputktp" class="col-sm-3 control-label">KTP</label>
 

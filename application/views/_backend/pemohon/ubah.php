@@ -14,7 +14,7 @@
     <!-- Main content -->
     <section class="content">
     <div class="row">
-        <div class="col-xs-8">
+        <div class="col-xs-12">
         <div class="box">
             <!-- /.box-header -->
             <div class="box-body">
@@ -23,11 +23,83 @@
 
                         <div class="form-group">
                             <label for="" class="col-sm-2 control-label">
+                                No. Reg
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="hidden" name="id" class="form-control" value="<?= $r->id; ?>">
+                                <input type="text" name="noreg" class="form-control" value="<?= $r->noreg; ?>" readonly>
+                            </div>
+                            <span class="help-block"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">
                                 Nama Pemohon
                             </label>
                             <div class="col-sm-8">
-                                <input type="hidden" name="noreg" class="form-control" value="<?= $r->noreg; ?>">
                                 <input type="text" name="nama" class="form-control" value="<?= $r->nama; ?>">
+                            </div>
+                            <span class="help-block"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">
+                                Jenis Kelamin
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="text" name="jk" class="form-control" value="<?= $r->jk; ?>">
+                            </div>
+                            <span class="help-block"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">
+                                Alamat
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="text" name="alamat" class="form-control" value="<?= $r->alamat; ?>">
+                            </div>
+                            <span class="help-block"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">
+                                Tanggal
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="text" name="tgl" class="form-control" value="<?= $r->tgl; ?>">
+                            </div>
+                            <span class="help-block"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">
+                                Pekerjaan
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="text" name="pekerjaan" class="form-control" value="<?= $r->pekerjaan; ?>">
+                            </div>
+                            <span class="help-block"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">
+                                Pemanfaatan
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="text" name="pemanfaatan" class="form-control" value="<?= $r->pemanfaatan; ?>">
+                            </div>
+                            <span class="help-block"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">
+                                Lokasi
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="text" name="lokasi" class="form-control" value="<?= $r->lokasi; ?>">
+                            </div>
+                            <span class="help-block"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">
+                                No. Telp
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="text" name="notelp" class="form-control" value="<?= $r->notelp; ?>">
                             </div>
                             <span class="help-block"></span>
                         </div>

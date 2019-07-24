@@ -51,7 +51,7 @@ class M_berkas extends CI_Model {
 
     public function tampil_ubah($id)
     {
-        $query = $this->db->query("SELECT * FROM tbl_berkas WHERE noreg='". $id ."'");
+        $query = $this->db->query("SELECT * FROM tbl_berkas WHERE id='". $id ."'");
 		return $query;
     }
 
@@ -64,12 +64,12 @@ class M_berkas extends CI_Model {
 
 	public function hapus($id)
 	{
-		$query = $this->db->query("DELETE FROM tbl_berkas WHERE noreg='" . $id ."'");
+		$query = $this->db->query("DELETE FROM tbl_berkas WHERE id='" . $id ."'");
 		return $query;
     }
 
 	public function filter($id) {
-		$query = $this->db->query("SELECT * FROM tbl_berkas WHERE noreg='". $id ."'")->row(0);
+		$query = $this->db->query("SELECT * FROM tbl_berkas WHERE id='". $id ."'")->row(0);
 		return $query;
 	}
 

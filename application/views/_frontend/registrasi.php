@@ -59,7 +59,7 @@
         <div class="register-box-body">
             <p class="login-box-msg">Silahkan Daftar</p>
 
-            <form method="post" action="<?= base_url("pemohon/daftar"); ?>" enctype="multipart/form-data">
+            <form method="post" action="<?= base_url("home/daftar"); ?>" enctype="multipart/form-data">
             <div class="form-group has-feedback">
                 <input type="text" name="nama" class="form-control" placeholder="Nama Lengkap" required>
                 <span class="glyphicon glyphicon- form-control-feedback"></span>
