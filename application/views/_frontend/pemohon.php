@@ -67,18 +67,7 @@
 
               <p class="text-muted text-center">Pemohon</p>
 
-              <ul class="list-group list-group-unbordered">
-                <li class="list-group-item">
-                  <b>Followers</b> <a class="pull-right">1,322</a>
-                </li>
-                <li class="list-group-item">
-                  <b>Following</b> <a class="pull-right">543</a>
-                </li>
-                <li class="list-group-item">
-                  <b>Friends</b> <a class="pull-right">13,287</a>
-                </li>
-              </ul>
-
+              <a href="<?= base_url('login/edit_pemohon');?>" class="btn btn-success btn-block"><b>Profile</b></a>
               <a href="<?= base_url('login/logout_pemohon');?>" class="btn btn-danger btn-block"><b>Logout</b></a>
             </div>
             <!-- /.box-body -->
@@ -101,6 +90,18 @@
               <!-- /.tab-pane -->
               <div class="active tab-pane" id="pemohon">
               <form method="post" action="<?= base_url("pemohon/tambahdatapemohon"); ?>" enctype="multipart/form-data" class="form-horizontal">
+                  <div class="alert alert-info  alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <h4><i class="icon fa fa-info"></i> Pemberitahuan !</h4>
+                    Silahkan Melengkapi Data Pemohon Terlebih Dahulu Sebelum Upload Berkas.
+                  </div>
+                  <div class="form-group">
+                    <label for="inputKTP" class="col-sm-2 control-label">KTP</label>
+
+                    <div class="col-sm-10">
+                    <input type="text" name="ktp" class="form-control" id="inputKTP" placeholder="KTP" value="<?= $ktp; ?>">
+                    </div>
+                  </div>
                   <div class="form-group">
                     <label for="inputNama" class="col-sm-2 control-label">Nama Lengkap</label>
 
@@ -127,7 +128,7 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputTgl" class="col-sm-2 control-label">Tanggal</label>
+                    <label for="inputTgl" class="col-sm-2 control-label">Tanggal Pengajuan</label>
 
                     <div class="col-sm-10">
                       <input type="date" name="tgl" class="form-control" id="inputtanggal" placeholder="Tanggal Pengajuan">
@@ -163,23 +164,21 @@
                   </div>
                   <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox"> I agree to the <a href="#">terms and conditions</a>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                      <button type="submit" class="btn btn-default">Submit</button>
+                      <button type="submit" name="submit" class="btn btn-primary">Submit</button>
                     </div>
                   </div>
                 </form>
               </div>
               <!-- /.tab-pane -->
               <div class="tab-pane" id="berkas">
-              <form method="post" action="<?= base_url("pemohon/tambahdatapemohon"); ?>" enctype="multipart/form-data" class="form-horizontal">
+              <form method="post" action="<?= base_url("pemohon/tambahdataberkas"); ?>" enctype="multipart/form-data" class="form-horizontal">
+                  <div class="form-group">
+                    <label for="inputKTP" class="col-sm-2 control-label">KTP</label>
+                    
+                    <div class="col-sm-10">
+                    <input type="text" name="noktp" class="form-control" id="noktp" value="<?= $ktp; ?>" readonly>
+                    </div>
+                  </div>
                   <div class="form-group">
                     <label for="inputNoreg" class="col-sm-2 control-label">No. Reg</label>
                     
@@ -191,7 +190,7 @@
                     <label for="inputNama" class="col-sm-2 control-label">Nama Lengkap</label>
 
                     <div class="col-sm-10">
-                    <input type="text" name="nama" class="form-control" id="inputnama" placeholder="Nama" value="<?= $nama; ?>">
+                    <input type="text" name="nama" class="form-control" id="inputnama" placeholder="Nama" value="<?= $nama; ?>" readonly>
                     </div>
                   </div>
                   <div class="form-group">
@@ -238,16 +237,7 @@
                   </div>
                   <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox"> I agree to the <a href="#">terms and conditions</a>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                      <button type="submit" class="btn btn-default">Submit</button>
+                      <button type="submit" name="submit2" class="btn btn-primary">Submit</button>
                     </div>
                   </div>
                 </form>
@@ -363,39 +353,55 @@
     <div class="row">
         <div class="col-xs-12">
         <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Data Berkas</h3>
+            </div>
             <!-- /.box-header -->
             <div class="box-body">
                 <table id="example1" class="table table-bordered table-striped">
                     <thead>
                         <tr>
-                            <th>No</th>
+                            <th>No.</th>
+                            <th>No. KTP</th>
                             <th>No. Reg</th>
-                            <th>Nama Pemohon</th>
-                            <th>Alamat</th>
-                            <th>Tgl Pengajuan</th>
-                            <th>Pekerjaan</th>
-                            <th>Pemanfaatan</th>
-                            <th>Lokasi</th>
+                            <th>Nama</th>
+                            <th>KTP</th>
+                            <th>KK</th>
+                            <th>BKL</th>
+                            <th>PBB</th>
+                            <th>SPPL</th>
+                            <th>SK</th>
+                            <th>Status</th>
                             <th width="10%">OPTION</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
                             $i=1;
-                            foreach($data as $r) {
+                            foreach($databerkas as $r) {
                         ?>
                             <tr>
                                 <td><?= $i ?>
+                                <td><?= $r->noktp; ?></td>
                                 <td><?= $r->noreg; ?></td>
                                 <td><?= $r->nama; ?></td>
-                                <td><?= $r->alamat; ?></td>
-                                <td><?= $r->tgl; ?></td>
-                                <td><?= $r->pekerjaan; ?></td>
-                                <td><?= $r->pemanfaatan; ?></td>
-                                <td><?= $r->lokasi; ?></td>
+                                <td><?= $r->ktp; ?></td>
+                                <td><?= $r->kk; ?></td>
+                                <td><?= $r->bkl; ?></td>
+                                <td><?= $r->pbb; ?></td>
+                                <td><?= $r->sppl; ?></td>
+                                <td><?= $r->sk; ?></td>
+                                <?php 
+                                  if($r->status_berkas == "Disetujui"){
+                                      echo '<td><span class="label label-success">'. $r->status_berkas .'</span></td>';
+                                  }
+                                  else {
+                                      echo '<td><span class="label label-danger">'. $r->status_berkas .'</span></td>';
+                                  }
+                                ?>
                                 <td>
-                                    <a href="<?= base_url('admin/tampilubah_pemohon/') . $r->id; ?>" class="btn btn-success"><i class="glyphicon glyphicon-pencil"></i></a>
-                                    <a href="<?= base_url('admin/hapus_pemohon/') . $r->id; ?>" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
+                                    <a href="<?= base_url('pemohon/detail_berkas/') . $r->id; ?>" class="btn btn-primary"><i class="glyphicon glyphicon-eye-open"></i></a>
+                                    <a href="<?= base_url('pemohon/hapus_berkas/') . $r->id; ?>" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
                                 </td>
                             </tr> 
                         <?php

@@ -23,86 +23,103 @@
                     
                         <div class="form-group">
                             <label for="" class="col-sm-2 control-label">
-                                Nama Pemohon
+                                No. KTP
                             </label>
                             <div class="col-sm-8">
-                                <input type="text" name="nama" class="form-control" value="<?= $r->nama; ?>">
+                                <input type="text" name="nama" class="form-control" value="<?= $r->noktp; ?>">
                             </div>
                             <span class="help-block"></span>
                         </div>
                         <div class="form-group">
                             <label for="" class="col-sm-2 control-label">
-                                Jenis Kelamin
+                                No. Reg
                             </label>
                             <div class="col-sm-8">
-                                <input type="text" name="jk" class="form-control" value="<?= $r->jk; ?>">
+                                <input type="text" name="jk" class="form-control" value="<?= $r->noreg; ?>">
                             </div>
                             <span class="help-block"></span>
                         </div>
                         <div class="form-group">
                             <label for="" class="col-sm-2 control-label">
-                                Alamat
+                                Nama
                             </label>
                             <div class="col-sm-8">
-                                <input type="text" name="alamat" class="form-control" value="<?= $r->alamat; ?>">
+                                <input type="text" name="alamat" class="form-control" value="<?= $r->nama; ?>">
                             </div>
                             <span class="help-block"></span>
                         </div>
                         <div class="form-group">
                             <label for="" class="col-sm-2 control-label">
-                                Tanggal
+                                KTP
                             </label>
                             <div class="col-sm-8">
-                                <input type="text" name="tgl" class="form-control" value="<?= $r->tgl; ?>">
+                                <img class="img-thumbnail" src="<?= base_url() . 'assets/gambar/'.$r->ktp  ?>"/>
                             </div>
                             <span class="help-block"></span>
                         </div>
                         <div class="form-group">
                             <label for="" class="col-sm-2 control-label">
-                                Pekerjaan
+                                KK
                             </label>
                             <div class="col-sm-8">
-                                <input type="text" name="pekerjaan" class="form-control" value="<?= $r->pekerjaan; ?>">
+                                <img class="img-thumbnail" src="<?= base_url() . 'assets/gambar/'.$r->kk  ?>"/>
                             </div>
                             <span class="help-block"></span>
                         </div>
                         <div class="form-group">
                             <label for="" class="col-sm-2 control-label">
-                                Pemanfaatan
+                                BKL
                             </label>
                             <div class="col-sm-8">
-                                <input type="text" name="pemanfaatan" class="form-control" value="<?= $r->pemanfaatan; ?>">
+                                <img class="img-thumbnail" src="<?= base_url() . 'assets/gambar/'.$r->bkl  ?>"/>
                             </div>
                             <span class="help-block"></span>
                         </div>
                         <div class="form-group">
                             <label for="" class="col-sm-2 control-label">
-                                Lokasi
+                                PBB
                             </label>
                             <div class="col-sm-8">
-                                <input type="text" name="lokasi" class="form-control" value="<?= $r->lokasi; ?>">
+                                <img class="img-thumbnail" src="<?= base_url() . 'assets/gambar/'.$r->pbb  ?>"/>
                             </div>
                             <span class="help-block"></span>
                         </div>
                         <div class="form-group">
                             <label for="" class="col-sm-2 control-label">
-                                No. Telp
+                                SPPL
                             </label>
                             <div class="col-sm-8">
-                                <input type="text" name="notelp" class="form-control" value="<?= $r->notelp; ?>">
+                                <img class="img-thumbnail" src="<?= base_url() . 'assets/gambar/'.$r->sppl  ?>"/>
                             </div>
                             <span class="help-block"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">
+                                SK
+                            </label>
+                            <div class="col-sm-8">
+                                <img class="img-thumbnail" src="<?= base_url() . 'assets/gambar/'.$r->sk  ?>"/>
+                            </div>
+                            <span class="help-block"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">
+                                Status Berkas
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="text" name="status_berkas" class="form-control" value="<?= $r->status_berkas; ?>">
+                            </div>
+                            <span class="help-block"></span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="form-group">
+                            <div class="col-sm-2 col-sm-offset-2 text-left">
+                                <button class="btn btn-primary" type="submit" name="submit">Simpan</button>
+                            </div>
                         </div>
                     <?php
                         }
                     ?>
-                    
-                    <div class="divider"></div>
-                    <div class="form-group">
-                        <div class="col-sm-4 col-sm-offset-6 text-right">
-                            <button class="btn btn-primary" type="submit" name="submit">Simpan</button>
-                        </div>
-                    </div>
                 </form>
             </div>
             <!-- /.box-body -->

@@ -31,20 +31,20 @@ class Admin extends CI_Controller {
 	{
 		$data['title'] = 'Pemohon';
 		$data['page']  = '_backend/pemohon/index';
-		$data['data'] = $this->M_pemohon->tampil()->result();
+		$data['data'] = $this->M_pemohon->admin_tampil()->result();
 		$this->load->view('_backend/index', $data);
 		
 	}
 
-	public function tambah_pemohon()
+	/* public function tambah_pemohon()
 	{
 		$data['title'] = 'Pemohon';
 		$data['page'] = '_backend/pemohon/tambah';
 		$data['kodeunik'] = $this->M_pemohon->buat_kode();
 		$this->load->view('_backend/index', $data);
-	}
+	} */
 
-	function tambahdata_pemohon()
+	/* function tambahdata_pemohon()
 	{
 		if (isset($_POST['submit'])) {
 			$object = array('noreg'			=> $this->input->post('noreg'),
@@ -64,7 +64,7 @@ class Admin extends CI_Controller {
 		} else {
 			redirect('admin/pemohon');
 		}
-	}
+	} */
 
 	public function tampilubah_pemohon($id)
 	{
@@ -78,8 +78,7 @@ class Admin extends CI_Controller {
 	{
 		if(isset($_POST['submit'])){
 			$id 	= $this->input->post('id');
-			$object = array('noreg'			=> $this->input->post('noreg'),
-							'nama' 			=> $this->input->post('nama'),
+			$object = array('nama' 			=> $this->input->post('nama'),
 							'jk'			=> $this->input->post('jk'),
 							'alamat'		=> $this->input->post('alamat'),
 							'tgl'			=> $this->input->post('tgl'),
@@ -107,7 +106,7 @@ class Admin extends CI_Controller {
 	{
 		$data['title'] = 'Berkas';
 		$data['page']  = '_backend/berkas/index';
-		$data['data'] = $this->M_berkas->tampil()->result();
+		$data['data'] = $this->M_berkas->admintampilberkas()->result();
 		$this->load->view('_backend/index', $data);
 		
 	}
@@ -117,6 +116,20 @@ class Admin extends CI_Controller {
 		$data['title'] = 'Analisa Data';
 		$data['page'] = '_backend/berkas/tambah';
 		$this->load->view('_backend/index', $data);
+	}
+
+	public function tampilubah_berkas($id)
+	{
+		$data['title']	= 'Berkas';
+		$data['page']	= '_backend/berkas/ubah';
+		$data['data']	= $this->M_berkas->tampil_ubah($id)->result();
+		$this->load->view('_backend/index', $data);
+	}
+
+	function hapus_berkas($id)
+	{
+		$this->M_berkas->hapus($id);
+		redirect('admin/berkas');
 	}
 
 }

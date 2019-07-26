@@ -16,9 +16,6 @@
     <!-- Small boxes (Stat box) -->
     <div class="row">
         <div class="col-xs-12">
-        <div class="box-header with-border">
-                <h3 class="box-title"><a href="<?= base_url('admin/tambah_pemohon'); ?>" class="btn btn-primary pull-right">Tambah <?= $title ?></a></h3>
-        </div>
         <div class="box">
             <!-- /.box-header -->
             <div class="box-body">
@@ -26,7 +23,6 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>No. Reg</th>
                             <th>Nama Pemohon</th>
                             <th>Alamat</th>
                             <th>Tgl Pengajuan</th>
@@ -43,7 +39,6 @@
                         ?>
                             <tr>
                                 <td><?= $i ?>
-                                <td><?= $r->noreg; ?></td>
                                 <td><?= $r->nama; ?></td>
                                 <td><?= $r->alamat; ?></td>
                                 <td><?= $r->tgl; ?></td>

@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class M_berkas extends CI_Model {
 
     var $table = 'tbl_berkas';
-    var $primary = 'noreg';
+    var $kunci = 'id';
 
     public function __construct()
     {
@@ -12,22 +12,23 @@ class M_berkas extends CI_Model {
         $this->load->database();
     }
 
-    public function tampilnoreg()
-    {
-        $query = $this->db->query("SELECT * FROM tbl_pemohon WHERE id='". $id ."'");
-		return $query;
-    }
-
     public function tampil()
     {
-        $query = $this->db->query("SELECT * FROM tbl_berkas");
-        return $query;
+        $nama = $this->session->userdata('nama');
+        $data = $this->db->query("SELECT * FROM $this->table WHERE nama='". $nama ."' GROUP BY $this->kunci DESC")->result();
+        return $data;
     }
 
-    public function insert($data)
+    public function admintampilberkas()
     {
-        $query = $this->db->insert($this->table, $data);
-        return $query;
+        $data = $this->db->query("SELECT * FROM $this->table");
+        return $data;
+    }
+
+    public function detail($id)
+    {
+        $data = $this->db->query("SELECT * FROM $this->table WHERE $this->kunci='". $id ."'");
+        return $data;
     }
 
     public function simpan($object)
@@ -44,14 +45,14 @@ class M_berkas extends CI_Model {
 
     public function ubah($id, $object)
 	{
-		$this->db->where($this->primary, $id);
+		$this->db->where($this->kunci, $id);
 		$query = $this->db->update($this->table, $object);
 		return $query;
 	}
 
 	public function hapus($id)
 	{
-		$query = $this->db->query("DELETE FROM tbl_berkas WHERE id='" . $id ."'");
+		$query = $this->db->query("DELETE FROM tbl_berkas WHERE id='". $id ."'");
 		return $query;
     }
 

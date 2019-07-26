@@ -14,10 +14,10 @@ class M_pemohon extends CI_Model {
 
     public function buat_kode()
     {
-        $this->db->select('RIGHT(tbl_pemohon.noreg,4) as kode', FALSE);
+        $this->db->select('RIGHT(tbl_berkas.noreg,4) as kode', FALSE);
         $this->db->order_by('noreg','DESC');
         $this->db->limit(1);
-        $query = $this->db->get('tbl_pemohon');
+        $query = $this->db->get('tbl_berkas');
         if($query->num_rows() <> 0 ){
             $data = $query->row();
             $kode = intval($data->kode) + 1;
@@ -31,7 +31,13 @@ class M_pemohon extends CI_Model {
         return $kodejadi;
     }
 
-    public function tampil()
+    public function tampil($ktp)
+    {
+        $query = $this->db->query("SELECT * FROM tbl_pemohon WHERE ktp='". $ktp ."'")->row(0);
+        return $query;
+    }
+
+    public function admin_tampil()
     {
         $query = $this->db->query("SELECT * FROM tbl_pemohon");
         return $query;

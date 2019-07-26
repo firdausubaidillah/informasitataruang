@@ -16,9 +16,6 @@
     <!-- Small boxes (Stat box) -->
     <div class="row">
         <div class="col-xs-12">
-        <div class="box-header with-border">
-                <h3 class="box-title"><a href="<?= base_url('admin/tambah_berkas'); ?>" class="btn btn-primary pull-right">Tambah <?= $title ?></a></h3>
-        </div>
         <div class="box">
             <!-- /.box-header -->
             <div class="box-body">
@@ -26,6 +23,7 @@
                     <thead>
                         <tr>
                             <th>No</th>
+                            <th>No. KTP</th>
                             <th>No. Reg</th>
                             <th>Nama Pemohon</th>
                             <th>KTP</th>
@@ -40,13 +38,14 @@
                         ?>
                             <tr>
                                 <td><?= $i ?>
+                                <td><?= $r->noktp; ?></td>
                                 <td><?= $r->noreg; ?></td>
                                 <td><?= $r->nama; ?></td>
                                 <td><?= $r->ktp; ?></td>
                                 <td><?= $r->kk; ?></td>
                                 <td>
-                                    <a href="<?= base_url('admin/tampilubah_pemohon/') . $r->noreg; ?>" class="btn btn-success"><i class="glyphicon glyphicon-pencil"></i></a>
-                                    <a href="<?= base_url('admin/hapus_pemohon/') . $r->noreg; ?>" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
+                                    <a href="<?= base_url('admin/tampilubah_berkas/') . $r->id; ?>" class="btn btn-success"><i class="glyphicon glyphicon-pencil"></i></a>
+                                    <a href="<?= base_url('admin/hapus_berkas/') . $r->id; ?>" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
                                 </td>
                             </tr> 
                         <?php
