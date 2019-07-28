@@ -79,7 +79,7 @@
         <div class="col-md-9">
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
-              <li class="active"><a href="#detailberkas" data-toggle="tab">Data Pemohon</a></li>
+              <li class="active"><a href="#detailberkas" data-toggle="tab">Berkas Pemohon</a></li>
             </ul>
             <div class="tab-content">
               <div class="tab-pane">
@@ -91,19 +91,7 @@
               ?>
               <div class="active tab-pane" id="detailberkas">
               <form method="post" action="<?= base_url("pemohon/tambahdatapemohon"); ?>" enctype="multipart/form-data" class="form-horizontal">
-                  <div class="form-group">
-                    <label for="inputKTP" class="col-sm-2 control-label">Formulir Pemohon</label>
-                    
-                    <div class="col-sm-3">
-                    <a href="<?= base_url('login/edit_pemohon');?>" class="btn btn-primary btn-block"><b>Download Formulir</b></a>
-                    </div>
-                    <label for="inputKTP" class="col-sm-2 control-label">Surat Pernyataan Pemohon</label>
-                    
-                    <div class="col-sm-3">
-                    <a href="<?= base_url('login/edit_pemohon');?>" class="btn btn-primary btn-block"><b>Download Surat Pernyataan</b></a>
-                    </div>
-                  </div>
-
+              
                   <div class="form-group">
                     <label for="inputKTP" class="col-sm-2 control-label">KTP</label>
 
@@ -144,11 +132,6 @@
 
                     <div class="col-sm-10">
                       <img class="img-thumbnail" src="<?= base_url() . 'assets/gambar/'.$p->sk  ?>"/>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                      <button type="submit" name="submit" class="btn btn-primary">Submit</button>
                     </div>
                   </div>
                 </form>

@@ -11,6 +11,7 @@ class Pemohon extends CI_Controller {
 		$this->load->model('M_pemohon');
 		$this->load->model('M_user');
 		$this->load->model('M_pernyataan');
+		$this->load->model('M_formulir');
 		$this->load->model('M_berkas');
 
 		$kodeakses	= $this->session->userdata('kodeakses');
@@ -241,6 +242,13 @@ class Pemohon extends CI_Controller {
 		} else {
 			redirect('pemohon/pernyataan');
 		}
+	}
+
+	public function downloadformulir($id)
+	{
+		$data['noreg'] 				= $this->M_formulir->noreg($id)->result();
+		$data['datapemohonberkas']	= $this->M_formulir->datapemohonberkas()->result();
+		$this->load->view('_frontend/cetakformulir', $data);
 	}
 
 }

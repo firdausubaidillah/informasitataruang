@@ -132,4 +132,20 @@ class Admin extends CI_Controller {
 		redirect('admin/berkas');
 	}
 
+	function ubahdata_berkas()
+	{
+		if(isset($_POST['submit'])){
+			$id 	= $this->input->post('id');
+			$object = array('noktp'				=> $this->input->post('noktp'),
+							'noreg'				=> $this->input->post('noreg'),
+							'nama'				=> $this->input->post('nama'),
+							'status_berkas'		=> $this->input->post('status_berkas'),
+							);
+			$this->M_berkas->ubah($id, $object);
+			$object = $this->security->xss_clean($object);
+			redirect('admin/berkas');
+		} else {
+			redirect('admin/berkas');
+		}
+	}
 }

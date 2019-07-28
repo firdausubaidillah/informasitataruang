@@ -18,7 +18,7 @@
         <div class="box">
             <!-- /.box-header -->
             <div class="box-body">
-                <form method="POST" action="<?=base_url("admin/ubahdata_pemohon"); ?>" enctype="multipart/form-data" class="form-horizontal">
+                <form method="POST" action="<?=base_url("admin/ubahdata_berkas"); ?>" enctype="multipart/form-data" class="form-horizontal">
                     <?php foreach($data as $r) { ?>
                     
                         <div class="form-group">
@@ -26,7 +26,8 @@
                                 No. KTP
                             </label>
                             <div class="col-sm-8">
-                                <input type="text" name="nama" class="form-control" value="<?= $r->noktp; ?>">
+                                <input type="hidden" name="id" class="form-control" value="<?= $r->id; ?>">
+                                <input type="text" name="noktp" class="form-control" value="<?= $r->noktp; ?>">
                             </div>
                             <span class="help-block"></span>
                         </div>
@@ -35,7 +36,7 @@
                                 No. Reg
                             </label>
                             <div class="col-sm-8">
-                                <input type="text" name="jk" class="form-control" value="<?= $r->noreg; ?>">
+                                <input type="text" name="noreg" class="form-control" value="<?= $r->noreg; ?>">
                             </div>
                             <span class="help-block"></span>
                         </div>
@@ -44,7 +45,7 @@
                                 Nama
                             </label>
                             <div class="col-sm-8">
-                                <input type="text" name="alamat" class="form-control" value="<?= $r->nama; ?>">
+                                <input type="text" name="nama" class="form-control" value="<?= $r->nama; ?>">
                             </div>
                             <span class="help-block"></span>
                         </div>
@@ -107,7 +108,22 @@
                                 Status Berkas
                             </label>
                             <div class="col-sm-8">
-                                <input type="text" name="status_berkas" class="form-control" value="<?= $r->status_berkas; ?>">
+                                <!-- <input type="text" name="status_berkas" class="form-control" value="<?= $r->status_berkas; ?>"> -->
+                                <select class="form-control" name="status_berkas">
+                                    <?php
+                                        if($r->status_berkas=="Disetujui") {
+                                    ?>
+                                            <option selected="">Disetujui</option>
+                                            <option>Menunggu persetujuan</option>
+                                            <?php
+                                        } else {
+                                    ?>
+                                            <option>Disetujui</option>
+                                            <option selected="">Menunggu persetujuan</option>
+                                    <?php
+                                        }
+                                    ?>
+                                </select>
                             </div>
                             <span class="help-block"></span>
                         </div>

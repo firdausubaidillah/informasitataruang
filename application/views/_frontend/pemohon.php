@@ -114,7 +114,7 @@
 
                     <div class="col-sm-10">
                        <select class="form-control" name="jk">
-                          <option value="">--- Pilih jenis Kelamin ---</option> 
+                          <option value="" diselected>--- Pilih jenis Kelamin ---</option> 
                           <option>Laki-laki</option>
                           <option>Perempuan</option>
                       </select>
@@ -365,13 +365,8 @@
                             <th>No. KTP</th>
                             <th>No. Reg</th>
                             <th>Nama</th>
-                            <th>KTP</th>
-                            <th>KK</th>
-                            <th>BKL</th>
-                            <th>PBB</th>
-                            <th>SPPL</th>
-                            <th>SK</th>
-                            <th>Status</th>
+                            <th width="20%">Status</th>
+                            <th width="10%">Berkas</th>
                             <th width="10%">OPTION</th>
                         </tr>
                     </thead>
@@ -385,12 +380,6 @@
                                 <td><?= $r->noktp; ?></td>
                                 <td><?= $r->noreg; ?></td>
                                 <td><?= $r->nama; ?></td>
-                                <td><?= $r->ktp; ?></td>
-                                <td><?= $r->kk; ?></td>
-                                <td><?= $r->bkl; ?></td>
-                                <td><?= $r->pbb; ?></td>
-                                <td><?= $r->sppl; ?></td>
-                                <td><?= $r->sk; ?></td>
                                 <?php 
                                   if($r->status_berkas == "Disetujui"){
                                       echo '<td><span class="label label-success">'. $r->status_berkas .'</span></td>';
@@ -399,6 +388,11 @@
                                       echo '<td><span class="label label-danger">'. $r->status_berkas .'</span></td>';
                                   }
                                 ?>
+                               
+                                <td>
+                                    <a href="<?= base_url('pemohon/downloadformulir/') . $r->id; ?>" class="btn btn-primary"><i class="glyphicon glyphicon-download"> Formulir</i></a>
+                                    <a href="<?= base_url('pemohon/hapus_berkas/') . $r->id; ?>" class="btn btn-primary"><i class="glyphicon glyphicon-download"> Pernyataan</i></a>
+                                </td>
                                 <td>
                                     <a href="<?= base_url('pemohon/detail_berkas/') . $r->id; ?>" class="btn btn-primary"><i class="glyphicon glyphicon-eye-open"></i></a>
                                     <a href="<?= base_url('pemohon/hapus_berkas/') . $r->id; ?>" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
