@@ -366,8 +366,7 @@
                             <th>No. Reg</th>
                             <th>Nama</th>
                             <th width="20%">Status</th>
-                            <th width="10%">Berkas</th>
-                            <th width="10%">OPTION</th>
+                            <th width="20%">OPTION</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -388,13 +387,9 @@
                                       echo '<td><span class="label label-danger">'. $r->status_berkas .'</span></td>';
                                   }
                                 ?>
-                               
-                                <td>
-                                    <a href="<?= base_url('pemohon/downloadformulir/') . $r->id; ?>" class="btn btn-primary"><i class="glyphicon glyphicon-download"> Formulir</i></a>
-                                    <a href="<?= base_url('pemohon/hapus_berkas/') . $r->id; ?>" class="btn btn-primary"><i class="glyphicon glyphicon-download"> Pernyataan</i></a>
-                                </td>
                                 <td>
                                     <a href="<?= base_url('pemohon/detail_berkas/') . $r->id; ?>" class="btn btn-primary"><i class="glyphicon glyphicon-eye-open"></i></a>
+                                    <a href="<?= base_url('pemohon/downloadformulir/') . $r->id; ?>" class="btn btn-primary"><i class="glyphicon glyphicon-download"></i></a>
                                     <a href="<?= base_url('pemohon/hapus_berkas/') . $r->id; ?>" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
                                 </td>
                             </tr> 

@@ -64,7 +64,7 @@ body{
   	<td></td>
   	<td></td>
   	<td></td>
-  	<td>Pasuruan, <?php echo $hasil['tanggal'] ?></td>
+  	<td>Pasuruan, <?= $f->tgl; ?></td>
   </tr>
 
   <tr>
@@ -308,8 +308,6 @@ body{
   <?php } ?>
   <?php } ?>
 </table>
-       
-
 
 <br>
 <br>
@@ -350,19 +348,19 @@ body{
   <tr>
     <td width="30%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nama</td>
     <td width="5%">:</td>
-    <td width="70%"><?php echo $hasil['nama'] ?></td>
+    <td width="70%"><?= $f->nama; ?></td>
   </tr>
 
   <tr>
     <td width="35%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jenis Kelamin</td>
     <td width="5%">:</td>
-    <td width="70%"><?php echo $hasil['jeniskelamin'] ?></td>
+    <td width="70%"><?= $f->jk; ?></td>
   </tr>
 
   <tr>
     <td width="20%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alamat</td>
     <td width="5%">:</td>
-    <td width="70%"><?php echo $hasil['alamat'] ?></td>
+    <td width="70%"><?= $f->alamat; ?></td>
   </tr>
   
   <tr>
@@ -372,25 +370,25 @@ body{
   <tr>
     <td width="20%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pekerjaan</td>
     <td width="5%">:</td>
-    <td width="70%"><?php echo $hasil['pekerjaan'] ?></td>
+    <td width="70%"><?= $f->pekerjaan; ?></td>
   </tr>
 
   <tr>
     <td width="20%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No. KTP</td>
     <td width="5%">:</td>
-    <td width="70%"><?php echo $hasil['noktp'] ?></td>
+    <td width="70%"><?= $f->ktp; ?></td>
   </tr>
 
   <tr>
     <td width="20%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No. TLP</td>
     <td width="5%">:</td>
-    <td width="70%"><?php echo $hasil['notelpon'] ?></td>
+    <td width="70%"><?= $f->notelp; ?></td>
   </tr>
 
   <tr>
     <td width="20%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lokasi</td>
     <td width="5%">:</td>
-    <td width="70%"><?php echo $hasil['lokasi'] ?></td>
+    <td width="70%"><?= $f->lokasi; ?></td>
   </tr>
   
   <tr>
@@ -442,7 +440,7 @@ body{
     <td width="4%"></td>
   <td width="20%"></td>
   <td width="4%"></td>
-    <td width="70%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pasuruan, <?php echo $hasil['tanggal'] ?> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="70%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pasuruan, <?= $f->tgl; ?> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
   </tr>
 
   <tr>
