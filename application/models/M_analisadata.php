@@ -35,6 +35,12 @@ class M_analisadata extends CI_Model {
 		$this->db->where($this->kunci, $id);
 		$query = $this->db->update($this->table, $object);
 		return $query;
-	}
+    }
+    
+    public function timeline()
+    {
+        $query = $this->db->query("SELECT * FROM $this->table")->result();
+        return $query;
+    }
 
 }
