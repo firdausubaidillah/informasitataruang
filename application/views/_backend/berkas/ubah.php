@@ -42,6 +42,18 @@
                         </div>
                         <div class="form-group">
                             <label for="" class="col-sm-2 control-label">
+                                Tanggal Pengajuan
+                            </label>
+                            <div class="col-sm-8">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    <input type="text" name="tgl" class="form-control" value="<?= date_indo($r->tgl); ?>" readonly>
+                                </div>
+                            </div>
+                            <span class="help-block"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">
                                 Nama
                             </label>
                             <div class="col-sm-8">

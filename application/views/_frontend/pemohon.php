@@ -128,13 +128,6 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputTgl" class="col-sm-2 control-label">Tanggal Pengajuan</label>
-
-                    <div class="col-sm-10">
-                      <input type="date" name="tgl" class="form-control" id="inputtanggal" placeholder="Tanggal Pengajuan">
-                    </div>
-                  </div>
-                  <div class="form-group">
                     <label for="inputPekerjaan" class="col-sm-2 control-label">Pekerjaan</label>
 
                     <div class="col-sm-10">
@@ -187,6 +180,17 @@
                     </div>
                   </div>
                   <div class="form-group">
+                    <label for="inputNoreg" class="col-sm-2 control-label">Tanggal Pengajuan</label>
+
+                    <div class="col-sm-10">
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                          
+                          <input type="text" name="tgl" class="form-control" id="tgl" value="<?php $tgl=date('Y-m-d'); echo $tgl; ?>" readonly>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
                     <label for="inputNama" class="col-sm-2 control-label">Nama Lengkap</label>
 
                     <div class="col-sm-10">
@@ -228,13 +232,13 @@
                     <input type="file" name="sppl" class="form-control" id="inputsppl" >
                     </div>
                   </div>
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <label for="inputsk" class="col-sm-2 control-label">Surat Kuasa</label>
 
                     <div class="col-sm-10">
                     <input type="file" name="sk" class="form-control" id="inputsk">
                     </div>
-                  </div>
+                  </div> -->
                   <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
                       <button type="submit" name="submit2" class="btn btn-primary">Submit</button>
@@ -364,6 +368,7 @@
                             <th>No.</th>
                             <th>No. KTP</th>
                             <th>No. Reg</th>
+                            <th>Tanggal Pengajuan</th>
                             <th>Nama</th>
                             <th width="20%">Status</th>
                             <th width="20%">OPTION</th>
@@ -378,6 +383,7 @@
                                 <td><?= $i ?>
                                 <td><?= $r->noktp; ?></td>
                                 <td><?= $r->noreg; ?></td>
+                                <td><?= date_indo($r->tgl); ?></td>
                                 <td><?= $r->nama; ?></td>
                                 <?php 
                                   if($r->status_berkas == "Disetujui"){

@@ -2,7 +2,7 @@
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
-      Data <?= $title ?>
+      <?= $title ?>
       <small></small>
     </h1>
     <ol class="breadcrumb">
@@ -22,14 +22,14 @@
                 <table id="example1" class="table table-bordered table-striped">
                     <thead>
                         <tr>
-                            <th>No</th>
+                            <th width="5%">No</th>
                             <th>No. KTP</th>
                             <th>No. Reg</th>
-                            <th>Tanggal Pengajuan</th>
+                            <th>Tanggal</th>
                             <th>Nama Pemohon</th>
-                            <th>KTP</th>
-                            <th>KK</th>
-                            <th width="10%">OPTION</th>
+                            <th>Petugas Survei</th>
+                            <th>Tanggal Survei</th>
+                            <th width="5%">OPTION</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -43,11 +43,10 @@
                                 <td><?= $r->noreg; ?></td>
                                 <td><?= date_indo($r->tgl); ?></td>
                                 <td><?= $r->nama; ?></td>
-                                <td><?= $r->ktp; ?></td>
-                                <td><?= $r->kk; ?></td>
+                                <td><?= $r->petugas_survei; ?></td>
+                                <td><?= date_indo($r->tgl_survei); ?></td>
                                 <td>
-                                    <a href="<?= base_url('admin/tampilubah_berkas/') . $r->id; ?>" class="btn btn-success"><i class="glyphicon glyphicon-pencil"></i></a>
-                                    <a href="<?= base_url('admin/hapus_berkas/') . $r->id; ?>" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
+                                    <a href="<?= base_url('admin/tampilubah_analisadata/') . $r->id; ?>" class="btn btn-success"><i class="glyphicon glyphicon-pencil"></i></a>
                                 </td>
                             </tr> 
                         <?php

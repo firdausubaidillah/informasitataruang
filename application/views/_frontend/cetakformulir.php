@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<body>
+<body onLoad="window.print()">
 <style>
 h1 {
 	margin-bottom:0px;
@@ -64,7 +64,7 @@ body{
   	<td></td>
   	<td></td>
   	<td></td>
-  	<td>Pasuruan, <?= $f->tgl; ?></td>
+  	<td>Pasuruan, <?= date_indo($e->tgl); ?></td>
   </tr>
 
   <tr>
@@ -228,10 +228,10 @@ body{
   	<td colspan="3">Surat Pernyataan Penunjukan Lokasi yang dimohonkan (Bermaterai)</td>
   </tr>
 
-  <tr>
+  <!-- <tr>
   	<td width="4%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.&nbsp;&nbsp;</td>
   	<td colspan="3">Surat Kuasa **)</td>
-  </tr>
+  </tr> -->
 
   <tr>
 	<td><br></td>
@@ -352,7 +352,7 @@ body{
   </tr>
 
   <tr>
-    <td width="35%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jenis Kelamin</td>
+    <td width="40%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jenis Kelamin</td>
     <td width="5%">:</td>
     <td width="70%"><?= $f->jk; ?></td>
   </tr>
@@ -440,7 +440,7 @@ body{
     <td width="4%"></td>
   <td width="20%"></td>
   <td width="4%"></td>
-    <td width="70%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pasuruan, <?= $f->tgl; ?> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="70%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pasuruan, <?= date_indo($e->tgl); ?> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
   </tr>
 
   <tr>

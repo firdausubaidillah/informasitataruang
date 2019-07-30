@@ -7,7 +7,7 @@ class Pemohon extends CI_Controller {
 	{
 		parent::__construct();
 		error_reporting(0);
-		$this->load->helper('url');
+		$this->load->helper('url','tgl_indo_helper');
 		$this->load->model('M_pemohon');
 		$this->load->model('M_user');
 		$this->load->model('M_pernyataan');
@@ -42,7 +42,6 @@ class Pemohon extends CI_Controller {
 							'nama'			=> $this->input->post('nama'),
 							'jk'			=> $this->input->post('jk'),
 							'alamat'		=> $this->input->post('alamat'),
-							'tgl'			=> $this->input->post('tgl'),
 							'pekerjaan'		=> $this->input->post('pekerjaan'),
 							'pemanfaatan'	=> $this->input->post('pemanfaatan'),
 							'lokasi'		=> $this->input->post('lokasi'),
@@ -63,6 +62,7 @@ class Pemohon extends CI_Controller {
 		if (isset($_POST['submit2'])) {
 			$object = array('noktp'			=> $this->input->post('noktp'),
 							'noreg'			=> $this->input->post('noreg'),
+							'tgl'			=> $this->input->post('tgl'),
 							'nama'			=> $this->input->post('nama'),
 							'status_berkas'	=> 'Menunggu Persetujuan'
 						);
@@ -86,10 +86,10 @@ class Pemohon extends CI_Controller {
 							$upload = $this->_do_upload5();
 							$object['sppl'] = $upload;
 						}
-						if (!empty($_FILES['sk']['name'])) {
+						/* if (!empty($_FILES['sk']['name'])) {
 							$upload = $this->_do_upload6();
 							$object['sk'] = $upload;
-						}
+						} */
 		
 			$object = $this->security->xss_clean($object);
 			$this->M_berkas->simpan($object);
@@ -198,7 +198,7 @@ class Pemohon extends CI_Controller {
 		return $this->upload->data('file_name');
 	}
 
-	private function _do_upload6()
+	/* private function _do_upload6()
 	{
 		$config['upload_path'] 		= 'assets/gambar/';
 		$config['allowed_types'] 	= 'gif|jpg|png|jpeg';
@@ -213,37 +213,9 @@ class Pemohon extends CI_Controller {
 			echo "Data Gagal Tersimpan";
 		}
 		return $this->upload->data('file_name');
-	}
+	} */
 
-	//PERNYATAAN
-	public function pernyataan()
-	{	
-		$data['kodeunik'] = $this->M_pernyataan->buat_kode();
-		$this->load->view('_frontend/pernyataan', $data);
-	}
-
-	function tambahdatapernyataan()
-	{
-		if (isset($_POST['submit'])) {
-			$object = array('noreg'			=> $this->input->post('noreg'),
-							'nama'			=> $this->input->post('nama'),
-							'jk'			=> $this->input->post('jk'),
-							'alamat'		=> $this->input->post('alamat'),							
-							'pekerjaan'		=> $this->input->post('pekerjaan'),
-							'ktp'			=> $this->input->post('ktp'),
-							'notelp'		=> $this->input->post('notelp'),
-							'lokasi'		=> $this->input->post('lokasi'),
-							'tgl'			=> $this->input->post('tgl')
-						);
-		
-			$object = $this->security->xss_clean($object);
-			$this->M_pernyataan->simpan($object);
-			redirect('pemohon/berkas');
-		} else {
-			redirect('pemohon/pernyataan');
-		}
-	}
-
+	//FORMULIR
 	public function downloadformulir($id)
 	{
 		$data['noreg'] 				= $this->M_formulir->noreg($id)->result();
@@ -252,4 +224,5 @@ class Pemohon extends CI_Controller {
 	}
 
 }
+
 ?>

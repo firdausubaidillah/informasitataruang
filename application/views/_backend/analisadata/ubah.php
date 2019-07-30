@@ -18,83 +18,75 @@
         <div class="box">
             <!-- /.box-header -->
             <div class="box-body">
-                <form method="POST" action="<?=base_url("admin/ubahdata_pemohon"); ?>" enctype="multipart/form-data" class="form-horizontal">
+                <form method="POST" action="<?=base_url("admin/ubahdata_analisadata"); ?>" enctype="multipart/form-data" class="form-horizontal">
                     <?php foreach($data as $r) { ?>
                     
                         <div class="form-group">
                             <label for="" class="col-sm-2 control-label">
-                                Nama Pemohon
+                                No. KTP
                             </label>
                             <div class="col-sm-8">
                                 <input type="hidden" name="id" class="form-control" value="<?= $r->id; ?>">
-                                <input type="text" name="nama" class="form-control" value="<?= $r->nama; ?>">
+                                <input type="text" name="noktp" class="form-control" value="<?= $r->noktp; ?>" readonly>
                             </div>
                             <span class="help-block"></span>
                         </div>
                         <div class="form-group">
                             <label for="" class="col-sm-2 control-label">
-                                Jenis Kelamin
+                                No. Reg
                             </label>
                             <div class="col-sm-8">
-                                <input type="text" name="jk" class="form-control" value="<?= $r->jk; ?>">
+                                <input type="text" name="noreg" class="form-control" value="<?= $r->noreg; ?>" readonly>
                             </div>
                             <span class="help-block"></span>
                         </div>
                         <div class="form-group">
                             <label for="" class="col-sm-2 control-label">
-                                Alamat
+                                Nama
                             </label>
                             <div class="col-sm-8">
-                                <input type="text" name="alamat" class="form-control" value="<?= $r->alamat; ?>">
+                                <input type="text" name="nama" class="form-control" value="<?= $r->nama; ?>" readonly>
                             </div>
                             <span class="help-block"></span>
                         </div>
                         <div class="form-group">
                             <label for="" class="col-sm-2 control-label">
-                                Pekerjaan
+                                Petugas Survei
                             </label>
                             <div class="col-sm-8">
-                                <input type="text" name="pekerjaan" class="form-control" value="<?= $r->pekerjaan; ?>">
+                            <select class="form-control" name="petugas_survei">
+                                <?php
+                                    $petugas = $this->M_analisadata->get();
+                                    foreach($petugas as $p) {
+                                        echo '<option value="'. $p->nama_petugassurvei .'">'. $p->nama_petugassurvei .'</option>';
+                                    }
+                                ?>
+                            </select>
                             </div>
                             <span class="help-block"></span>
                         </div>
                         <div class="form-group">
                             <label for="" class="col-sm-2 control-label">
-                                Pemanfaatan
+                                Tanggal Survei
                             </label>
                             <div class="col-sm-8">
-                                <input type="text" name="pemanfaatan" class="form-control" value="<?= $r->pemanfaatan; ?>">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    <input type="date" name="tgl_survei" class="form-control">
+                                </div>
                             </div>
                             <span class="help-block"></span>
                         </div>
+
+                        <div class="divider"></div>
                         <div class="form-group">
-                            <label for="" class="col-sm-2 control-label">
-                                Lokasi
-                            </label>
-                            <div class="col-sm-8">
-                                <input type="text" name="lokasi" class="form-control" value="<?= $r->lokasi; ?>">
+                            <div class="col-sm-2 col-sm-offset-2 text-left">
+                                <button class="btn btn-primary" type="submit" name="submit">Simpan</button>
                             </div>
-                            <span class="help-block"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="" class="col-sm-2 control-label">
-                                No. Telp
-                            </label>
-                            <div class="col-sm-8">
-                                <input type="text" name="notelp" class="form-control" value="<?= $r->notelp; ?>">
-                            </div>
-                            <span class="help-block"></span>
                         </div>
                     <?php
                         }
                     ?>
-                    
-                    <div class="divider"></div>
-                    <div class="form-group">
-                        <div class="col-sm-4 col-sm-offset-6 text-right">
-                            <button class="btn btn-primary" type="submit" name="submit">Simpan</button>
-                        </div>
-                    </div>
                 </form>
             </div>
             <!-- /.box-body -->

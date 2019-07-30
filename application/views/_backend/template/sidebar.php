@@ -43,7 +43,8 @@
             <li class="<?php if($title=='Berkas'){ echo "active"; } ?>"><a href="<?= base_url("admin/berkas"); ?>"><i class="fa fa-circle-o text-aqua"></i> Berkas</a></li>
           </ul>
       </li>
-      <li class="<?php if($title=='Analisa Data') { echo "active"; } ?>"><a href="<?= base_url('admin/berkas'); ?>"><i class="fa fa-check-square"></i><span>Analisa Data</span></a></li>
+      <li class="<?php if($title=='Analisa Data') { echo "active"; } ?>"><a href="<?= base_url('admin/analisadata'); ?>"><i class="fa fa-check-square"></i><span>Analisa Data</span></a></li>
+      <li class="<?php if($title=='Petugas Survei') { echo "active"; } ?>"><a href="<?= base_url('admin/petugassurvei'); ?>"><i class="fa fa-users"></i><span>Petugas Survei</span></a></li>
     </ul>
   </section>
   <!-- /.sidebar -->

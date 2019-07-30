@@ -25,7 +25,6 @@
                             <th>No</th>
                             <th>Nama Pemohon</th>
                             <th>Alamat</th>
-                            <th>Tgl Pengajuan</th>
                             <th>Pekerjaan</th>
                             <th>Pemanfaatan</th>
                             <th>Lokasi</th>
@@ -41,7 +40,6 @@
                                 <td><?= $i ?>
                                 <td><?= $r->nama; ?></td>
                                 <td><?= $r->alamat; ?></td>
-                                <td><?= $r->tgl; ?></td>
                                 <td><?= $r->pekerjaan; ?></td>
                                 <td><?= $r->pemanfaatan; ?></td>
                                 <td><?= $r->lokasi; ?></td>
