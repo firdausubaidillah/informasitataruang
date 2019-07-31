@@ -256,17 +256,28 @@
                   <!-- timeline time label -->
                   <li class="time-label">
                         <span class="bg-blue">
-                          <?= date_indo($t->tgl_survei); ?>
+                          <?= date_indo($t->tgl_persetujuan); ?>
                         </span>
                   </li>
                   <!-- /.timeline-label -->
+                   <!-- timeline item -->
+                   <li>
+                    <i class="fa fa-user bg-aqua"></i>
+                    <div class="timeline-item">
+                      <h3 class="timeline-header no-border">Berkas Permohon ITR Dengan No. <b><?= $t->noreg; ?></b> Telah Disetujui Oleh Admin 
+                      </h3>
+                    </div>
+                  </li>
+                  <!-- END timeline item -->
                   <!-- timeline item -->
                   <li>
                     <i class="fa fa-user bg-aqua"></i>
 
                     <div class="timeline-item">
-                      <h3 class="timeline-header"><a href="#"><?= $t->petugas_survei; ?></a> Telah Mensurvei Berkas <?= $t->noreg; ?>
-                      </h3>
+                      <h3 class="timeline-header"><b><?= $t->petugas_survei; ?></b> Telah Mensurvei Berkas <?= $t->noreg; ?></h3>
+                      <div class="timeline-body">
+                          <img src="http://placehold.it/150x100" alt="..." class="margin">
+                      </div>
                     </div>
                   </li>
                   <?php } ?>

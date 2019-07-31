@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 30, 2019 at 05:42 AM
+-- Generation Time: Jul 31, 2019 at 11:57 AM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 5.6.36
 
@@ -66,15 +66,29 @@ CREATE TABLE `tbl_berkas` (
   `status_berkas` varchar(25) NOT NULL,
   `tgl_persetujuan` date NOT NULL,
   `petugas_survei` varchar(50) NOT NULL,
-  `tgl_survei` varchar(50) NOT NULL
+  `tgl_survei` varchar(50) NOT NULL,
+  `penganalisa` varchar(50) NOT NULL,
+  `tgl_analisa` varchar(50) NOT NULL,
+  `tgl_ambil` varchar(50) NOT NULL,
+  `nama_pengambil` varchar(50) NOT NULL,
+  `titik_koordinat1x` varchar(100) NOT NULL,
+  `titik_koordinat1y` varchar(100) NOT NULL,
+  `titik_koordinat2x` varchar(100) NOT NULL,
+  `titik_koordinat2y` varchar(100) NOT NULL,
+  `titik_koordinat3x` varchar(100) NOT NULL,
+  `titik_koordinat3y` varchar(100) NOT NULL,
+  `titik_koordinat4x` varchar(100) NOT NULL,
+  `titik_koordinat4y` varchar(255) NOT NULL,
+  `foto_lokasi` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_berkas`
 --
 
-INSERT INTO `tbl_berkas` (`id`, `noktp`, `noreg`, `tgl`, `nama`, `ktp`, `kk`, `bkl`, `pbb`, `sppl`, `sk`, `status_berkas`, `tgl_persetujuan`, `petugas_survei`, `tgl_survei`) VALUES
-(2, '35001122334455', 'TR0001', '2019-07-30', 'Tsamrotul Fuad', '', '', '', '', '', '', 'Disetujui', '2019-07-30', 'Wira Kusuma Panggabaya', '2019-07-24');
+INSERT INTO `tbl_berkas` (`id`, `noktp`, `noreg`, `tgl`, `nama`, `ktp`, `kk`, `bkl`, `pbb`, `sppl`, `sk`, `status_berkas`, `tgl_persetujuan`, `petugas_survei`, `tgl_survei`, `penganalisa`, `tgl_analisa`, `tgl_ambil`, `nama_pengambil`, `titik_koordinat1x`, `titik_koordinat1y`, `titik_koordinat2x`, `titik_koordinat2y`, `titik_koordinat3x`, `titik_koordinat3y`, `titik_koordinat4x`, `titik_koordinat4y`, `foto_lokasi`) VALUES
+(2, '35001122334455', 'TR0001', '2019-07-30', 'Tsamrotul Fuad', '', '', '', '', '', '', 'Disetujui', '2019-07-30', 'Wira Kusuma Panggabaya', '2019-07-24', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(3, '35001122334455', 'TR0002', '2019-07-30', 'Tsamrotul Fuad', '410.jpg', '', '', '', '', '', 'Disetujui', '2019-07-31', 'Firdaus Ubaidillah', '2019-07-22', '', '', '', '', '', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -148,6 +162,19 @@ INSERT INTO `tbl_petugassurvei` (`id`, `nama_petugassurvei`, `jabatan`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_timeline`
+--
+
+CREATE TABLE `tbl_timeline` (
+  `id_timeline` int(11) NOT NULL,
+  `waktu` varchar(25) NOT NULL,
+  `user` varchar(50) NOT NULL,
+  `keterangan` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_user`
 --
 
@@ -165,7 +192,8 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`id`, `nama`, `ktp`, `notelp`, `level`, `aktif_user`) VALUES
-(1, 'Tsamrotul Fuad', '35001122334455', '082233487223', 'PEMOHON', 'YA');
+(1, 'Tsamrotul Fuad', '35001122334455', '082233487223', 'PEMOHON', 'YA'),
+(2, 'Firdaus', '56', '56', 'PEMOHON', 'YA');
 
 --
 -- Indexes for dumped tables
@@ -202,6 +230,12 @@ ALTER TABLE `tbl_petugassurvei`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tbl_timeline`
+--
+ALTER TABLE `tbl_timeline`
+  ADD PRIMARY KEY (`id_timeline`);
+
+--
 -- Indexes for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
@@ -221,7 +255,7 @@ ALTER TABLE `tbl_admin`
 -- AUTO_INCREMENT for table `tbl_berkas`
 --
 ALTER TABLE `tbl_berkas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tbl_pemohon`
@@ -236,10 +270,16 @@ ALTER TABLE `tbl_petugassurvei`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
+-- AUTO_INCREMENT for table `tbl_timeline`
+--
+ALTER TABLE `tbl_timeline`
+  MODIFY `id_timeline` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

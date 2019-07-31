@@ -1,3 +1,6 @@
+<?php
+    $nama     = $this->session->userdata('nama');
+?>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -74,6 +77,93 @@
                                     <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                                     <input type="date" name="tgl_survei" class="form-control">
                                 </div>
+                            </div>
+                            <span class="help-block"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">
+                                Penganalisa
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="text" name="noktp" class="form-control" value="<?= $nama; ?>" readonly>
+                            </div>
+                            <span class="help-block"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">
+                                Tanggal Analisa
+                            </label>
+                            <div class="col-sm-8">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    <input type="date" name="tgl_survei" class="form-control">
+                                </div>
+                            </div>
+                            <span class="help-block"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">
+                                Tanggal Ambil
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="text" name="noktp" class="form-control">
+                            </div>
+                            <span class="help-block"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">
+                                Nama Pengambil
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="text" name="noktp" class="form-control">
+                            </div>
+                            <span class="help-block"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">
+                                Titik Koordinat 1
+                            </label>
+                            <div class="col-sm-4">
+                                <input type="text" name="noktp" class="form-control">
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="text" name="noktp" class="form-control">
+                            </div>
+                            <span class="help-block"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">
+                                Titik Koordinat 2
+                            </label>
+                            <div class="col-sm-4">
+                                <input type="text" name="noktp" class="form-control">
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="text" name="noktp" class="form-control">
+                            </div>
+                            <span class="help-block"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">
+                                Titik Koordinat 3
+                            </label>
+                            <div class="col-sm-4">
+                                <input type="text" name="noktp" class="form-control">
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="text" name="noktp" class="form-control">
+                            </div>
+                            <span class="help-block"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">
+                                Titik Koordinat 4
+                            </label>
+                            <div class="col-sm-4">
+                                <input type="text" name="noktp" class="form-control">
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="text" name="noktp" class="form-control">
                             </div>
                             <span class="help-block"></span>
                         </div>
