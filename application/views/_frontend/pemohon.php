@@ -255,7 +255,7 @@
                 ?>
                   <!-- timeline time label -->
                   <li class="time-label">
-                        <span class="bg-red">
+                        <span class="bg-blue">
                           <?= date_indo($t->tgl_survei); ?>
                         </span>
                   </li>
@@ -265,39 +265,17 @@
                     <i class="fa fa-user bg-aqua"></i>
 
                     <div class="timeline-item">
-                      <span class="time"><i class="fa fa-clock-o"></i> 5 mins ago</span>
-
-                      <h3 class="timeline-header no-border"><a href="#"><?= $t->petugas_survei; ?></a> accepted your friend request
+                      <h3 class="timeline-header"><a href="#"><?= $t->petugas_survei; ?></a> Telah Mensurvei Berkas <?= $t->noreg; ?>
                       </h3>
                     </div>
                   </li>
-                  <!-- END timeline item -->
-                  <!-- timeline item -->
-                  <li>
-                    <i class="fa fa-comments bg-yellow"></i>
-
-                    <div class="timeline-item">
-                      <span class="time"><i class="fa fa-clock-o"></i> 27 mins ago</span>
-
-                      <h3 class="timeline-header"><a href="#">Jay White</a> commented on your post</h3>
-
-                      <div class="timeline-body">
-                        Take me to your leader!
-                        Switzerland is small and neutral!
-                        We are more like Germany, ambitious and misunderstood!
-                      </div>
-                      <div class="timeline-footer">
-                        <a class="btn btn-warning btn-flat btn-xs">View comment</a>
-                      </div>
-                    </div>
-                  </li>
+                  <?php } ?>
                   <!-- END timeline item -->
                   <li>
                     <i class="fa fa-clock-o bg-gray"></i>
                   </li>
                 </ul>
               </div>
-                  <?php } ?>
               <!-- /.tab-pane -->
 
             </div>

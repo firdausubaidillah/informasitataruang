@@ -33,7 +33,7 @@ class Pemohon extends CI_Controller {
 	{	
 		$data['kodeunik'] 	= $this->M_pemohon->buat_kode();
 		$data['databerkas']	= $this->M_berkas->tampil();
-		$data['timeline']	= $this->M_analisadata->timeline();
+		$data['timeline']	= $this->M_analisadata->timeline($id);
 		$this->load->view('_frontend/pemohon', $data);
 	}
 

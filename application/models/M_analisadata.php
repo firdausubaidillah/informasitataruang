@@ -37,10 +37,11 @@ class M_analisadata extends CI_Model {
 		return $query;
     }
     
-    public function timeline()
+    public function timeline($id)
     {
-        $query = $this->db->query("SELECT * FROM $this->table")->result();
-        return $query;
+        $nama = $this->session->userdata('nama');
+        $data = $this->db->query("SELECT * FROM $this->table WHERE nama='". $nama ."' GROUP BY $this->kunci DESC")->result();
+        return $data;
     }
 
 }
