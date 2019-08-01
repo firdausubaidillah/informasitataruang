@@ -147,13 +147,47 @@ class Admin extends CI_Controller {
 			$id 	= $this->input->post('id');
 			$object = array('petugas_survei'	=> $this->input->post('petugas_survei'),
 							'tgl_survei'		=> $this->input->post('tgl_survei'),
+							'penganalisa'		=> $this->input->post('penganalisa'),
+							'tgl_analisa'		=> $this->input->post('tgl_analisa'),
+							'nama_pengambil'	=> $this->input->post('nama_pengambil'),
+							'tgl_ambil'			=> $this->input->post('tgl_ambil'),
+							'titik_koordinat1x'	=> $this->input->post('titik_koordinat1x'),	
+							'titik_koordinat1y'	=> $this->input->post('titik_koordinat1y'),	
+							'titik_koordinat2x'	=> $this->input->post('titik_koordinat2x'),	
+							'titik_koordinat2y'	=> $this->input->post('titik_koordinat2y'),	
+							'titik_koordinat3x'	=> $this->input->post('titik_koordinat3x'),	
+							'titik_koordinat3y'	=> $this->input->post('titik_koordinat3y'),	
+							'titik_koordinat4x'	=> $this->input->post('titik_koordinat4x'),	
+							'titik_koordinat4y'	=> $this->input->post('titik_koordinat4y')	
+
 							);
+							if (!empty($_FILES['foto_lokasi']['name'])) {
+								$upload = $this->_do_uploadfoto();
+								$object['foto_lokasi'] = $upload;
+							}
 			$this->M_analisadata->ubah($id, $object);
 			$object = $this->security->xss_clean($object);
 			redirect('admin/analisadata');
 		} else {
 			redirect('admin/analisadata');
 		}
+	}
+
+	private function _do_uploadfoto()
+	{
+		$config['upload_path'] 		= 'assets/gambar/lokasi';
+		$config['allowed_types'] 	= 'gif|jpg|png|jpeg';
+		$config['max_size'] 		= 10000;
+		$config['max_widht'] 		= 1000;
+		$config['max_height']  		= 1000;
+		$config['file_name'] 		= '';
+ 
+		$this->load->library('upload', $config);
+		if (!$this->upload->do_upload('foto_lokasi')) {
+			$this->session->set_flashdata('msg', $this->upload->display_errors('',''));
+			echo "Data Gagal Tersimpan";
+		}
+		return $this->upload->data('file_name');
 	}
 
 	//PETUGAS SURVEI

@@ -133,7 +133,10 @@
                                 </div>
                             </div>
                             <div class="col-sm-4">
-                                <input type="text" name="titik_koordinat1y" class="form-control">
+                                <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                                    <input type="text" name="titik_koordinat1y" class="form-control">
+                                </div>
                             </div>
                             <span class="help-block"></span>
                         </div>
@@ -148,7 +151,10 @@
                                 </div>
                             </div>
                             <div class="col-sm-4">
-                                <input type="text" name="titik_koordinat2y" class="form-control">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                                    <input type="text" name="titik_koordinat2y" class="form-control">
+                                    </div>
                             </div>
                             <span class="help-block"></span>
                         </div>
@@ -163,7 +169,10 @@
                                 </div>
                             </div>
                             <div class="col-sm-4">
-                                <input type="text" name="titik_koordinat3y" class="form-control">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                                    <input type="text" name="titik_koordinat3y" class="form-control">
+                                </div>
                             </div>
                             <span class="help-block"></span>
                         </div>
@@ -178,7 +187,10 @@
                                 </div>
                             </div>
                             <div class="col-sm-4">
-                                <input type="text" name="titik_koordinat4y" class="form-control">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                                    <input type="text" name="titik_koordinat4y" class="form-control">
+                                </div>
                             </div>
                             <span class="help-block"></span>
                         </div>
