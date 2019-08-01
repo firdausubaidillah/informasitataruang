@@ -85,7 +85,7 @@
                                 Penganalisa
                             </label>
                             <div class="col-sm-8">
-                                <input type="text" name="noktp" class="form-control" value="<?= $nama; ?>" readonly>
+                                <input type="text" name="penganalisa" class="form-control" value="<?= $nama; ?>" readonly>
                             </div>
                             <span class="help-block"></span>
                         </div>
@@ -96,17 +96,8 @@
                             <div class="col-sm-8">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                                    <input type="date" name="tgl_survei" class="form-control">
+                                    <input type="date" name="tgl_analisa" class="form-control">
                                 </div>
-                            </div>
-                            <span class="help-block"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="" class="col-sm-2 control-label">
-                                Tanggal Ambil
-                            </label>
-                            <div class="col-sm-8">
-                                <input type="text" name="noktp" class="form-control">
                             </div>
                             <span class="help-block"></span>
                         </div>
@@ -115,7 +106,19 @@
                                 Nama Pengambil
                             </label>
                             <div class="col-sm-8">
-                                <input type="text" name="noktp" class="form-control">
+                                <input type="text" name="nama_pengambil" class="form-control">
+                            </div>
+                            <span class="help-block"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">
+                                Tanggal Ambil
+                            </label>
+                            <div class="col-sm-8">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    <input type="date" name="tgl_ambil" class="form-control">
+                                </div>
                             </div>
                             <span class="help-block"></span>
                         </div>
@@ -124,10 +127,13 @@
                                 Titik Koordinat 1
                             </label>
                             <div class="col-sm-4">
-                                <input type="text" name="noktp" class="form-control">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                                    <input type="text" name="titik_koordinat1x" class="form-control">
+                                </div>
                             </div>
                             <div class="col-sm-4">
-                                <input type="text" name="noktp" class="form-control">
+                                <input type="text" name="titik_koordinat1y" class="form-control">
                             </div>
                             <span class="help-block"></span>
                         </div>
@@ -136,10 +142,13 @@
                                 Titik Koordinat 2
                             </label>
                             <div class="col-sm-4">
-                                <input type="text" name="noktp" class="form-control">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                                    <input type="text" name="titik_koordinat2x" class="form-control">
+                                </div>
                             </div>
                             <div class="col-sm-4">
-                                <input type="text" name="noktp" class="form-control">
+                                <input type="text" name="titik_koordinat2y" class="form-control">
                             </div>
                             <span class="help-block"></span>
                         </div>
@@ -148,10 +157,13 @@
                                 Titik Koordinat 3
                             </label>
                             <div class="col-sm-4">
-                                <input type="text" name="noktp" class="form-control">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                                    <input type="text" name="titik_koordinat3x" class="form-control">
+                                </div>
                             </div>
                             <div class="col-sm-4">
-                                <input type="text" name="noktp" class="form-control">
+                                <input type="text" name="titik_koordinat3y" class="form-control">
                             </div>
                             <span class="help-block"></span>
                         </div>
@@ -160,10 +172,22 @@
                                 Titik Koordinat 4
                             </label>
                             <div class="col-sm-4">
-                                <input type="text" name="noktp" class="form-control">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                                    <input type="text" name="titik_koordinat4x" class="form-control">
+                                </div>
                             </div>
                             <div class="col-sm-4">
-                                <input type="text" name="noktp" class="form-control">
+                                <input type="text" name="titik_koordinat4y" class="form-control">
+                            </div>
+                            <span class="help-block"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-2 control-label">
+                                Foto Lokasi
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="file" name="foto_lokasi" class="form-control">
                             </div>
                             <span class="help-block"></span>
                         </div>
