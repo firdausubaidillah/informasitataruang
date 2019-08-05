@@ -33,7 +33,7 @@
       <!--  -->
       <li class="<?php if(($title=='Pemohon') OR ($title=='Berkas')) { echo "active"; } ?> treeview">
           <a href="<?= base_url(); ?>#">
-              <i class="fa fa-laptop"></i> <span>Data Master</span>
+              <i class="fa fa-database"></i> <span>Data Master</span>
                 <span class="pull-right-container">
                   <i class="fa fa-angle-left pull-right"></i>
                 </span>
@@ -43,6 +43,17 @@
             <li class="<?php if($title=='Berkas'){ echo "active"; } ?>"><a href="<?= base_url("admin/berkas"); ?>"><i class="fa fa-circle-o text-aqua"></i> Berkas</a></li>
           </ul>
       </li>
+      <li class="<?php if(($title=='Monitor Berkas') OR ($title=='Status Berkas')) { echo "active"; } ?> treeview">
+          <a href="<?= base_url(); ?>#">
+              <i class="fa fa-laptop"></i> <span>Data Berkas</span>
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="<?php if($title=='Monitor Berkas') { echo "active"; } ?>"><a href="<?= base_url('admin/monitorberkas'); ?>"><i class="fa fa-circle-o text-red"></i><span>Monitor Berkas</span></a></li>
+            <li class="<?php if($title=='Status Berkas') { echo "active"; } ?>"><a href="<?= base_url('admin/statusberkas'); ?>"><i class="fa fa-circle-o text-red"></i><span>Status Berkas</span></a></li>
+          </ul>
       <li class="<?php if($title=='Analisa Data') { echo "active"; } ?>"><a href="<?= base_url('admin/analisadata'); ?>"><i class="fa fa-check-square"></i><span>Analisa Data</span></a></li>
       <li class="<?php if($title=='Petugas Survei') { echo "active"; } ?>"><a href="<?= base_url('admin/petugassurvei'); ?>"><i class="fa fa-users"></i><span>Petugas Survei</span></a></li>
     </ul>

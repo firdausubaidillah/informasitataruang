@@ -16,6 +16,12 @@
     <!-- Small boxes (Stat box) -->
     <div class="row">
         <div class="col-xs-12">
+            <div class="alert alert-warning">
+                <ul class="margin-bottom-none padding-left-lg">
+                    <li>Ubah Status Berkas <b>DISETUJUI</b> menjadi <b> "SEDANG DISURVEI"</b> sebelum Menganalisa Berkas.</li>
+                    <li>Ubah Status Berkas <b>PROSES ANALISA</b> menjadi <b> "MEMENUHI PERSYARATAN"</b></li>
+                </ul>
+            </div>
         <div class="box">
             <!-- /.box-header -->
             <div class="box-body">
@@ -23,12 +29,10 @@
                     <thead>
                         <tr>
                             <th width="5%">No</th>
-                            <th>No. KTP</th>
                             <th>No. Reg</th>
                             <th>Nama Pemohon</th>
-                            <th>Petugas Survei</th>
-                            <th>Tanggal Survei</th>
-                            <th width="5%">OPTION</th>
+                            <th>Status Berkas</th>
+                            <th width="10%">OPTION</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -38,13 +42,11 @@
                         ?>
                             <tr>
                                 <td><?= $i ?>
-                                <td><?= $r->noktp; ?></td>
                                 <td><?= $r->noreg; ?></td>
                                 <td><?= $r->nama; ?></td>
-                                <td><?= $r->petugas_survei; ?></td>
-                                <td><?= date_indo($r->tgl_survei); ?></td>
+                                <td><?= $r->status_berkas; ?></td>
                                 <td>
-                                    <a href="<?= base_url('admin/tampilubah_analisadata/') . $r->id; ?>" class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i></a>
+                                    <a href="<?= base_url('admin/tampilubah_monitorberkas/') . $r->id; ?>" class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i></a>
                                 </td>
                             </tr> 
                         <?php

@@ -80,7 +80,6 @@
                 <!-- /.col -->
             </div>
             </form>
-
         </div>
     <!-- /.form-box -->
   </div>

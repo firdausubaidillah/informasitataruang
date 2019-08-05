@@ -12,6 +12,8 @@ class Admin extends CI_Controller {
 		$this->load->model('M_berkas');
 		$this->load->model('M_petugassurvei');
 		$this->load->model('M_analisadata');
+		$this->load->model('M_monitor');
+		$this->load->model('M_statusberkas');
 
 		$kodeakses = $this->session->userdata('kodeakses');
 		$level = $this->session->userdata('level');
@@ -26,6 +28,7 @@ class Admin extends CI_Controller {
 	{
 		$data['title'] = 'Dashboard';
 		$data['page']  = '_backend/dashboard/index';
+		$data['data'] = $this->M_statusberkas->tampildepan()->result();
 		$this->load->view('_backend/index', $data);
 	}
 
@@ -123,7 +126,6 @@ class Admin extends CI_Controller {
 		redirect('admin/berkas');
 	}
 
-
 	//ANALISA DATA
 	public function analisadata()
 	{
@@ -149,8 +151,6 @@ class Admin extends CI_Controller {
 							'tgl_survei'		=> $this->input->post('tgl_survei'),
 							'penganalisa'		=> $this->input->post('penganalisa'),
 							'tgl_analisa'		=> $this->input->post('tgl_analisa'),
-							'nama_pengambil'	=> $this->input->post('nama_pengambil'),
-							'tgl_ambil'			=> $this->input->post('tgl_ambil'),
 							'titik_koordinat1x'	=> $this->input->post('titik_koordinat1x'),	
 							'titik_koordinat1y'	=> $this->input->post('titik_koordinat1y'),	
 							'titik_koordinat2x'	=> $this->input->post('titik_koordinat2x'),	
@@ -158,7 +158,8 @@ class Admin extends CI_Controller {
 							'titik_koordinat3x'	=> $this->input->post('titik_koordinat3x'),	
 							'titik_koordinat3y'	=> $this->input->post('titik_koordinat3y'),	
 							'titik_koordinat4x'	=> $this->input->post('titik_koordinat4x'),	
-							'titik_koordinat4y'	=> $this->input->post('titik_koordinat4y')	
+							'titik_koordinat4y'	=> $this->input->post('titik_koordinat4y'),
+							'status_berkas'		=> 'Proses Analisa'	
 
 							);
 							if (!empty($_FILES['foto_lokasi']['name'])) {
@@ -250,5 +251,73 @@ class Admin extends CI_Controller {
 		redirect('admin/petugassurvei');
 	}
 
+	//Monitor Berkas
+	function monitorberkas()
+	{
+		$data['title'] = 'Monitor Berkas';
+		$data['page']  = '_backend/monitorberkas/index';
+		$data['data']  = $this->M_monitor->tampil()->result();
+		$this->load->view('_backend/index', $data);
+		
+	}
+
+	public function tampilubah_monitorberkas($id)
+	{
+		$data['title']	= 'Monitor Berkas';
+		$data['page']	= '_backend/monitorberkas/ubah';
+		$data['data']	= $this->M_monitor->tampil_ubah($id)->result();
+		$this->load->view('_backend/index', $data);
+	}
+
+	public function ubahdata_monitorberkas()
+	{
+		if(isset($_POST['submit'])){
+			$id 	= $this->input->post('id');
+			$object = array('noreg'			=> $this->input->post('noreg'),
+							'nama'			=> $this->input->post('nama'),
+							'status_berkas'	=> $this->input->post('status_berkas'),
+							);
+			$this->M_monitor->ubah($id, $object);
+			$object = $this->security->xss_clean($object);
+			redirect('admin/monitorberkas');
+		} else {
+			redirect('admin/monitorberkas');
+		}
+	}
+
+	//STATUS BERKAS
+	function statusberkas()
+	{
+		$data['title'] = 'Status Berkas';
+		$data['page']  = '_backend/statusberkas/index';
+		$data['data']  = $this->M_statusberkas->tampil()->result();
+		$this->load->view('_backend/index', $data);
+	}
+
+	public function tampilubah_statusberkas($id)
+	{
+		$data['title']	= 'Status Berkas';
+		$data['page']	= '_backend/statusberkas/ubah';
+		$data['data']	= $this->M_statusberkas->tampil_ubah($id)->result();
+		$this->load->view('_backend/index', $data);
+	}
+
+	public function ubahdata_statusberkas()
+	{
+		if(isset($_POST['submit'])){
+			$id 	= $this->input->post('id');
+			$object = array('noreg'			=> $this->input->post('noreg'),
+							'nama'			=> $this->input->post('nama'),
+							'status_berkas'	=> $this->input->post('status_berkas'),
+							'nama_pengambil'=> $this->input->post('nama_pengambil'),
+							'tgl_ambil'		=> $this->input->post('tgl_ambil'),
+							);
+			$this->M_statusberkas->ubah($id, $object);
+			$object = $this->security->xss_clean($object);
+			redirect('admin/statusberkas');
+		} else {
+			redirect('admin/statusberkas');
+		}
+	}
 
 }

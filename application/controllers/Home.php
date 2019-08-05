@@ -35,7 +35,7 @@ class Home extends CI_Controller {
 						);
 		
 			$object = $this->security->xss_clean($object);
-			$this->M_user->simpan($object);
+            $this->M_user->simpan($object);
 			redirect('pemohon/index');
 		} else {
 			redirect('home/registrasi');

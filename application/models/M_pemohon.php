@@ -55,6 +55,13 @@ class M_pemohon extends CI_Model {
 		return $query;
     }
 
+    public function tampilpemohon($id)
+    {
+        $nama = $this->session->userdata('nama');
+        $query = $this->db->query("SELECT * FROM $this->table WHERE nama='". $nama ."' GROUP BY $this->primary DESC")->result();
+        return $query;
+    }
+
     public function ubah($id, $object)
 	{
 		$this->db->where($this->primary, $id);

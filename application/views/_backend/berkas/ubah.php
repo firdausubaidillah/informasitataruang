@@ -126,12 +126,12 @@
                                         if($r->status_berkas=="Disetujui") {
                                     ?>
                                             <option selected="">Disetujui</option>
-                                            <option>Menunggu persetujuan</option>
+                                            <option>Menunggu konfirmasi</option>
                                             <?php
                                         } else {
                                     ?>
                                             <option>Disetujui</option>
-                                            <option selected="">Menunggu persetujuan</option>
+                                            <option selected="">Menunggu konfirmasi</option>
                                     <?php
                                         }
                                     ?>
