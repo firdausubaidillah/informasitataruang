@@ -185,7 +185,7 @@
                         <div class="input-group">
                           <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                           
-                          <input type="text" name="tgl" class="form-control" id="tgl" value="<?php $tgl=date('Y-m-d'); echo $tgl; ?>" readonly>
+                          <input type="text" name="tgl" class="form-control" id="tgl" value="<?php $tgl=date('Y-m-d'); echo date_indo($tgl); ?>" readonly>
                         </div>
                     </div>
                   </div>
