@@ -67,8 +67,8 @@
 
               <p class="text-muted text-center">Pemohon</p>
 
-              <a href="<?= base_url('pemohon/datapemohon');?>" class="btn btn-success btn-block"><b>Profile</b></a>
-              <a href="<?= base_url('login/logout_pemohon');?>" class="btn btn-danger btn-block"><b>Logout</b></a>
+              <a href="<?= base_url('pemohon/datapemohon');?>" class="btn btn-success btn-block"><b>Profil</b></a>
+              <a href="<?= base_url('login/logout_pemohon');?>" class="btn btn-danger btn-block"><b>Keluar</b></a>
             </div>
             <!-- /.box-body -->
           </div>
@@ -155,7 +155,7 @@
                   </div>
                   <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                      <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                      <button type="submit" name="submit" class="btn btn-primary">Simpan</button>
                     </div>
                   </div>
                 </form>
@@ -240,7 +240,7 @@
                   </div> -->
                   <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                      <button type="submit" name="submit2" class="btn btn-primary">Submit</button>
+                      <button type="submit" name="submit2" class="btn btn-primary">Simpan</button>
                     </div>
                   </div>
                 </form>
@@ -431,7 +431,7 @@
                                 <td>
                                     <a href="<?= base_url('pemohon/detail_berkas/') . $r->id; ?>" class="btn btn-primary"><i class="glyphicon glyphicon-eye-open"></i></a>
                                     <a href="<?= base_url('pemohon/downloadformulir/') . $r->id; ?>" class="btn btn-primary"><i class="glyphicon glyphicon-download"></i></a>
-                                    <a href="<?= base_url('pemohon/hapus_berkas/') . $r->id; ?>" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
+                                    
                                 </td>
                             </tr> 
                         <?php
