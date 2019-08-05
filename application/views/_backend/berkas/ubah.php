@@ -106,7 +106,7 @@
                             </div>
                             <span class="help-block"></span>
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="" class="col-sm-2 control-label">
                                 SK
                             </label>
@@ -114,7 +114,7 @@
                                 <img class="img-thumbnail" src="<?= base_url() . 'assets/gambar/'.$r->sk  ?>"/>
                             </div>
                             <span class="help-block"></span>
-                        </div>
+                        </div> -->
                         <div class="form-group">
                             <label for="" class="col-sm-2 control-label">
                                 Status Berkas

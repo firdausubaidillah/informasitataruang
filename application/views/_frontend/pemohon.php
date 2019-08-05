@@ -185,7 +185,7 @@
                         <div class="input-group">
                           <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                           
-                          <input type="text" name="tgl" class="form-control" id="tgl" value="<?php $tgl=date('Y-m-d'); echo date_indo($tgl); ?>" readonly>
+                          <input type="text" name="tgl" class="form-control" id="tgl" value="<?php $tgl=date('Y-m-d'); echo $tgl; ?>" readonly>
                         </div>
                     </div>
                   </div>
@@ -327,7 +327,7 @@
                   <li>
                     <i class="fa fa-check-square bg-green"></i>
                     <div class="timeline-item">
-                      <h3 class="timeline-header">Berkas dengan No. <b><?= $t->noreg; ?></b> Telah di konfirmasi oleh <b><?= $t->penganalisa ?></b></h3>
+                      <h3 class="timeline-header">Berkas dengan No. <b><?= $t->noreg; ?></b> Telah di konfirmasi
                       <div class="timeline-body">
                           <img src="<?= base_url("assets/"); ?>verifikasiberkas.png" alt="..." height="100px" width="150px" class="margin">
                       </div>

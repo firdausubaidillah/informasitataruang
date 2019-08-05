@@ -127,13 +127,13 @@
                       <img class="img-thumbnail" src="<?= base_url() . 'assets/gambar/'.$p->sppl  ?>"/>
                     </div>
                   </div>
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <label for="inputKTP" class="col-sm-2 control-label">SK</label>
 
                     <div class="col-sm-10">
                       <img class="img-thumbnail" src="<?= base_url() . 'assets/gambar/'.$p->sk  ?>"/>
                     </div>
-                  </div>
+                  </div> -->
                 </form>
               </div>
               <?php } ?>
