@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 31, 2019 at 11:57 AM
+-- Generation Time: Aug 05, 2019 at 04:24 AM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 5.6.36
 
@@ -69,16 +69,16 @@ CREATE TABLE `tbl_berkas` (
   `tgl_survei` varchar(50) NOT NULL,
   `penganalisa` varchar(50) NOT NULL,
   `tgl_analisa` varchar(50) NOT NULL,
-  `tgl_ambil` varchar(50) NOT NULL,
   `nama_pengambil` varchar(50) NOT NULL,
-  `titik_koordinat1x` varchar(100) NOT NULL,
-  `titik_koordinat1y` varchar(100) NOT NULL,
-  `titik_koordinat2x` varchar(100) NOT NULL,
-  `titik_koordinat2y` varchar(100) NOT NULL,
-  `titik_koordinat3x` varchar(100) NOT NULL,
-  `titik_koordinat3y` varchar(100) NOT NULL,
-  `titik_koordinat4x` varchar(100) NOT NULL,
-  `titik_koordinat4y` varchar(255) NOT NULL,
+  `tgl_ambil` varchar(50) NOT NULL,
+  `titik_koordinat1x` varchar(100) DEFAULT NULL,
+  `titik_koordinat1y` varchar(100) DEFAULT NULL,
+  `titik_koordinat2x` varchar(100) DEFAULT NULL,
+  `titik_koordinat2y` varchar(100) DEFAULT NULL,
+  `titik_koordinat3x` varchar(100) DEFAULT NULL,
+  `titik_koordinat3y` varchar(100) DEFAULT NULL,
+  `titik_koordinat4x` varchar(100) DEFAULT NULL,
+  `titik_koordinat4y` varchar(100) DEFAULT NULL,
   `foto_lokasi` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -86,9 +86,9 @@ CREATE TABLE `tbl_berkas` (
 -- Dumping data for table `tbl_berkas`
 --
 
-INSERT INTO `tbl_berkas` (`id`, `noktp`, `noreg`, `tgl`, `nama`, `ktp`, `kk`, `bkl`, `pbb`, `sppl`, `sk`, `status_berkas`, `tgl_persetujuan`, `petugas_survei`, `tgl_survei`, `penganalisa`, `tgl_analisa`, `tgl_ambil`, `nama_pengambil`, `titik_koordinat1x`, `titik_koordinat1y`, `titik_koordinat2x`, `titik_koordinat2y`, `titik_koordinat3x`, `titik_koordinat3y`, `titik_koordinat4x`, `titik_koordinat4y`, `foto_lokasi`) VALUES
-(2, '35001122334455', 'TR0001', '2019-07-30', 'Tsamrotul Fuad', '', '', '', '', '', '', 'Disetujui', '2019-07-30', 'Wira Kusuma Panggabaya', '2019-07-24', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(3, '35001122334455', 'TR0002', '2019-07-30', 'Tsamrotul Fuad', '410.jpg', '', '', '', '', '', 'Disetujui', '2019-07-31', 'Firdaus Ubaidillah', '2019-07-22', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO `tbl_berkas` (`id`, `noktp`, `noreg`, `tgl`, `nama`, `ktp`, `kk`, `bkl`, `pbb`, `sppl`, `sk`, `status_berkas`, `tgl_persetujuan`, `petugas_survei`, `tgl_survei`, `penganalisa`, `tgl_analisa`, `nama_pengambil`, `tgl_ambil`, `titik_koordinat1x`, `titik_koordinat1y`, `titik_koordinat2x`, `titik_koordinat2y`, `titik_koordinat3x`, `titik_koordinat3y`, `titik_koordinat4x`, `titik_koordinat4y`, `foto_lokasi`) VALUES
+(2, '35001122334455', 'TR0001', '2019-07-30', 'Tsamrotul Fuad', '', '', '', '', '', '', 'Sedang Disurvei', '2019-08-04', 'Wira Kusuma Panggabaya', '2019-08-01', 'Lestari', '2019-08-06', '', '', '-7.6329825', '112.9168183', '', '', '', '', '', '', '2019_brosur-a_1.jpg'),
+(3, '3522206411920001', 'TR0002', '2019-08-02', 'Lestari', '', '', '', '', '', '', 'Sudah Diambil', '2019-08-02', 'Firdaus Ubaidillah', '2019-08-01', 'Lestari', '2019-08-02', 'lestari', '2019-08-02', '', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -133,7 +133,9 @@ CREATE TABLE `tbl_pemohon` (
 --
 
 INSERT INTO `tbl_pemohon` (`id`, `ktp`, `nama`, `jk`, `alamat`, `pekerjaan`, `pemanfaatan`, `lokasi`, `notelp`) VALUES
-(1, '35001122334455', 'Tsamrotul Fuad', 'Laki-laki', 'Jl. Sarirejo RT02/RW01  Arjosari Rejoso Kab. Pasuruan ', 'PHL', 'Kantor', 'Mandaran', '082233487223');
+(1, '35001122334455', 'Tsamrotul Fuad', 'Laki-laki', 'Jl. Sarirejo RT02/RW01  Arjosari Rejoso Kab. Pasuruan ', 'PHL', 'Kantor', 'Mandaran', '082233487223'),
+(2, '3522206411920001', 'Lestari', 'Perempuan', 'RT 4 RW 4 KASIMAN', 'CPNS', 'Rumah tinggal', 'Pesona Candi', '082301054108'),
+(10, '56', 'Firdaus', 'Laki-laki', 'Jalan Jawa', 'PHL', 'Pemukiman', 'Jambangan', '56');
 
 -- --------------------------------------------------------
 
@@ -193,7 +195,8 @@ CREATE TABLE `tbl_user` (
 
 INSERT INTO `tbl_user` (`id`, `nama`, `ktp`, `notelp`, `level`, `aktif_user`) VALUES
 (1, 'Tsamrotul Fuad', '35001122334455', '082233487223', 'PEMOHON', 'YA'),
-(2, 'Firdaus', '56', '56', 'PEMOHON', 'YA');
+(2, 'Firdaus', '56', '56', 'PEMOHON', 'YA'),
+(3, 'Lestari', '3522206411920001', '082301054108', 'PEMOHON', 'YA');
 
 --
 -- Indexes for dumped tables
@@ -261,7 +264,7 @@ ALTER TABLE `tbl_berkas`
 -- AUTO_INCREMENT for table `tbl_pemohon`
 --
 ALTER TABLE `tbl_pemohon`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `tbl_petugassurvei`
@@ -279,7 +282,7 @@ ALTER TABLE `tbl_timeline`
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
