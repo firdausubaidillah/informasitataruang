@@ -261,7 +261,7 @@
                   <!-- /.timeline-label -->
                    <!-- timeline item -->
                   <li>
-                    <i class="fa fa-file-archive-o-o bg-blue"></i>
+                    <i class="fa fa-file-archive-o bg-blue"></i>
                     <div class="timeline-item">
                       <h3 class="timeline-header">Berkas dengan No. <b><?= $t->noreg; ?></b> Telah disetujui dan ditertibkan</h3>
                       <div class="timeline-body">
