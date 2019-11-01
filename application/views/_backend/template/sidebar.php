@@ -56,6 +56,7 @@
           </ul>
       <li class="<?php if($title=='Analisa Data') { echo "active"; } ?>"><a href="<?= base_url('admin/analisadata'); ?>"><i class="fa fa-check-square"></i><span>Analisa Data</span></a></li>
       <li class="<?php if($title=='Petugas Survei') { echo "active"; } ?>"><a href="<?= base_url('admin/petugassurvei'); ?>"><i class="fa fa-users"></i><span>Petugas Survei</span></a></li>
+      <li class="<?php if($title=='Perubahan Keperuntukkan') { echo "active"; } ?>"><a href="<?= base_url('admin/pk'); ?>"><i class="fa fa-users"></i><span>Perubahan Keperuntukkan</span></a></li>
     </ul>
   </section>
   <!-- /.sidebar -->

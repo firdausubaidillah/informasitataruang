@@ -14,6 +14,7 @@ class Admin extends CI_Controller {
 		$this->load->model('M_analisadata');
 		$this->load->model('M_monitor');
 		$this->load->model('M_statusberkas');
+		$this->load->model('M_pk');
 
 		$kodeakses = $this->session->userdata('kodeakses');
 		$level = $this->session->userdata('level');
@@ -319,5 +320,36 @@ class Admin extends CI_Controller {
 			redirect('admin/statusberkas');
 		}
 	}
+
+	public function pk()
+	{
+		$data['title']	= 'Perubahan Keperuntukkan';
+		$data['page']	= '_backend/pk/index';
+		$data['data']	= $this->M_pk->tampil()->result();
+		$this->load->view('_backend/index', $data);
+	}
+
+	public function tampilperubahan($id)
+	{
+		$data['title']	= 'Perubahan Keperuntukkan';
+		$data['page']	= '_backend/pk/ubah';
+		$data['data']	= $this->M_pk->tampil_ubah($id)->result();
+		$this->load->view('_backend/index', $data);
+	}
+
+	public function ubahperubahan()
+	{
+		if(isset($_POST['submit'])){
+			$id 	= $this->input->post('id_perubahan');
+			$object = array('status'	 => $this->input->post('status'),
+							);
+			$this->M_pk->ubah($id, $object);
+			$object = $this->security->xss_clean($object);
+			redirect('admin/pk');
+		} else {
+			redirect('admin/pk');
+		}
+	}
+
 
 }

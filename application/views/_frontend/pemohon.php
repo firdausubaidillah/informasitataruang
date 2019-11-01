@@ -4,6 +4,7 @@
     $ktp      = $this->session->userdata('ktp');
     $notelp   = $this->session->userdata('notelp');
     $level    = $this->session->userdata('level');
+    $alamat    = $this->session->userdata('alamat');
 ?>
 
 <!DOCTYPE html>
@@ -79,16 +80,17 @@
         <div class="col-md-9">
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
-              <li class="active"><a href="#pemohon" data-toggle="tab">Data Pemohon</a></li>
+              <li><a href="#pemohon" data-toggle="tab">Data Pemohon</a></li>
               <li><a href="#berkas" data-toggle="tab">Berkas</a></li>
               <li><a href="#timeline" data-toggle="tab">Timeline</a></li>
+              <li class="active"><a href="#pk" data-toggle="tab">Perubahan</a></li>
             </ul>
             <div class="tab-content">
               <div class="tab-pane">
                 <!-- /.post -->
               </div>
               <!-- /.tab-pane -->
-              <div class="active tab-pane" id="pemohon">
+              <div class="tab-pane" id="pemohon">
               <?php 
                 foreach($datapemohon as $p) {
               ?>
@@ -362,7 +364,95 @@
                 </ul>
               </div>
               <!-- /.tab-pane -->
+              <div class="active tab-pane" id="pk">
+              <?php 
+                foreach($datapemohon as $p) {
+              ?>
+              <form method="post" action="<?= base_url("pemohon/tambahperubahan"); ?>" enctype="multipart/form-data" class="form-horizontal">
+                  <!-- <div class="alert alert-info  alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <h4><i class="icon fa fa-info"></i> Pemberitahuan !</h4>
+                    Silahkan Melengkapi Data Pemohon Terlebih Dahulu Pada Menu Profile Sebelum Upload Berkas.
+                  </div> -->
+                  <div class="form-group">
+                    <label for="inputKTP" class="col-sm-2 control-label">Lokasi</label>
 
+                    <div class="col-sm-10">
+                    <input type="hidden" name="noktp" class="form-control" id="inputKTP" placeholder="" value="<?= $p->ktp ?>">
+                    <input type="text" name="lokasi" class="form-control" id="inputKTP" placeholder="" value="<?= $p->alamat ?>" readonly>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputJK" class="col-sm-2 control-label">Tanggal Pengajuan</label>
+                    <div class="col-sm-10">
+                      <input type="date" name="tgl_pengajuan" class="form-control" id="inputjk" placeholder="Masukkan Tgl Pengajuan">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputJK" class="col-sm-2 control-label">Kelurahan / Kecamatan</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="kelurahan" class="form-control" id="inputjk" placeholder="Masukkan Kelurahan/Kecamatan">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputAlamat" class="col-sm-2 control-label">Fungsi Lahan yang diajukan</label>
+
+                    <div class="col-sm-10">
+                      <textArea name="lahandiajukan" class="form-control" id="inputalamat" placeholder="" ></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputAlamat" class="col-sm-2 control-label">Fungsi Lahan sesuai RTRW</label>
+
+                    <div class="col-sm-10">
+                      <textArea name="lahansesuai" class="form-control" id="inputalamat" placeholder="" ></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPekerjaan" class="col-sm-2 control-label">Tujuan Perubahan Lahan</label>
+
+                    <div class="col-sm-10">
+                    <input type="text" name="tujuanlahan" class="form-control" id="inputpekerjaan" placeholder="Masukkan Tujuan Perubahan Lahan">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPekerjaan" class="col-sm-2 control-label">Status Tanah</label>
+
+                    <div class="col-sm-10">
+                    <input type="text" name="statustanah" class="form-control" id="inputpekerjaan" placeholder="Masukkan Status Tanah">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPekerjaan" class="col-sm-2 control-label">Dengan Batas - batas</label>
+
+                    <div class="col-sm-4">
+                    <input type="text" name="btsutara" class="form-control" id="inputpekerjaan" placeholder="Masukkan Batas Utara">
+                    </div>
+                    <div class="col-sm-4">
+                    <input type="text" name="btsselatan" class="form-control" id="inputpekerjaan" placeholder="Masukkan Batas Selatan">
+                    </div>
+                    
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPekerjaan" class="col-sm-2 control-label"></label>
+
+                    <div class="col-sm-4">
+                    <input type="text" name="btstimur" class="form-control" id="inputpekerjaan" placeholder="Masukkan Batas Barat">
+                    </div>
+                    <div class="col-sm-4">
+                    <input type="text" name="btsbarat" class="form-control" id="inputpekerjaan" placeholder="Masukkan Batas Timur">
+                    </div>
+                    
+                  </div>                                       
+                
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <button type="submit" name="submit" class="btn btn-primary">Simpan</button>
+                    </div>
+                  </div>
+                </form>
+                <?php } ?>
+              </div>
             </div>
             <!-- /.tab-content -->
           </div>
@@ -372,6 +462,74 @@
       </div>
       <!-- /.row -->
     </section>
+    <!-- Data Perubahan Keperuntukan -->
+    <section class="content">
+    <!-- Small boxes (Stat box) -->
+    <div class="row">
+        <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Data Perubahan Keperuntukan</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Lokasi</th>
+                            <th>Kel/Kec</th>
+                            <th>Lahan Diajukan</th>
+                            <th>Lahan Sesuai</th>
+                            <th>Tujuan</th>
+                            <th>Status Tanah</th>
+                            <th width="15%">Status Berkas</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                            $i=1;
+                            foreach($dataperubahan as $r) {
+                        ?>
+                            <tr>
+                                <td><?= $i ?>
+                                <td><?= $r->lokasi; ?></td>
+                                <td><?= $r->kelurahan; ?></td>
+                                <td><?= $r->lahandiajukan; ?></td>
+                                <td><?= $r->lahansesuai; ?></td>
+                                <td><?= $r->tujuanlahan; ?></td>
+                                <td><?= $r->statustanah; ?></td>
+                                <?php 
+                                  if($r->status == "Berkas Terkirim"){
+                                      echo '<td><span class="label label-default">'. $r->status .'</span></td>';
+                                  }
+                                  elseif($r->status == "Berkas Diterima") {
+                                      echo '<td><span class="label label-info">'. $r->status .'</span></td>';
+                                  }
+                                  else {
+                                    echo '<td><span class="label label-warning">'. $r->status_berkas .'</span></td>';
+                                  }
+                                ?>
+                
+                            </tr> 
+                        <?php
+                            $i++;
+                            }
+                        ?>
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+    </section>
+
+    <!-- Data Berkas -->
     <section class="content">
     <!-- Small boxes (Stat box) -->
     <div class="row">
