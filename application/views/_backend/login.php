@@ -54,7 +54,7 @@
       <section class="content">
       <div class="login-box">
   <div class="login-logo">
-    <img src="<?= base_url("assets/frontend/"); ?>assets/img/logoo.PNG" width="120" height="144"><br>
+    <img src="<?= base_url("assets/frontend/");?>logokotapasuruan.png" width="200" height="144"><br>
     <a href="<?= base_url("admin/login");?>"><p><h4><b>Informasi Tata Ruang</b></h4></p><p><h4><b> Dinas Pekerjaan Umum dan Penataan Ruang Kota Pasuruan</b></h4></p></a>
   </div>
   <!-- /.login-logo -->
