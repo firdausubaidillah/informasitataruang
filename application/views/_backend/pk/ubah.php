@@ -2,12 +2,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
     <h1>
-        Ubah <?= $title; ?>
+        Status Pengajuan Berkas
     </h1>
     <ol class="breadcrumb">
         <li><a href="<?= base_url("admin/"); ?>"><i class="fa fa-dashboard"></i> Home</a></li>
         <li>Data</li>
-        <li class="active">Ubah <?= $title; ?></li>
+        <li class="active"> Status Pengajuan Berkas</li>
     </ol>
     </section>
 
@@ -48,6 +48,10 @@
                                 <select class="form-control" name="status">
                                     <option>Berkas Terkirim</option>
                                     <option>Berkas Diterima</option>
+                                    <option>Berkas Sedang diverifikasi</option>
+                                    <option>Berkas Sedang disurvei</option>
+                                    <option>Proses Analisa</option>
+                                    <option>Diajukan ke TKPRD</option>
                                 </select>
                             </div>
                             <span class="help-block"></span>
