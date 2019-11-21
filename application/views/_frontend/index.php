@@ -40,16 +40,16 @@
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="http://pupr.pasuruankota.go.id/uptujimutu" target="new-tab">Beranda</a>
+        <a class="nav-link" href="">Beranda</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="http://pupr.pasuruankota.go.id/uptujimutu" target="new-tab">Informasi Tata Ruang</a>
+        <a class="nav-link" href="">Informasi Tata Ruang</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="http://pupr.pasuruankota.go.id/uptujimutu" target="new-tab">Peta</a>
+        <a class="nav-link" href="">Peta</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="http://pupr.pasuruankota.go.id/uptujimutu" target="new-tab">Hubungi Kami</a>
+        <a class="nav-link" href="">Hubungi Kami</a>
       </li>
     </ul>
 
@@ -57,7 +57,7 @@
 </nav>
 
 <main role="main">
-  
+
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -104,8 +104,8 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
-        </div>  
-  
+        </div>
+
   <div class="container marketing">
   <section class="section-feature">
       <div class="container">
@@ -115,8 +115,8 @@
             <div class="card mb-4 shadow-sm">
               <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
               <div class="card-body text-center">
-                <h3>Regulasi Penataan Ruang</h3>
-                              
+                <h4>Regulasi Penataan Ruang</h4>
+
               </div>
             </div>
           </div>
@@ -124,8 +124,8 @@
             <div class="card mb-4 shadow-sm">
               <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
               <div class="card-body text-center">
-                <h3>Peta Kota Pasuruan</h3>
-                              
+                <h4>Peta Kota Pasuruan</h4>
+
               </div>
             </div>
           </div>
@@ -133,15 +133,15 @@
             <div class="card mb-4 shadow-sm">
               <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
               <div class="card-body text-center">
-                <h3><a href="<?= base_url('loginpemohon'); ?>">Pengajuan Formulir</h3>
-                
+                <h4><a href="<?= base_url('loginpemohon'); ?>">Pengajuan Formulir</h4>
+
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-      
+
   </div>
   <hr class="featurette-divider">
 </main>
